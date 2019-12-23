@@ -1,7 +1,7 @@
 
 :root {
 	--color-bg: #212121;
-	--color-primary: #484848;
+	--color-primary: rgb(42, 42, 42);
 	--color-primary-dark: #272727;
 	--color-primary-accent: #e53935;
 
@@ -73,8 +73,8 @@ body {
 
 
 header {
-	padding-top: 100px;
-	padding-bottom: 80px;
+	padding-top: 80px;
+	padding-bottom: 60px;
 	background-color: var(--color-primary-accent);
 	text-align: center;
 
@@ -92,7 +92,7 @@ h1 {
 h2 {
 	color: var(--color-secondary);
 
-	border-bottom: blue;
+
 	border-style: solid;
 	border-width: 0px 0px 0px 5px;
 
@@ -120,82 +120,85 @@ header p {
 
 	border-radius: 100px;
 
+	margin-left: 10px;
+	margin-right: 10px;
+
 	display: inline-block;
 
 	background-color: var(--color-primary);
 
-	opacity: 0.5;
+	
 
 	cursor: pointer;
 }
 
+#socialBtn img {
+	width: 30px;
+	height: 30px;
+}
+
 #projectScroll {
-	overflow: auto;
-
-	white-space: nowrap;
-
-	padding-bottom: 15px;
+	text-align: center;
 }
 
 #project {
-	width: 500px;
-	height: 200px;
-
-	padding: 10px 10px 10px 10px;
-
-	white-space: normal;
-
-	display: inline-block;
-
-	margin-right: 20px;
-	
-	background-color: var(--color-primary);
-
-	vertical-align: top;
-}
-
-#project img {
-	width: 100px;
-	height: 100px;
-
-	display: inline-block;
-
-	float: left;
-
-	margin: 0;
-	position: relative;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	border-radius: 100%;
-}
-
-#projBody {
-	margin-left: 120px;
+    width: 475px;
+    height: 200px;
 
 
 	margin-right: 10px;
+	margin-bottom: 10px;
 
+    padding: 15px;
 
-
-}
-
-.vcenter {
-	position: relative;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-#project #projTitle {
-	font-weight: bold;	
-	width: inherit;
-	height: inherit;
-}
-
-#project #projDesc {
+	background-color: var(--color-primary);
 	
+	white-space: normal;
+	
+	display: inline-block;
+    
 }
+
+#project img {
+    width: 100px;
+    height: 100px;
+
+    padding-right: 10px;
+
+    border-radius: 25%;
+	vertical-align: top;
+	
+
+}
+
+
+#projTitle {
+    text-align: left;
+    font-size: 14pt;
+    font-weight: bold;
+
+	padding-left: 0.5em;
+	padding-bottom: 5px;
+	
+
+    border-left: var(--color-secondary);
+    border-style: solid;
+	border-width: 0px 0px 5px 0px;
+	border-bottom-color: var(--color-primary-accent);
+}
+
+#projImg img {
+
+	width: 100px;
+	height: 100px;
+
+	border-radius: 20%;
+}
+
+#projDesc {
+	text-align: left;
+}
+
 
 #mainIcons {
 	width: 100%;
@@ -218,8 +221,9 @@ header p {
 
 
 	margin-right: 10px;
+	margin-left: 10px;
 
-	padding: 10px 10px 10px 10px;
+	padding: 20px;
 
 	
 
@@ -227,6 +231,8 @@ header p {
 	user-select: none;
 
 	display: inline-block;
+
+	box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 	border-radius: 10px;
 
