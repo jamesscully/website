@@ -127,14 +127,15 @@ header p {
 
 	background-color: var(--color-primary);
 
-	
-
 	cursor: pointer;
+	line-height: 24px;
+
 }
 
 #socialBtn img {
 	width: 30px;
 	height: 30px;
+	float: left;
 }
 
 #projectScroll {
