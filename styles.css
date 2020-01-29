@@ -45,18 +45,22 @@ header {
 
 h1 {
 	margin: 0 auto;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 
-	font-size: 40pt;
+	font-size: 32pt;
 }
 
 h2 {
 	color: var(--color-secondary);
 
+	display: inline-block;
+
 	border-style: solid;
-	border-width: 0 0 0 5px;
+	border-width: 0 0 5px 0;
 
 	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 #linkToGitHub {
@@ -79,6 +83,8 @@ a:active  { color: var(--color-primary-accent); }
 	margin-bottom: 50px;
 	margin-left: 15%;
 	margin-right: 15%;
+
+	text-align: center;
 }
 
 #socialBtn {
@@ -107,7 +113,6 @@ a:active  { color: var(--color-primary-accent); }
 	height: 30px;
 	float: left;
 }
-
 
 #project {
     width: 475px;
