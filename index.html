@@ -10,11 +10,13 @@
 	<title>James Scully</title>
 
 	<!-- <meta http-equiv="refresh" content="1" > -->
+
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>  
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 </head>
 
 <html>
 	<header>
-
 		Greetings! I'm
 
 		<h1>James Scully</h1>
@@ -31,10 +33,13 @@
 				<img src="res/img/LI-In-Bug120px.png">
 			</div>
 		</a>
-		
 	</header>
 
 	<p style="text-align: center;"><b>I'm also a</b></p>
+
+	<div id="item_card" greeting="flanders"></div>
+
+	<script src="./carded_item.js"></script>
 
 	<div id="mainIcons">
 		
@@ -63,13 +68,16 @@
 
 	</div>
 
+	
+
 	<p style="text-align: center; margin-bottom: 60px;">
 		If you're interested, you can find my resume
+
 			<a href="https://jwscully.uk/resume.pdf" target="_blank">
 				 here 
 			</a>  <br><br>
 		
-		If you wish to contact me, my contact details are on the resume (to prevent pesky web-crawlers finding & spamming me!)
+		If you wish to contact me, my contact details are on the resume 
 	</p> 
 	
 	<div class="section">
