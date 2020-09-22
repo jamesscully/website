@@ -18,7 +18,7 @@ function App() {
         {/*<Checkbutton text="Graphics"/>*/}
         {/*<Checkbutton text="Blender"/>*/}
 
-        <ProjectShowcase project={"test"}/>
+        <ProjectShowcase project={"bottleup"}/>
 
       </header>
     </div>

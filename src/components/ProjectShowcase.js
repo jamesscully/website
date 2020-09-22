@@ -1,14 +1,23 @@
 import * as React from "react";
 import './ProjectShowcase.css'
 
-export default class ProjectShowcase extends React.Component {
+let Project = require('../models/Project')
 
+export default class ProjectShowcase extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            projectName: props.project
+        var json = require('../projects.json')
+
+        if(props.project in json) {
+            console.log("We've found a hit!")
         }
+
+        this.state = {
+            project: json[props.project.toString()]
+        }
+
+        console.log(this.state.project)
     }
 
     render() {
@@ -21,15 +30,40 @@ export default class ProjectShowcase extends React.Component {
             userSelect: "none"
         }
 
+        // eslint-disable-next-line no-undef
+        const project = this.state.project
+
+        let stackString = ""
+
+        // customize stack string
+        for(let i = 0; i < project.stack.length; i++) {
+            let tech = project.stack[i]
+
+            stackString += tech + "; "
+        }
+
+        // load either image or text (emoji)
+
+
+
+
         return (
             <table id="project">
                 <tbody>
                 <tr>
-                    <th colSpan="2" id="projTitle">
-                        Bottling Up Assistant (2018/2019)<a id="linkToGitHub"
-                                                            href="https://github.com/jamesscully/spoons-bottle-up"
-                                                            target="_blank">View on GitHub</a> <br/>
-                        <p id="miscInfo">Android; Java; SQL</p>
+                    <th colSpan="2" id="projTitle"> {project.title}
+                        <a id="linkToGitHub"
+                           href={project.github}
+                           target="_blank"
+                           rel={"noopener noreferrer"}
+                        >View on GitHub
+                        </a>
+
+                        <br/>
+
+                        <p id="miscInfo">
+                            {stackString}
+                        </p>
                     </th>
                 </tr>
 
@@ -39,10 +73,10 @@ export default class ProjectShowcase extends React.Component {
                 <tr>
                     <td id="projImg"
                         style={imageStyle}>
-                        🍾
+
                     </td>
                     <td id="projDesc">
-                        Mobile application for speeding up restocking of fridges at my previous workplace
+                        {project.description}
                     </td>
                 </tr>
                 </tbody>
