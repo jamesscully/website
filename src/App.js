@@ -1,28 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Checkbutton from "./components/Checkbutton";
 import ProjectShowcase from "./components/ProjectShowcase";
+import ProjectRepository from './ProjectRepository'
 
 function App() {
+
+  let projects = ProjectRepository.getProjects()
+
+  projects.map(function (p) {
+      console.log(p.title + " " + p.hasTag("C++"))
+      return true
+  })
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
 
-        {/*<Checkbutton text="C++"/>*/}
-        {/*<Checkbutton text="Java"/>*/}
-        {/*<Checkbutton text="Kotlin"/>*/}
-        {/*<Checkbutton text="C"/>*/}
-        {/*<Checkbutton text="Game Dev."/>*/}
-        {/*<Checkbutton text="Graphics"/>*/}
-        {/*<Checkbutton text="Blender"/>*/}
+        <Checkbutton text="C++"/>
+        <Checkbutton text="Java"/>
+        <Checkbutton text="Kotlin"/>
+        <Checkbutton text="C"/>
+        <Checkbutton text="Game Dev."/>
+        <Checkbutton text="Graphics"/>
+        <Checkbutton text="Blender"/>
+
+        {
+          projects.map(function (p) {
+            return p.toShowcase()
+          })
+        }
 
         <ProjectShowcase project={"bottleup"}/>
+        <ProjectShowcase project={"openglbeach"}/>
+        <ProjectShowcase project={"openglcollege"}/>
 
       </header>
     </div>
   );
+
+
 }
 
 export default App;
