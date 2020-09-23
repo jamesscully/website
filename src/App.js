@@ -13,6 +13,8 @@ function App() {
       return true
   })
 
+    console.log(ProjectRepository.hmap)
+
   return (
     <div className="App">
       <header className="App-header">
