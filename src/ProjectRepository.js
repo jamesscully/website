@@ -7,53 +7,62 @@ var HashMap = require('hashmap')
 export default class ProjectRepository {
 
     // eslint-disable-next-line no-undef
-    static hmap = new HashMap()
+    static tagMap = new HashMap()
+    static filterTags = new HashMap()
+    static projectsMap = new HashMap()
 
-    // eslint-disable-next-line no-useless-constructor
-    constructor() {
+    static getProjectById(id) {
+        if(this.projectsMap.size === 0) {
+            console.warn("Attempt to access empty hashmap")
+        }
 
+        return this.projectsMap.get(id)
     }
 
     static getProjects() {
 
+        // if already calculated, return copy
+        if(this.projectsMap.size !== 0) {
+            return this.projectsMap.values()
+        }
+
         let projects = []
 
-        console.log(projectsData)
-
-        for(const x in projectsData) {
-            const project = new Project(projectsData[x])
-
-            projects.push(project)
-        }
-
-        for (const p in projects) {
-            console.log(projects[p])
-        }
-
+        // sort by new - old
         projects.sort(function (a, b) {
             return b.endDate - a.endDate
         })
 
-        for(let i = 0; i < projects.length; i++) {
-            let project = projects[i];
-            this.addToHash(project)
+        // add all projects to map + array
+        for(const x in projectsData) {
+            const project = new Project(null, projectsData[x])
+
+            this.projectsMap.set(project.id, project)
+            projects.push(project)
         }
+
+        // add all tags to a map
+        projects.forEach((project, _) => { this.addTagsFromProject(project) })
 
         return projects
     }
 
-    static addToHash(project) {
-        for(var index in project.tags) {
+    static addTagsFromProject(project) {
+        for(const index in project.tags) {
 
             // get tag as string from project
             let tag = project.tags[index]
 
             // get current value
-            let value = this.hmap.get(tag)
+            let value = this.tagMap.get(tag)
 
             if(value == null) {
                 console.log(`Found null entry for ${tag}`)
-                this.hmap.set(tag, [])
+                this.tagMap.set(tag, [])
+
+                // set in selected tags map
+                this.filterTags.set(tag, false)
+
                 // reassign value if null'd
                 value = []
             }
@@ -62,7 +71,41 @@ export default class ProjectRepository {
 
             value.push(project)
 
-            this.hmap.set(tag, value)
+            this.tagMap.set(tag, value)
         }
+    }
+
+    static showTag(tag) {
+        this.filterTags.set(tag, true)
+
+        let list = this.tagMap.get(tag)
+
+        if(list == null)
+            return
+
+        for(let i = 1; i < list.length; i++) {
+            const project = list[i]
+
+            project.show()
+        }
+    }
+
+    static hideTag(tag) {
+        this.filterTags.set(tag, false)
+
+        let list = this.tagMap.get(tag)
+
+        if(list == null)
+            return
+
+        for(let i = 1; i < list.length; i++) {
+            const project = list[i]
+
+            project.hide()
+        }
+    }
+
+    static populate() {
+        this.getProjects()
     }
 }

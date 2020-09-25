@@ -1,3 +1,7 @@
+body {
+  background-color: #212121;
+}
+
 .App {
   text-align: center;
 }
@@ -15,8 +19,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -27,11 +32,13 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#CheckboxContainer {
+  width: 500px;
+  float: left;
 }
+
+#ProjectContainer {
+  margin-top: 28px;
+}
+
+

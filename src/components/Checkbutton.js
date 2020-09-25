@@ -1,4 +1,5 @@
 import * as React from "react";
+import ProjectRepository from "../ProjectRepository";
 
 export default class Checkbutton extends React.Component {
 
@@ -7,14 +8,35 @@ export default class Checkbutton extends React.Component {
 
         this.state = {
             checked: true,
-            text: props.text
+            text: props.tag
         }
+
+        // populate visible tags hashmap
+        ProjectRepository.filterTags.set(this.getText(), this.isChecked())
     }
 
     toggle = () => {
         this.setState({
             checked: !this.state.checked
         })
+
+        console.log(`Setting ${this.getText()} to ${!this.isChecked()}`)
+
+        let value = !this.state.checked
+
+        if(value) {
+            ProjectRepository.showTag(this.getText())
+        } else {
+            ProjectRepository.hideTag(this.getText())
+        }
+    }
+
+    getText() {
+        return this.state.text
+    }
+
+    isChecked() {
+        return this.state.checked
     }
 
     render() {
@@ -29,9 +51,10 @@ export default class Checkbutton extends React.Component {
             marginRight: "10px",
             marginBottom: "5px",
             whiteSpace: "no-wrap",
-            minWidth: 100,
+            minWidth: 125,
             float: "left",
-            fontWeight: "bold"
+            fontWeight: "bold",
+            fontSize: "14pt"
         }
 
         // use str for starters
@@ -40,10 +63,10 @@ export default class Checkbutton extends React.Component {
         // change on/off stuff here
         if (this.state.checked) {
             mStyle.backgroundColor = "green"
-            image = "\u2713"
+            image = "\u2714"
         } else {
             mStyle.backgroundColor = "red"
-            image = ""
+            image = "\u2716"
         }
 
         return (
