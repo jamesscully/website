@@ -1,61 +1,82 @@
-import React from 'react';
+import React, {Component, useState} from 'react';
 import './App.css';
 import Checkbutton from "./components/Checkbutton";
 import ProjectView from "./components/ProjectView";
 import ProjectRepository from './ProjectRepository'
-import Project from "./models/Project";
+
+function filterTag(enabled, tag) {
+    console.log(`${tag} enabled: ${enabled}`)
+
+    if(enabled) {
+
+    }
+
+}
 
 function App() {
-
     ProjectRepository.populate()
 
-  let projects = ProjectRepository.getProjects()
-  // let visibleProjects = ProjectRepository.getVisibleProjects()
+    let projects = ProjectRepository.getProjects()
+    let foundTags = ProjectRepository.tagMap.keys()
 
-  projects.map(function (p) {
-      console.log(p.title + " " + p.hasTag("C++"))
-      return true
-  })
+    const [filter, tags] = useState(foundTags)
 
-    const foundTags = ProjectRepository.tagMap.keys()
 
-    const checkButtons = foundTags.map((tag) => {
+    console.log("Tags: " + filter)
 
-        const blacklist = ["CMake"]
+      return (
+        <div className="App">
+          <header className="App-header">
+            <div id={"CheckbuttonContainer"}>
+                {
+                    // for each tag, add button if not in blacklist
+                    foundTags.map((tag) => {
 
-        if(blacklist.includes(tag))
-            return null
+                        const blacklist = ["CMake"]
 
-        return(
-            <Checkbutton key={tag} tag={tag}/>
-        )
-    })
+                        if(blacklist.includes(tag))
+                            return null
 
-    const projectViews = projects.map((project) => {
-        return <Project id={project.id}/>
-    })
+                        return (
+                            <div key={tag} className={"checkbutton"}>
+                                <Checkbutton  tag={tag} callback={(enabled) => {
+                                    filterTag(enabled, tag)
+                                }} />
+                            </div>
+                        );
+                    })
+                }
+            </div>
+          </header>
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div id={"CheckbuttonContainer"}>
-            {checkButtons}
+          <div id={"ProjectContainer"}>
+              {
+                projects.map((project) => {
+
+                    // console.log("Drawing projects")
+                    let element = <ProjectView key={project.id} id={project.id} />
+
+                    for(const index in project.tags) {
+
+                        const tag = project.tags[index]
+                        const matches = ProjectRepository.filterTags.get(tag)
+
+                        // console.log(`Checking if ${tag} is in hashmap: ${matches}`)
+
+                        if(matches)
+                            return element
+                        else
+                            return null
+                    }
+                    return null
+                })
+              }
+          </div>
         </div>
-      </header>
-
-      <div id={"ProjectContainer"}>
-
-          {
-              projects.map((project) => {
-                  return <ProjectView id={project.id} />
-              })
-          }
-
-      </div>
-    </div>
-  );
+      );
 
 
 }
+
 
 export default App;

@@ -1,8 +1,6 @@
 import * as React from "react";
 import './ProjectView.css'
 import ProjectRepository from "../ProjectRepository";
-import Project from "../models/Project";
-
 
 export default class ProjectView extends React.Component {
 

@@ -32,6 +32,10 @@ body {
   color: #61dafb;
 }
 
+.checkbutton {
+  float: left;
+}
+
 #CheckboxContainer {
   width: 500px;
   float: left;

@@ -1,7 +1,6 @@
 import Project from './models/Project.js'
-import { projectsData } from './projects'
+import {projectsData} from './projects'
 
-var LinkedList = require('linked-list')
 var HashMap = require('hashmap')
 
 export default class ProjectRepository {
@@ -61,7 +60,7 @@ export default class ProjectRepository {
                 this.tagMap.set(tag, [])
 
                 // set in selected tags map
-                this.filterTags.set(tag, false)
+                this.filterTags.set(tag, true)
 
                 // reassign value if null'd
                 value = []
@@ -77,32 +76,10 @@ export default class ProjectRepository {
 
     static showTag(tag) {
         this.filterTags.set(tag, true)
-
-        let list = this.tagMap.get(tag)
-
-        if(list == null)
-            return
-
-        for(let i = 1; i < list.length; i++) {
-            const project = list[i]
-
-            project.show()
-        }
     }
 
     static hideTag(tag) {
         this.filterTags.set(tag, false)
-
-        let list = this.tagMap.get(tag)
-
-        if(list == null)
-            return
-
-        for(let i = 1; i < list.length; i++) {
-            const project = list[i]
-
-            project.hide()
-        }
     }
 
     static populate() {

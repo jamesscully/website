@@ -5,11 +5,13 @@ export default class Checkbutton extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
+            props: props,
             checked: true,
-            text: props.tag
+            text: props.tag,
         }
+
+        this.toggle =this.toggle.bind(this)
 
         // populate visible tags hashmap
         ProjectRepository.filterTags.set(this.getText(), this.isChecked())
@@ -70,7 +72,12 @@ export default class Checkbutton extends React.Component {
         }
 
         return (
-            <div style={mStyle} onClick={this.toggle}>
+            <div style={mStyle} onClick={() => {
+                this.toggle()
+                // send our state back to App for filtering
+                this.state.props.callback(!this.state.checked)
+            }
+            }>
                 {image} {this.state.text}
             </div>
         );

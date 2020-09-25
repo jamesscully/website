@@ -1,6 +1,4 @@
-
 import * as React from "react";
-import ProjectRepository from "../ProjectRepository";
 
 export default class Project extends React.Component {
 
