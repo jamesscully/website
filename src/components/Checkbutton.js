@@ -22,7 +22,7 @@ export default class Checkbutton extends React.Component {
             checked: !this.state.checked
         })
 
-        console.log(`Setting ${this.getText()} to ${!this.isChecked()}`)
+        // console.log(`Setting ${this.getText()} to ${!this.isChecked()}`)
 
         let value = !this.state.checked
 
