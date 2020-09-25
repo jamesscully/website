@@ -9,7 +9,7 @@ export default class Project extends React.Component {
 
         this.id = json_object.id
         this.title = json_object.title
-        this.image = json_object.image
+        this.imageURL = json_object.imageURL
         this.imageText = json_object.imageText
         this.startDate = json_object.startDate
         this.endDate = json_object.endDate

@@ -31,21 +31,10 @@ export default class ProjectView extends React.Component {
         if(this.state.hidden)
             return null
 
-        let image = this.project.image
+        let image = <img src={this.project.imageURL} alt={String.fromCodePoint(this.project.imageText)}/>
 
-        // load either image or text (emoji)
-        if(image === "") {
-            // if empty, load string
-            if(this.project.imageText !== "") {
-                image = String.fromCodePoint(this.project.imageText)
-            } else {
-                image = ""
-            }
-        } else {
-            image = "<img src='" + this.project.image + "' alt=" + this.project.imageText + "/>"
-        }
 
-        const spacer = { height: "20px" }
+        const spacer = { height: "10px" }
 
         return(
             <table key={this.project.title} id="project">
@@ -74,7 +63,9 @@ export default class ProjectView extends React.Component {
                         {image}
                     </td>
                     <td id="description">
-                        {this.project.description}
+                        <p>
+                            {this.project.description}
+                        </p>
                     </td>
                 </tr>
                 </tbody>

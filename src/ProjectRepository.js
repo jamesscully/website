@@ -56,7 +56,6 @@ export default class ProjectRepository {
             let value = this.tagMap.get(tag)
 
             if(value == null) {
-                console.log(`Found null entry for ${tag}`)
                 this.tagMap.set(tag, [])
 
                 // set in selected tags map
@@ -65,8 +64,6 @@ export default class ProjectRepository {
                 // reassign value if null'd
                 value = []
             }
-
-            console.log(`Adding ${tag.toString()} to HMap`)
 
             value.push(project)
 

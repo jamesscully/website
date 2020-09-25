@@ -15,6 +15,7 @@ export default class App extends Component {
             allTags: ProjectRepository.tagMap.keys(),
             filter: ProjectRepository.tagMap.keys()
         }
+
     }
 
     filterTag(tag, enabled) {
@@ -22,13 +23,13 @@ export default class App extends Component {
         let newArray = this.state.filter
 
         if(enabled) {
-            console.log(`Adding tag ${tag}`)
             newArray.push(tag)
         } else {
-            console.log(`Removing tag ${tag}`)
             const index = newArray.indexOf(tag)
             newArray.splice(index, 1)
         }
+
+        console.log(`New filters: ${newArray} `)
 
         this.setState({
             filter: newArray
@@ -44,12 +45,6 @@ export default class App extends Component {
                         {
                             // for each tag, add button if not in blacklist
                             this.state.allTags.map((tag) => {
-
-                                const blacklist = ["CMake"]
-
-                                if(blacklist.includes(tag))
-                                    return null
-
                                 return (
                                     <div key={tag} className={"checkbutton"}>
                                         <Checkbutton  tag={tag} callback={(enabled) => {
@@ -65,21 +60,20 @@ export default class App extends Component {
                 <div id={"ProjectContainer"}>
                     {
                         this.state.projects.map((project) => {
-                            let element = <ProjectView key={project.id} id={project.id} />
+                            let valid = false
 
+                            // we only need 1 tag to match for the filter
                             for(const index in project.tags) {
 
+                                // if we've hit a valid tag, we don't need to search anymore
+                                if(valid)
+                                    break
                                 const tag = project.tags[index]
-                                const matches = ProjectRepository.filterTags.get(tag)
-
-                                // console.log(`Checking if ${tag} is in hashmap: ${matches}`)
-
-                                if(matches)
-                                    return element
-                                else
-                                    return null
+                                valid = this.state.filter.includes(tag)
                             }
-                            return null
+
+                            // return our view if valid, else hide
+                            return (valid ? <ProjectView key={project.id} id={project.id} /> : null)
                         })
                     }
                 </div>
