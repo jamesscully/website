@@ -39,23 +39,24 @@ export default class App extends Component {
     render() {
         console.log("Rendering")
         return (
+
             <div className="App">
                 <header className="App-header">
-                    <div id={"CheckbuttonContainer"}>
-                        {
-                            // for each tag, add button if not in blacklist
-                            this.state.allTags.map((tag) => {
-                                return (
-                                    <div key={tag} className={"checkbutton"}>
-                                        <Checkbutton  tag={tag} callback={(enabled) => {
-                                            this.filterTag(tag, enabled)
-                                        }} />
-                                    </div>
-                                );
-                            })
-                        }
-                    </div>
+
                 </header>
+
+                <div id={"CheckbuttonContainer"}>
+                    {
+                        // for each tag, add button
+                        this.state.allTags.map((tag) => {
+                            return (
+                                <Checkbutton  tag={tag} callback={(enabled) => {
+                                    this.filterTag(tag, enabled)
+                                }} />
+                            );
+                        })
+                    }
+                </div>
 
                 <div id={"ProjectContainer"}>
                     {

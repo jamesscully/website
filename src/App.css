@@ -3,7 +3,7 @@ body {
 }
 
 .App {
-  text-align: center;
+
 }
 
 .App-logo {
@@ -32,17 +32,36 @@ body {
   color: #61dafb;
 }
 
-.checkbutton {
-  float: left;
+.check-button {
+  background-color: red;
+  border-radius: 50px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  user-select: none;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  white-space: nowrap;
+  width: 125px;
+  display: inline-block;
+  min-height: 1em;
+  font-weight: bold;
+  font-size: 15pt;
 }
 
-#CheckboxContainer {
-  width: 500px;
-  float: left;
+
+#CheckbuttonContainer {
+  background-color: darkslategrey;
+  text-align: center;
+
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 #ProjectContainer {
-  margin-top: 28px;
+  padding-top: 28px;
+  text-align: center;
 }
 
 

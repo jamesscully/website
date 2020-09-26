@@ -33,7 +33,7 @@ export const projectsData = [
         "startDate": 2020,
         "endDate": 2020,
         "description": "OpenGL work featuring lighting systems, dynamic lighting, object loading",
-        "tags": ["OpenGL", "Graphics", "C++", "Linux"],
+        "tags": ["OpenGL", "Graphics", "C++"],
         "stack": ["OpenGL", "C++"],
         "github": "https://github.com/jamesscully/OpenGL-Beach-Scene"
     },
@@ -46,7 +46,7 @@ export const projectsData = [
         "startDate": 2016,
         "endDate": 2017,
         "description": "Created to illustrate how vertices and shapes are drawn in a 3D context, used instead of Blender.",
-        "tags": ["OpenGL", "Graphics", "C++", "Linux"],
+        "tags": ["OpenGL", "Graphics", "C++"],
         "stack": ["OpenGL", "C++"],
         "github": "https://github.com/jamesscully/OpenGL-Vertex-Demo"
     },

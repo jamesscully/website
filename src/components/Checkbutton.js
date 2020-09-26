@@ -44,19 +44,7 @@ export default class Checkbutton extends React.Component {
     render() {
 
         let mStyle = {
-            backgroundColor: "red",
-            borderRadius: "50px",
-            padding: "10px",
-            userSelect: "none",
-            cursor: "pointer",
-            marginLeft: "10px",
-            marginRight: "10px",
-            marginBottom: "5px",
-            whiteSpace: "no-wrap",
-            minWidth: 125,
-            float: "left",
-            fontWeight: "bold",
-            fontSize: "14pt"
+            backgroundColor: "red"
         }
 
         // use str for starters
@@ -72,7 +60,7 @@ export default class Checkbutton extends React.Component {
         }
 
         return (
-            <div style={mStyle} onClick={() => {
+            <div style={mStyle} className={"check-button"} onClick={() => {
                 this.toggle()
                 // send our state back to App for filtering
                 this.state.props.callback(!this.state.checked)
