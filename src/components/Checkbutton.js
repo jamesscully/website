@@ -5,33 +5,43 @@ export default class Checkbutton extends React.Component {
 
     constructor(props) {
         super(props);
+        this.toggle = this.toggle.bind(this)
+
         this.state = {
             props: props,
-            checked: true,
+            checked: props.checked,
             text: props.tag,
         }
 
-        this.toggle =this.toggle.bind(this)
+
+        // inform app state of our initial on/off state
+        this.state.props.callback(this.state.checked)
 
         // populate visible tags hashmap
-        ProjectRepository.filterTags.set(this.getText(), this.isChecked())
+        // ProjectRepository.filterTags.set(this.getText(), this.isChecked())
     }
 
     toggle = () => {
+        let enabled = !this.state.checked
+
         this.setState({
-            checked: !this.state.checked
+            checked: enabled
         })
 
-        // console.log(`Setting ${this.getText()} to ${!this.isChecked()}`)
+        console.log(`Setting ${this.getText()} to ${enabled}`)
 
-        let value = !this.state.checked
+        ProjectRepository.filterTag(this.getText(), enabled)
+    }
 
-        if(value) {
-            ProjectRepository.showTag(this.getText())
-        } else {
-            ProjectRepository.hideTag(this.getText())
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("Prev props:")
+        console.log(prevProps)
+
+        if(prevProps.checked !== this.props.checked) {
+            this.setState({checked: this.props.checked});
         }
     }
+
 
     getText() {
         return this.state.text
@@ -59,8 +69,10 @@ export default class Checkbutton extends React.Component {
             image = "\u2716"
         }
 
+        console.log(`Rendering ${this.getText()} as ${this.isChecked()}`)
+
         return (
-            <div style={mStyle} className={"check-button"} onClick={() => {
+            <div key={this.getText()} style={mStyle} className={"check-button"} onClick={() => {
                 this.toggle()
                 // send our state back to App for filtering
                 this.state.props.callback(!this.state.checked)

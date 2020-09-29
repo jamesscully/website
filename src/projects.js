@@ -18,9 +18,9 @@ export const projectsData = [
         "imageURL": "",
         "imageText": "0x1F37E",
         "startDate": 2018,
-        "endDate": 2019,
+        "endDate": 0,
         "description": "Mobile application for speeding up restocking of fridges at my previous workplace",
-        "tags": ["Java", "Android", "Kotlin", "Python"],
+        "tags": ["Android (Java/Kotlin)"],
         "stack": ["Java", "Kotlin", "Python"],
         "github": "https://github.com/jamesscully/spoons-bottle-up"
     },
@@ -33,7 +33,7 @@ export const projectsData = [
         "startDate": 2020,
         "endDate": 2020,
         "description": "OpenGL work featuring lighting systems, dynamic lighting, object loading",
-        "tags": ["OpenGL", "Graphics", "C++"],
+        "tags": ["C++"],
         "stack": ["OpenGL", "C++"],
         "github": "https://github.com/jamesscully/OpenGL-Beach-Scene"
     },
@@ -46,7 +46,7 @@ export const projectsData = [
         "startDate": 2016,
         "endDate": 2017,
         "description": "Created to illustrate how vertices and shapes are drawn in a 3D context, used instead of Blender.",
-        "tags": ["OpenGL", "Graphics", "C++"],
+        "tags": ["C++"],
         "stack": ["OpenGL", "C++"],
         "github": "https://github.com/jamesscully/OpenGL-Vertex-Demo"
     },
@@ -59,7 +59,7 @@ export const projectsData = [
         "startDate": 2019,
         "endDate": 2020,
         "description": "Simple music player for bookmarking points within songs, and navigation between them.",
-        "tags": ["Android", "Kotlin"],
+        "tags": ["Android (Java/Kotlin)"],
         "stack": ["Android", "Kotlin"],
         "github": "https://github.com/jamesscully/Hendrix"
     },
@@ -71,9 +71,9 @@ export const projectsData = [
         "startDate": 2020,
         "endDate": 2020,
         "description": "Dexterity-based video game used to show game design concepts, such as increasing difficulty, using core mechanics in new ways to achieve an objective and an aesthetic.",
-        "tags": ["C#", "Graphics"],
+        "tags": ["C#"],
         "stack": ["C#", "Blender", "Unity"],
-        "github": "https://github.com/jamesscully/spoons-bottle-up"
+        "github": "https://github.com/jamesscully/Dexteritate"
     }
 
 ]

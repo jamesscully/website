@@ -1,7 +1,7 @@
 import * as React from "react";
 import './ProjectView.css'
 import ProjectRepository from "../ProjectRepository";
-
+import SmallGitHub from "../res/img/GitHub-Mark-Light-32px.png"
 export default class ProjectView extends React.Component {
 
     constructor(props) {
@@ -33,20 +33,25 @@ export default class ProjectView extends React.Component {
 
         let image = <img src={this.project.imageURL} alt={String.fromCodePoint(this.project.imageText)}/>
 
-
         const spacer = { height: "10px" }
 
+        // alias to remove this. keyword
+        const project = this.project
+
         return(
-            <table key={this.project.title} id="project">
+            <table key={project.title} id="project">
                 <tbody>
                 <tr>
-                    <th colSpan="2" id="title"> {this.project.title}
+                    <th colSpan="2" id="title"> {project.title} ({project.getTimeSpan()})
                         <a id="linkToGitHub"
-                           href={this.project.github}
+                           href={project.github}
                            target="_blank"
                            rel={"noopener noreferrer"}>
-                            View on GitHub
+                            Source
+                            <img src={SmallGitHub}/>
                         </a>
+
+
 
                         <br/>
 
@@ -64,10 +69,11 @@ export default class ProjectView extends React.Component {
                     </td>
                     <td id="description">
                         <p>
-                            {this.project.description}
+                            {project.description}
                         </p>
                     </td>
                 </tr>
+
                 </tbody>
             </table>
 

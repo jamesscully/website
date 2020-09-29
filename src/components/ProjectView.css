@@ -30,8 +30,8 @@
     padding-bottom: 5px;
     border-left: var(--color-secondary);
     border-style: solid;
-    border-width: 0 0 5px 0;
-    border-bottom-color: var(--color-primary-accent)
+    border-width: 5px 5px 5px 5px;
+    border-color: var(--color-primary) var(--color-primary) var(--color-primary-accent) var(--color-primary);
 }
 
 #stack {
@@ -44,7 +44,7 @@
 #image {
     width: 100px;
     height: 100px;
-    font-size: 50px;
+    font-size: 80px;
     border-radius: 10%;
     background-color: var(--color-primary-dark);
     display: block;
@@ -76,7 +76,13 @@
 
 #linkToGitHub {
     float: right;
-    font-size: 10pt
+    font-size: 10pt;
+}
+
+#linkToGitHub img {
+    height: 1.3em;
+    margin-left: 4px;
+    vertical-align: text-bottom;
 }
 
 #linkToGitHub:visited {

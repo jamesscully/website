@@ -29,5 +29,19 @@ export default class Project extends React.Component {
         return this.tags.includes(tag)
     }
 
+    getTimeSpan() {
+        if(this.startDate === this.endDate) {
+            return this.startDate.toString()
+        }
+
+        let end = this.endDate
+
+        if(end === 0) {
+            end = "Ongoing"
+        }
+
+        return `${this.startDate} - ${end}`
+    }
+
 
 }

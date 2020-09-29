@@ -71,12 +71,17 @@ export default class ProjectRepository {
         }
     }
 
-    static showTag(tag) {
-        this.filterTags.set(tag, true)
-    }
+    static filterTag(tag, enabled) {
 
-    static hideTag(tag) {
-        this.filterTags.set(tag, false)
+        console.log(`\tSetting ${tag} in repo to ${enabled}`)
+
+
+        this.filterTags.set(tag, enabled)
+
+        if(tag === "Android (Java/Kotlin)") {
+            this.filterTags.set("Java", enabled)
+            this.filterTags.set("Kotlin", enabled)
+        }
     }
 
     static populate() {
