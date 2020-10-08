@@ -1,0 +1,68 @@
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#Section {
+    width: 80vw;
+
+    margin: 0 auto;
+
+    background-color: #61dafb;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+    EducationBlobs
+*/
+
+.EducationBlob {
+    background-color: #575757;
+    text-align: left;
+    margin-bottom: 24px;
+    padding: 8px;
+}
+
+.EducationBlob h1 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.EducationBlob h2 {
+    border-bottom: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #ab000e;
+
+    margin: 0;
+    padding: 0;
+}
+
+.EducationBlob img {
+    align-self: flex-start;
+    object-fit: contain;
+
+    width: 100px;
+    border-radius: 50px;
+}
+
+#BlobImage {
+    display: flex;
+    float: left;
+    padding-right: 16px;
+}
+
+#BlobContent {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+

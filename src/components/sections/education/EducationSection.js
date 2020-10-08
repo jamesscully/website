@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import EducationBlob from "./EducationBlob";
+import './Education.css'
 
 
 export class EducationSection extends Component {
@@ -7,8 +8,8 @@ export class EducationSection extends Component {
         return (
             <div id={"Section"}>
 
-                Blob:
-            <EducationBlob/>
+            <EducationBlob id={"university"}/>
+            <EducationBlob id={"college"}/>
 
             </div>
         )

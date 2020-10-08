@@ -128,6 +128,10 @@ export default class App extends Component {
                     }
                 </div>
 
+                <span id={"ProjectsPreamble"}>
+                    <h1>Education</h1>
+                </span>
+
                 <EducationSection/>
 
             </div>
