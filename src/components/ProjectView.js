@@ -11,7 +11,7 @@ export default class ProjectView extends React.Component {
             id: props.id
         }
 
-        console.log(`Retrieving project for ${props.id}`)
+
         this.project = ProjectRepository.getProjectById(this.state.id)
     }
 

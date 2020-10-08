@@ -8,6 +8,7 @@ import LinkedInImg from './res/img/LI-In-Bug120px.png'
 import Avatar from './res/img/avatar_placeholder_400px.png'
 
 import NavBar from "./components/NavBar";
+import {EducationSection} from "./components/sections/education/EducationSection";
 
 var HashMap = require('hashmap')
 
@@ -38,7 +39,7 @@ export default class App extends Component {
 
         newMap.set(tag, enabled)
 
-        console.log(`New filters: ${newMap.entries()} `)
+
 
         this.setState({
             filter: newMap
@@ -46,7 +47,6 @@ export default class App extends Component {
     }
 
     render() {
-        console.log("Rendering")
         return (
             <div className="App">
                 <NavBar/>
@@ -98,7 +98,6 @@ export default class App extends Component {
                         // for each tag, add button
                         this.state.allTags.map((tag) => {
                             let filtered = this.state.filter.get(tag)
-                            console.log(`Creating ${tag} as ${filtered}`)
                             return (
                                 <Checkbutton tag={tag} checked={filtered} callback={(enabled) => {
                                     this.filterTag(tag, enabled)
@@ -128,7 +127,11 @@ export default class App extends Component {
                         })
                     }
                 </div>
+
+                <EducationSection/>
+
             </div>
+
         );
     }
 }

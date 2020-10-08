@@ -1,5 +1,5 @@
 import Project from './models/Project.js'
-import {projectsData} from './projects'
+import {projectsData} from './data/projects'
 
 var HashMap = require('hashmap')
 
@@ -73,7 +73,7 @@ export default class ProjectRepository {
 
     static filterTag(tag, enabled) {
 
-        console.log(`\tSetting ${tag} in repo to ${enabled}`)
+
 
 
         this.filterTags.set(tag, enabled)

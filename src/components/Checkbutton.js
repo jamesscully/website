@@ -28,14 +28,14 @@ export default class Checkbutton extends React.Component {
             checked: enabled
         })
 
-        console.log(`Setting ${this.getText()} to ${enabled}`)
+
 
         ProjectRepository.filterTag(this.getText(), enabled)
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("Prev props:")
-        console.log(prevProps)
+
+
 
         if(prevProps.checked !== this.props.checked) {
             this.setState({checked: this.props.checked});
@@ -69,7 +69,7 @@ export default class Checkbutton extends React.Component {
             image = "\u2716"
         }
 
-        console.log(`Rendering ${this.getText()} as ${this.isChecked()}`)
+
 
         return (
             <div key={this.getText()} style={mStyle} className={"check-button"} onClick={() => {
