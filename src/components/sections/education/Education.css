@@ -1,15 +1,7 @@
 
-h1 {
-    margin: 0;
-    padding: 0;
-}
-
 #Section {
     width: 80vw;
-
     margin: 0 auto;
-
-    background-color: #61dafb;
 
     display: flex;
     flex-direction: column;
@@ -21,11 +13,11 @@ h1 {
 */
 
 .EducationBlob {
-    background-color: #575757;
     text-align: left;
     margin-bottom: 24px;
-    padding: 8px;
+
 }
+
 
 .EducationBlob h1 {
     text-align: left;
@@ -59,8 +51,39 @@ h1 {
 #BlobContent {
     display: flex;
     flex-direction: column;
+
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+
 }
 
+/*
+    Content IDs
+*/
+
+#institution {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+#date {
+    font-size: 16pt;
+    font-weight: normal;
+    float: right;
+}
+
+#course {
+    font-size: 18pt;
+}
+
+#grade {
+    font-size: 16pt;
+}
+
+#button_expand {
+
+}
 
 
 

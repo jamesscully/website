@@ -1,7 +1,7 @@
 export const educationData = {
     "university": {
         "image": "res/img/android.png",
-        "date": "2017 - 2020",
+        "date": "2020",
         "name": "University of Nottingham",
         "course": "BSc Computer Science",
         "grade": "2:1 with Honours",
@@ -25,7 +25,7 @@ export const educationData = {
 
     "college": {
         "image": "res/img/android.png",
-        "date": "2015 - 2017",
+        "date": "2017",
         "name": "Boston College UK",
         "course": "Extended National Diploma in Software Development",
         "grade": "D*D*D*",

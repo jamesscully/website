@@ -30,6 +30,16 @@ a:active {
   color: var(--color-primary-accent)
 }
 
+
+h1 {
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 32pt;
+  text-align: center;
+}
+
+
 .App-header {
   /*background-color: var(--color-primary);*/
   /*min-height: 15vh;*/
@@ -46,7 +56,7 @@ a:active {
 
   padding-top: 60px;
   padding-bottom: 60px;
-  
+
   margin-bottom: 20px;
   background-color: var(--color-primary-accent);
   text-align: center;
@@ -162,14 +172,6 @@ a:active {
 }
 
 
-h1 {
-  margin: 0 auto;
-  padding-bottom: 15px;
-  font-size: 32pt;
-  text-align: center;
-
-}
-
 #CheckbuttonContainer {
   background-color: var(--color-primary-dark);
   text-align: center;
@@ -188,7 +190,7 @@ h1 {
 
   margin: 0 auto;
 
-  width: 75vw;
+  width: 80vw;
 
   min-height: 50vh;
 }
