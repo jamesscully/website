@@ -1,0 +1,15 @@
+#navbar {
+    height: 7vh;
+    width: 100vw;
+}
+
+.navbutton {
+    width: 10%;
+    height: 7vh;
+    background-color: #212121;
+    float: right;
+
+    text-align: center;
+    line-height: 7vh;
+    cursor: pointer;
+}

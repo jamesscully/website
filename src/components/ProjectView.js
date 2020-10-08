@@ -33,50 +33,44 @@ export default class ProjectView extends React.Component {
 
         let image = <img src={this.project.imageURL} alt={String.fromCodePoint(this.project.imageText)}/>
 
-        const spacer = { height: "10px" }
-
         // alias to remove this. keyword
         const project = this.project
 
         return(
-            <table key={project.title} id="project">
-                <tbody>
-                <tr>
-                    <th colSpan="2" id="title"> {project.title} ({project.getTimeSpan()})
-                        <a id="linkToGitHub"
-                           href={project.github}
-                           target="_blank"
-                           rel={"noopener noreferrer"}>
-                            Source
-                            <img src={SmallGitHub}/>
-                        </a>
+            <div id={"project"} className={"container"}>
+                <div id={"title"} className={"item"}>
+                    <span>
+                        {project.title} ({project.getTimeSpan()})
+                    </span>
 
+                    <a  id="linkToGitHub"
+                        href={project.github}
+                        target="_blank"
+                        rel={"noopener noreferrer"}>
+                        <span>Source</span>
+                        <img src={SmallGitHub} alt={"Source"}/>
+                    </a>
 
+                    <br/>
 
-                        <br/>
+                    <p id="stack">
+                        {this.stackString()}
+                    </p>
+                </div>
 
-                        <p id="stack">
-                            {this.stackString()}
-                        </p>
-                    </th>
-                </tr>
+                <div id={"description_container"}>
+                     <div id="image" className={"item"}>
+                         {image}
+                     </div>
+                     <div id={"description"} className={"item"}>
+                         <p>
+                             {project.description}
+                         </p>
+                     </div>
+                </div>
 
-                <tr style={spacer}/>
-
-                <tr>
-                    <td id="image">
-                        {image}
-                    </td>
-                    <td id="description">
-                        <p>
-                            {project.description}
-                        </p>
-                    </td>
-                </tr>
-
-                </tbody>
-            </table>
-
+                <div className={"check-button float-right flex-end"}> Read more </div>
+            </div>
         )
     }
 }

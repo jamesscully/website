@@ -5,6 +5,9 @@ import ProjectView from "./components/ProjectView";
 import ProjectRepository from './ProjectRepository'
 import GitHubImg from './res/img/GitHub-Mark-Light-120px-plus.png'
 import LinkedInImg from './res/img/LI-In-Bug120px.png'
+import Avatar from './res/img/avatar_placeholder_400px.png'
+
+import NavBar from "./components/NavBar";
 
 var HashMap = require('hashmap')
 
@@ -33,16 +36,6 @@ export default class App extends Component {
 
         let newMap = this.state.filter
 
-        if(tag === "Android") {
-            // this.filterTag("Java", enabled)
-            // this.filterTag("Kotlin", enabled)
-
-            newMap.set("Java", enabled)
-            newMap.set("Kotlin", enabled)
-
-            console.log(`Setting Java/Kotlin/Android to ${enabled}`)
-        }
-
         newMap.set(tag, enabled)
 
         console.log(`New filters: ${newMap.entries()} `)
@@ -55,44 +48,52 @@ export default class App extends Component {
     render() {
         console.log("Rendering")
         return (
-
             <div className="App">
+                <NavBar/>
                 <header className="App-header">
                     Greetings! I'm
-
                     <h1>James Scully</h1>
 
-                    <div className="socialBtn">
-                        <a href="https://www.github.com/jamesscully/" target="_blank" rel={"noopener noreferrer"}>
-                            <img src={GitHubImg} alt={"GitHub"}/>
-                        </a>
-                    </div>
-
-
-                    <a href="https://www.linkedin.com/in/james-scully-852b8797/" target="_blank" rel={"noopener noreferrer"}>
+                    <div>
                         <div className="socialBtn">
-                            <img src={LinkedInImg} alt={"LinkedIn"}/>
+                            <a href="https://www.github.com/jamesscully/" target="_blank" rel={"noopener noreferrer"}>
+                                <img src={GitHubImg} alt={"GitHub"}/>
+                            </a>
                         </div>
-                    </a>
+
+                        <div className="socialBtn">
+                            <a href="https://www.linkedin.com/in/james-scully-852b8797/" target="_blank" rel={"noopener noreferrer"}>
+                                <img src={LinkedInImg} alt={"LinkedIn"}/>
+                            </a>
+                        </div>
+                    </div>
                 </header>
 
 
-                <span id={"IntroText"}>
-                    <h1>A bit about me</h1>
+                <h1>A bit about me</h1>
 
+                <div id={"IntroContainer"}>
+                    <div id={"IntroText"}>
+                        <p>
+                            I'm a graduate from the University of Nottingham, with a BSc (2:1) in Computer Science
+                            <br/>
+                            I particularly enjoy working on software that makes life easier, or that keeps me up at night!
+                            <br/>
+                            <br/>
+                            I typically work with Android for real-world applications, but enjoy a variety of languages.
+                        </p>
+                    </div>
+                    <img src={Avatar} alt={""}/>
 
+                </div>
 
-                </span>
 
                 <span id={"ProjectsPreamble"}>
                     <h1>Projects</h1>
-                    If you've found yourself here, you're likely looking for what I've done. <br/>
-                    Here it is. You can filter by the tags below for relevance.
                 </span>
 
-
-
                 <div id={"CheckbuttonContainer"}>
+                    <b>Filter by tag: <br/> <br/></b>
                     {
                         // for each tag, add button
                         this.state.allTags.map((tag) => {
@@ -114,10 +115,10 @@ export default class App extends Component {
 
                             // we only need 1 tag to match for the filter
                             for(const index in project.tags) {
-
                                 // if we've hit a valid tag, we don't need to search anymore
                                 if(valid)
                                     break
+
                                 const tag = project.tags[index]
                                 valid = this.state.filter.get(tag)
                             }

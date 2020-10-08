@@ -45,7 +45,8 @@ export const projectsData = [
         "imageText": "",
         "startDate": 2016,
         "endDate": 2017,
-        "description": "Created to illustrate how vertices and shapes are drawn in a 3D context, used instead of Blender.",
+        "description": "Created in college to illustrate how vertices and shapes are drawn at the API level, rather than using Blender.",
+        // "description": "Created to illustrate how vertices and shapes are drawn in a 3D context, used instead of Blender.",
         "tags": ["C++"],
         "stack": ["OpenGL", "C++"],
         "github": "https://github.com/jamesscully/OpenGL-Vertex-Demo"

@@ -13,6 +13,22 @@ body {
   background-color: var(--color-bg);
 }
 
+a:link {
+  color: #fff;
+  text-underline-offset: 5px
+}
+
+a:visited {
+  color: #fff
+}
+
+a:hover {
+  color: var(--color-secondary-light)
+}
+
+a:active {
+  color: var(--color-primary-accent)
+}
 
 .App-header {
   /*background-color: var(--color-primary);*/
@@ -24,25 +40,63 @@ body {
   /*font-size: calc(10px + 2vmin);*/
   /*color: white;*/
 
+  display: flex;
+  flex-direction: column;
+
+
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-top: 60px;
+  
   margin-bottom: 20px;
   background-color: var(--color-primary-accent);
   text-align: center;
   user-select: none;
+
   height: 20vh
 }
 
-button {
 
+#IntroContainer {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: row;
+
+  border-radius: 10px;
+  padding: 20px;
+
+  width: 50vw;
+  margin: 0 auto 20px;
+}
+
+#IntroContainer img {
+  object-fit: cover;
+  height: 100%;
+  width: 250px;
 }
 
 #IntroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+
+  margin-right: 20px;
+
+  /*background-color: var(--color-primary);*/
+}
+
+#IntroContainer img {
+  object-fit: cover;
+  height: 100%;
+  width: 250px;
+}
+
+#IntroContainer h1 {
+
+}
+
+#IntroText p {
   text-align: center;
-  width: 100%;
-  display: block;
-  margin-bottom: 20px;
 }
 
 #ProjectsPreamble {
@@ -72,31 +126,22 @@ button {
   float: left;
 }
 
-a:link {
-  color: #fff;
-  text-underline-offset: 5px
+
+
+.flex-end {
+  align-self: flex-end;
 }
-
-a:visited {
-  color: #fff
-}
-
-a:hover {
-  color: var(--color-secondary-light)
-}
-
-a:active {
-  color: var(--color-primary-accent)
-}
-
-
 
 .App-link {
   color: #61dafb;
 }
 
+.float-right {
+  float: right;
+}
+
 .check-button {
-  background-color: red;
+  background-color: #575757;
   border-radius: 50px;
   text-align: center;
   height: 40px;
@@ -106,26 +151,24 @@ a:active {
   margin-left: 5px;
   margin-right: 5px;
 
-  padding-left: 10px;
-  padding-right: 10px;
-
   white-space: nowrap;
   display: inline-block;
   min-height: 1em;
   font-weight: bold;
   font-size: 15pt;
+
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 
 h1 {
   margin: 0 auto;
   padding-bottom: 15px;
-  font-size: 32pt
+  font-size: 32pt;
+  text-align: center;
+
 }
-
-
-
-
 
 #CheckbuttonContainer {
   background-color: var(--color-primary-dark);
@@ -137,7 +180,17 @@ h1 {
 
 #ProjectContainer {
   padding-top: 28px;
-  text-align: center;
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  margin: 0 auto;
+
+  width: 75vw;
+
+  min-height: 50vh;
 }
 
 
