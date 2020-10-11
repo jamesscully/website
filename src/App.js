@@ -3,13 +3,10 @@ import './App.css';
 import Checkbutton from "./components/Checkbutton";
 import ProjectView from "./components/ProjectView";
 import ProjectRepository from './ProjectRepository'
-import GitHubImg from './res/img/GitHub-Mark-Light-120px-plus.png'
-import LinkedInImg from './res/img/LI-In-Bug120px.png'
+import GitHubImg from './res/img/github_logo_120px.png'
+import LinkedInImg from './res/img/linkedin_logo.png'
 import Avatar from './res/img/avatar_placeholder_400px.png'
-
-import NavBar from "./components/NavBar";
 import {EducationSection} from "./components/sections/education/EducationSection";
-import Card from "./components/Card";
 
 const images = require.context('./res/img/', true);
 

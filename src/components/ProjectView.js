@@ -1,7 +1,8 @@
 import * as React from "react";
 import './ProjectView.css'
 import ProjectRepository from "../ProjectRepository";
-import SmallGitHub from "../res/img/GitHub-Mark-Light-32px.png"
+import SmallGitHub from "../res/img/github_logo_32px.png"
+
 export default class ProjectView extends React.Component {
 
     constructor(props) {

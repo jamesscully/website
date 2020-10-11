@@ -1,6 +1,5 @@
-import React, {Component, useState, useCallback} from 'react'
+import React, {Component} from 'react'
 import {EducationData} from '../../../data/education'
-import {Spring, Transition, animated, interpolate, config} from 'react-spring/renderprops'
 import './Education.css'
 
 const images = require.context('../../../res/img/edu', true);

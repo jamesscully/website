@@ -1,6 +1,6 @@
 export const EducationData = {
     "university": {
-        "image": "res/img/android.png",
+        "image": "res/img/android_logo.png",
         "date": "2020",
         "name": "University of Nottingham",
         "course": "BSc Computer Science",
@@ -24,7 +24,7 @@ export const EducationData = {
     },
 
     "college": {
-        "image": "res/img/android.png",
+        "image": "res/img/android_logo.png",
         "date": "2017",
         "name": "Boston College UK",
         "course": "Extended National Diploma in Software Development",
