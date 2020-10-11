@@ -2,7 +2,7 @@
     --color-bg: #212121;
     --color-primary: rgb(42, 42, 42);
     --color-primary-dark: #272727;
-    --color-primary-accent: #e53935;
+    --color-primary-accent: #ba1b1b;
     --color-secondary: #e53935;
     --color-secondary-light: #ff6d60;
     --color-secondary-dark: #ab000e;
@@ -79,7 +79,7 @@
 
     height: 100px;
     font-size: 80px;
-    border-radius: 10%;
+    border-radius: 25px;
     background-color: var(--color-primary-dark);
     display: block;
     padding-top: 0;

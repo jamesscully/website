@@ -60,6 +60,8 @@ export default class Checkbutton extends React.Component {
         // use str for starters
         let image = ""
 
+
+
         // change on/off stuff here
         if (this.state.checked) {
             mStyle.backgroundColor = "green"

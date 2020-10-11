@@ -34,12 +34,9 @@ export default class App extends Component {
     }
 
     filterTag(tag, enabled) {
-
         let newMap = this.state.filter
 
         newMap.set(tag, enabled)
-
-
 
         this.setState({
             filter: newMap
@@ -49,7 +46,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="App">
-                <NavBar/>
+                {/*<NavBar/>*/}
                 <header className="App-header">
                     Greetings! I'm
                     <h1>James Scully</h1>
@@ -69,8 +66,9 @@ export default class App extends Component {
                     </div>
                 </header>
 
-
-                <h1>A bit about me</h1>
+                <div className={"section"}>
+                    A bit about me
+                </div>
 
                 <div id={"IntroContainer"}>
                     <div id={"IntroText"}>
@@ -89,7 +87,7 @@ export default class App extends Component {
 
 
                 <span id={"ProjectsPreamble"}>
-                    <h1>Projects</h1>
+                    <div className={"section"}>Projects</div>
                 </span>
 
                 <div id={"CheckbuttonContainer"}>
@@ -123,16 +121,22 @@ export default class App extends Component {
                             }
 
                             // return our view if valid, else hide
-                            return (valid ? <ProjectView key={project.id} id={project.id} /> : null)
+                            return (valid && <ProjectView key={project.id} id={project.id} />)
                         })
                     }
                 </div>
 
                 <span id={"ProjectsPreamble"}>
-                    <h1>Education</h1>
+                    <div className={"section"}>
+                        Education
+                    </div>
                 </span>
 
                 <EducationSection/>
+
+                <div className={"section"}>
+                    Bits and Bobs
+                </div>
 
             </div>
 

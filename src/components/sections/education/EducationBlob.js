@@ -1,10 +1,11 @@
-import React, {Component} from 'react'
+import React, {Component, useState, useCallback} from 'react'
 import {educationData} from '../../../data/education'
+import {Spring, Transition, animated, interpolate, config} from 'react-spring/renderprops'
 import './Education.css'
 
 const images = require.context('../../../res/img/edu', true);
 
-export default class EducationBlob extends React.Component {
+export default class EducationBlob extends Component {
     constructor(props) {
         super(props);
 
@@ -16,7 +17,6 @@ export default class EducationBlob extends React.Component {
     }
 
     render() {
-
         let object = educationData[this.state.key]
         let image = images(`./${this.state.key}.png`)
         let date = object['date']
@@ -25,8 +25,16 @@ export default class EducationBlob extends React.Component {
         let course = object['course']
         let description = object['description']
 
+        // update text for expansion of blob
+        let buttonText = "Expand"
+        if(this.state.expanded) {
+            buttonText = "Collapse"
+        }
+
         return(
             <div className={"EducationBlob"}>
+
+
                 <div id={"BlobImage"}>
                     <img src={image} alt={"Logo"}/>
                 </div>
@@ -62,7 +70,9 @@ export default class EducationBlob extends React.Component {
                         this.setState({
                             expanded: !this.state.expanded
                         })
-                    }}>Read More</div>
+                    }}>
+                        {buttonText}
+                    </div>
                 </div>
 
 

@@ -31,9 +31,8 @@ a:active {
 }
 
 
-h1 {
+.App-header h1 {
   margin: 0 auto;
-  margin-top: 24px;
   margin-bottom: 24px;
   font-size: 32pt;
   text-align: center;
@@ -41,18 +40,8 @@ h1 {
 
 
 .App-header {
-  /*background-color: var(--color-primary);*/
-  /*min-height: 15vh;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  /*font-size: calc(10px + 2vmin);*/
-  /*color: white;*/
-
   display: flex;
   flex-direction: column;
-
 
   padding-top: 60px;
   padding-bottom: 60px;
@@ -63,6 +52,16 @@ h1 {
   user-select: none;
 
   height: 20vh
+}
+
+.section {
+  font-size: 32pt;
+  font-weight: bolder;
+  width: 100vw;
+  text-align: center;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 
@@ -99,10 +98,6 @@ h1 {
   object-fit: cover;
   height: 100%;
   width: 250px;
-}
-
-#IntroContainer h1 {
-
 }
 
 #IntroText p {
