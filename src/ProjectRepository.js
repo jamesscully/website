@@ -1,5 +1,5 @@
 import Project from './models/Project.js'
-import {projectsData} from './data/projects'
+import {ProjectsData} from './data/projects'
 
 var HashMap = require('hashmap')
 
@@ -33,8 +33,8 @@ export default class ProjectRepository {
         })
 
         // add all projects to map + array
-        for(const x in projectsData) {
-            const project = new Project(null, projectsData[x])
+        for(const x in ProjectsData) {
+            const project = new Project(null, ProjectsData[x])
 
             this.projectsMap.set(project.id, project)
             projects.push(project)

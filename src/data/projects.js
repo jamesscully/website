@@ -1,4 +1,4 @@
-export const projectsData = [
+export const ProjectsData = [
     // {
     //     "id": "null",
     //     "title": "null",

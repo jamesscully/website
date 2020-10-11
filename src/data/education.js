@@ -1,4 +1,4 @@
-export const educationData = {
+export const EducationData = {
     "university": {
         "image": "res/img/android.png",
         "date": "2020",

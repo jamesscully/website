@@ -1,5 +1,5 @@
 import React, {Component, useState, useCallback} from 'react'
-import {educationData} from '../../../data/education'
+import {EducationData} from '../../../data/education'
 import {Spring, Transition, animated, interpolate, config} from 'react-spring/renderprops'
 import './Education.css'
 
@@ -17,7 +17,7 @@ export default class EducationBlob extends Component {
     }
 
     render() {
-        let object = educationData[this.state.key]
+        let object = EducationData[this.state.key]
         let image = images(`./${this.state.key}.png`)
         let date = object['date']
         let name = object['name']
