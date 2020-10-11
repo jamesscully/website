@@ -9,6 +9,9 @@ import Avatar from './res/img/avatar_placeholder_400px.png'
 
 import NavBar from "./components/NavBar";
 import {EducationSection} from "./components/sections/education/EducationSection";
+import Card from "./components/Card";
+
+const images = require.context('./res/img/', true);
 
 var HashMap = require('hashmap')
 
@@ -94,10 +97,10 @@ export default class App extends Component {
                     <b>Filter by tag: <br/> <br/></b>
                     {
                         // for each tag, add button
-                        this.state.allTags.map((tag) => {
+                        this.state.allTags.map((tag, index) => {
                             let filtered = this.state.filter.get(tag)
                             return (
-                                <Checkbutton tag={tag} checked={filtered} callback={(enabled) => {
+                                <Checkbutton key={index} tag={tag} checked={filtered} callback={(enabled) => {
                                     this.filterTag(tag, enabled)
                                 }} />
                             );
