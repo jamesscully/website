@@ -35,10 +35,6 @@ export default class EducationBlob extends Component {
             buttonText = "Collapse"
         }
 
-        console.log("Rendering expansion")
-
-        const { expanded } = this.state
-
         const text = description.split('\n\n')
 
         return(
@@ -46,7 +42,6 @@ export default class EducationBlob extends Component {
                 <div id={"BlobImage"}>
                     <img src={image} alt={"Logo"}/>
                 </div>
-
 
                 <div className={"BlobContent"}>
 
@@ -66,7 +61,7 @@ export default class EducationBlob extends Component {
                     </span>
                     <div className="Blobitem">
                         <Spring
-                            config={{ tension: 2000, friction: 100, precision: 1 }}
+                            config={{ tension: 2500, friction: 200, precision: 1, clamp: true }}
                             from={{ height: this.state.expanded ? 0 : 'auto' }}
                             to={{ height: this.state.expanded ? 'auto' : 0}}>
                             {
@@ -85,15 +80,10 @@ export default class EducationBlob extends Component {
                         </Spring>
                     </div>
 
-
-
-
                     <div id="button_expand" className={'check-button'} onClick={this.onToggle}>
                         {buttonText}
                     </div>
                 </div>
-
-
             </div>
         );
     }

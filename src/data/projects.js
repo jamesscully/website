@@ -28,7 +28,7 @@ export const ProjectsData = [
     {
         "id": "openglbeach",
         "title": "OpenGL Beach Scene",
-        "imageURL": "",
+        "imageURL": "https://i.imgur.com/Cj3XUvS.png",
         "imageText": "",
         "startDate": 2020,
         "endDate": 2020,
@@ -55,7 +55,7 @@ export const ProjectsData = [
     {
         "id": "hendrix",
         "title": "Hendrix Music App",
-        "imageURL": "https://raw.githubusercontent.com/jamesscully/Hendrix/master/app/src/main/ic_launcher-web.png",
+        "imageURL": "https://i.imgur.com/gxiXfcg.png",
         "imageText": "",
         "startDate": 2019,
         "endDate": 2020,
@@ -67,8 +67,8 @@ export const ProjectsData = [
     {
         "id": "dexteritate",
         "title": "Dexteritate",
-        "imageURL": "",
-        "imageText": "0x1F37E",
+        "imageURL": "https://i.imgur.com/Vn6hTjc.png",
+        "imageText": "",
         "startDate": 2020,
         "endDate": 2020,
         "description": "Dexterity-based video game used to show game design concepts, such as increasing difficulty, using core mechanics in new ways to achieve an objective and an aesthetic.",
