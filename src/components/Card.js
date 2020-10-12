@@ -1,6 +1,7 @@
 import React from 'react'
-
+import {animated} from "react-spring";
 import './Card.css'
+import {Spring, config} from "react-spring/renderprops-universal";
 
 export default class Card extends React.Component {
 
@@ -9,7 +10,8 @@ export default class Card extends React.Component {
 
         this.state = {
             icon: props.img,
-            text: props.text
+            text: props.text,
+            style: props.style
         }
     }
 
@@ -18,16 +20,31 @@ export default class Card extends React.Component {
         console.log(`Icon = ${this.state.icon}`)
 
         return(
-            <div className="icon">
-                <img src={this.state.icon} alt={"Test"}/>
-                    <div id={"textArea"}>
-                        {
-                            this.state.text.split('\n').map((item, i) => {
+
+            <Spring
+                config={config.molasses}
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}>
+                {props =>
+                    <animated.div className="icon" style={props}>
+                        <img src={this.state.icon} alt={"Test"}/>
+                        <animated.div id={"textArea"} style={props}>
+                            {
+                                this.state.text.split('\n').map((item, i) => {
                                     return <p key={i}> {item} </p>
-                            })
-                        }
-                    </div>
-            </div>
+                                })
+                            }
+                        </animated.div>
+                    </animated.div>
+                }
+            </Spring>
+
+
+
+
+
+
+
         )
     }
 }

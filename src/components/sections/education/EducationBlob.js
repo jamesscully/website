@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {EducationData} from '../../../data/education'
 import './Education.css'
+import {Spring, config} from "react-spring/renderprops";
+import {animated} from "react-spring/renderprops";
 
 const images = require.context('../../../res/img/edu', true);
 
@@ -9,15 +11,18 @@ export default class EducationBlob extends Component {
         super(props);
 
         this.state = {
-            key: props.id,
+            identifier: props.id,
             expanded: false,
             modules: false
         }
     }
 
+    onToggle = () => this.setState(state => ({expanded: !state.expanded}))
+
+
     render() {
-        let object = EducationData[this.state.key]
-        let image = images(`./${this.state.key}.png`)
+        let object = EducationData[this.state.identifier]
+        let image = images(`./${this.state.identifier}.png`)
         let date = object['date']
         let name = object['name']
         let grade = object['grade']
@@ -30,15 +35,20 @@ export default class EducationBlob extends Component {
             buttonText = "Collapse"
         }
 
+        console.log("Rendering expansion")
+
+        const { expanded } = this.state
+
+        const text = description.split('\n\n')
+
         return(
             <div className={"EducationBlob"}>
-
-
                 <div id={"BlobImage"}>
                     <img src={image} alt={"Logo"}/>
                 </div>
 
-                <div id={"BlobContent"}>
+
+                <div className={"BlobContent"}>
 
                     <span id={"institution"}>
                         {name}
@@ -54,22 +64,31 @@ export default class EducationBlob extends Component {
                         {course}, <br/>
                         <span id={"grade"}> {grade} </span>
                     </span>
-                    <p>
-                        {
-                            description.split('\n\n').map((item, i) => {
-                                if(this.state.expanded)
-                                    return <p key={i}> {item} </p>
-                                else
-                                    return null
-                            })
-                        }
-                    </p>
+                    <div className="Blobitem">
+                        <Spring
+                            config={{ tension: 2000, friction: 100, precision: 1 }}
+                            from={{ height: this.state.expanded ? 0 : 'auto' }}
+                            to={{ height: this.state.expanded ? 'auto' : 0}}>
+                            {
+                                props => (
+                                    <animated.div className={"item"} style={props}>
+                                        {
+                                            text.map((item, i) => {
+                                                return <p key={i} > {item} </p>
+                                            })
+                                        }
+                                    </animated.div>
+                                )
 
-                    <div id="button_expand" className={'check-button'} onClick={() => {
-                        this.setState({
-                            expanded: !this.state.expanded
-                        })
-                    }}>
+                            }
+
+                        </Spring>
+                    </div>
+
+
+
+
+                    <div id="button_expand" className={'check-button'} onClick={this.onToggle}>
                         {buttonText}
                     </div>
                 </div>

@@ -1,5 +1,7 @@
 import * as React from "react";
 import ProjectRepository from "../ProjectRepository";
+import {Spring, config} from "react-spring/renderprops";
+import {animated} from "react-spring";
 
 export default class Checkbutton extends React.Component {
 
@@ -34,9 +36,6 @@ export default class Checkbutton extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-
-
-
         if(prevProps.checked !== this.props.checked) {
             this.setState({checked: this.props.checked});
         }
@@ -51,7 +50,15 @@ export default class Checkbutton extends React.Component {
         return this.state.checked
     }
 
+    onToggle = () => {
+        this.toggle()
+        // send our state back to App for filtering
+        this.state.props.callback(!this.state.checked)
+    }
+
     render() {
+
+        const {checked} = this.state
 
         let mStyle = {
             backgroundColor: "red"
@@ -63,7 +70,7 @@ export default class Checkbutton extends React.Component {
 
 
         // change on/off stuff here
-        if (this.state.checked) {
+        if (checked) {
             mStyle.backgroundColor = "green"
             image = "\u2714"
         } else {
@@ -74,14 +81,23 @@ export default class Checkbutton extends React.Component {
 
 
         return (
-            <div key={this.getText()} style={mStyle} className={"check-button"} onClick={() => {
-                this.toggle()
-                // send our state back to App for filtering
-                this.state.props.callback(!this.state.checked)
+            <Spring
+                config={config.default}
+                from={{backgroundColor: checked ? "red" : "green"}}
+                to={{backgroundColor: checked ? "green" : "red"}}
+            >
+            {
+                props => (
+                    <animated.div key={this.getText()} style={props} className={"check-button"} onClick={this.onToggle}>
+                        {image} {this.state.text}
+
+                        {
+                            console.log(props)
+                        }
+                    </animated.div>
+                )
             }
-            }>
-                {image} {this.state.text}
-            </div>
+            </Spring>
         );
     }
 }

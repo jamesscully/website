@@ -47,7 +47,7 @@
     padding-right: 16px;
 }
 
-#BlobContent {
+.BlobContent {
     display: flex;
     flex-direction: column;
 
@@ -55,6 +55,17 @@
     border-radius: 8px;
     background-color: var(--color-primary);
 
+}
+
+.item {
+    width: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+.item p {
+    margin: 0;
+    padding: 10px;
 }
 
 /*

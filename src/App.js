@@ -8,6 +8,9 @@ import LinkedInImg from './res/img/linkedin_logo.png'
 import Avatar from './res/img/avatar_placeholder_400px.png'
 import {EducationSection} from "./components/sections/education/EducationSection";
 
+import {Transition} from "react-spring/renderprops-universal";
+import Card from "./components/Card";
+
 const images = require.context('./res/img/', true);
 
 var HashMap = require('hashmap')
@@ -44,6 +47,8 @@ export default class App extends Component {
     }
 
     render() {
+
+
         return (
             <div className="App">
                 {/*<NavBar/>*/}
@@ -66,6 +71,7 @@ export default class App extends Component {
                     </div>
                 </header>
 
+
                 <div className={"section"}>
                     A bit about me
                 </div>
@@ -82,13 +88,16 @@ export default class App extends Component {
                         </p>
                     </div>
                     <img src={Avatar} alt={""}/>
-
                 </div>
 
+                <Card img={images('./tux.png')} text={"Linux Enthusiast"}/>
+                <Card img={images('./android_logo.png')} text={"Android Developer [Java/Kotlin]"}/>
+                <Card img={images('./uni.png')} text={"BSc Comp Sci graduate"}/>
 
                 <span id={"ProjectsPreamble"}>
                     <div className={"section"}>Projects</div>
                 </span>
+
 
                 <div id={"CheckbuttonContainer"}>
                     <b>Filter by tag: <br/> <br/></b>
