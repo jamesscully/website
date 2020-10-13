@@ -6,6 +6,7 @@ import {animated} from "react-spring/renderprops";
 
 const images = require.context('../../../res/img/edu', true);
 
+
 export default class EducationBlob extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +19,6 @@ export default class EducationBlob extends Component {
     }
 
     onToggle = () => this.setState(state => ({expanded: !state.expanded}))
-
 
     render() {
         let object = EducationData[this.state.identifier]
@@ -44,43 +44,39 @@ export default class EducationBlob extends Component {
                 </div>
 
                 <div className={"BlobContent"}>
-
                     <span id={"institution"}>
                         {name}
-
                         <span id={"date"}>
                             Graduated {date}
                         </span>
                     </span>
 
-
-
                     <span id={"course"}>
                         {course}, <br/>
                         <span id={"grade"}> {grade} </span>
                     </span>
-                    <div className="Blobitem">
-                        <Spring
-                            config={{ tension: 2500, friction: 200, precision: 1, clamp: true }}
-                            from={{ height: this.state.expanded ? 0 : 'auto' }}
-                            to={{ height: this.state.expanded ? 'auto' : 0}}>
-                            {
-                                props => (
-                                    <animated.div className={"item"} style={props}>
-                                        {
-                                            text.map((item, i) => {
-                                                return <p key={i} > {item} </p>
-                                            })
-                                        }
-                                    </animated.div>
-                                )
 
-                            }
+                    <Spring
+                        native
+                        force
+                        config={{ tension: 2500, friction: 200, precision: 1, clamp: true }}
+                        from={{ height: this.state.expanded ? 0 : 'auto' }}
+                        to={{ height: this.state.expanded ? 'auto' : 0}}>
+                        {
+                            props => (
+                                <animated.div className={"item"} style={props}>
+                                    {
+                                        text.map((item, i) => {
+                                            return <p key={i} > {item} </p>
+                                        })
+                                    }
+                                </animated.div>
+                            )
+                        }
+                    </Spring>
 
-                        </Spring>
-                    </div>
 
-                    <div id="button_expand" className={'check-button'} onClick={this.onToggle}>
+                    <div id="button_expand" className={'check-button float-right flex-end'} onClick={this.onToggle}>
                         {buttonText}
                     </div>
                 </div>

@@ -71,7 +71,6 @@ export default class App extends Component {
                     </div>
                 </header>
 
-
                 <div className={"section"}>
                     A bit about me
                 </div>
@@ -90,14 +89,13 @@ export default class App extends Component {
                     <img src={Avatar} alt={""}/>
                 </div>
 
-                <Card img={images('./tux.png')} text={"Linux Enthusiast"}/>
-                <Card img={images('./android_logo.png')} text={"Android Developer [Java/Kotlin]"}/>
-                <Card img={images('./uni.png')} text={"BSc Comp Sci graduate"}/>
+                {/*<Card img={images('./tux.png')} text={"Linux Enthusiast"}/>*/}
+                {/*<Card img={images('./android_logo.png')} text={"Android Developer [Java/Kotlin]"}/>*/}
+                {/*<Card img={images('./uni.png')} text={"BSc Comp Sci graduate"}/>*/}
 
                 <span id={"ProjectsPreamble"}>
                     <div className={"section"}>Projects</div>
                 </span>
-
 
                 <div id={"CheckbuttonContainer"}>
                     <b>Filter by tag: <br/> <br/></b>
