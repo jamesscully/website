@@ -8,8 +8,8 @@ import LinkedInImg from './res/img/linkedin_logo.png'
 import Avatar from './res/img/avatar_placeholder_400px.png'
 import {EducationSection} from "./components/sections/education/EducationSection";
 
-import {Transition} from "react-spring/renderprops-universal";
-import Card from "./components/Card";
+import SectionHeader from "./components/SectionHeader";
+import SocialButton from "./components/SocialButton";
 
 const images = require.context('./res/img/', true);
 
@@ -25,7 +25,6 @@ export default class App extends Component {
         this.state = {
             projects: ProjectRepository.getProjects(),
             allTags: ProjectRepository.tagMap.keys(),
-            // filter: ProjectRepository.tagMap.keys()
             filter: filterMap
         }
 
@@ -47,8 +46,6 @@ export default class App extends Component {
     }
 
     render() {
-
-
         return (
             <div className="App">
                 {/*<NavBar/>*/}
@@ -56,95 +53,90 @@ export default class App extends Component {
                     Greetings! I'm
                     <h1>James Scully</h1>
 
-                    <div>
-                        <div className="socialBtn">
-                            <a href="https://www.github.com/jamesscully/" target="_blank" rel={"noopener noreferrer"}>
-                                <img src={GitHubImg} alt={"GitHub"}/>
-                            </a>
-                        </div>
-
-                        <div className="socialBtn">
-                            <a href="https://www.linkedin.com/in/james-scully-852b8797/" target="_blank" rel={"noopener noreferrer"}>
-                                <img src={LinkedInImg} alt={"LinkedIn"}/>
-                            </a>
-                        </div>
-                    </div>
+                    <span>
+                        <SocialButton img={GitHubImg} href={"https://www.github.com/jamesscully"}/>
+                        <SocialButton img={LinkedInImg} href={"https://www.linkedin.com/in/james-scully-852b8797/"}/>
+                    </span>
                 </header>
 
                 <div className={"section"}>
-                    A bit about me
-                </div>
+                    <SectionHeader text={"A bit about me"}/>
+                    <div id={"IntroContainer"}>
+                        <div id={"IntroText"}>
+                            <p>
+                                Hello! I'm James, a programmer that enjoys making life easier.
+                                <br/> <br/>
+                                I graduated from the University of Nottingham with an upper-class second honours in September 2020,
+                                and since then, have been looking for opportunities!
+                                <br/> <br/>
+                                I typically work with Android, however I enjoy any language or tech that is the right tool for the job. This website written in React.js for example!
+                            </p>
 
-                <div id={"IntroContainer"}>
-                    <div id={"IntroText"}>
-                        <p>
-                            I'm a graduate from the University of Nottingham, with a BSc (2:1) in Computer Science
-                            <br/>
-                            I particularly enjoy working on software that makes life easier, or that keeps me up at night!
-                            <br/>
-                            <br/>
-                            I typically work with Android for real-world applications, but enjoy a variety of languages.
-                        </p>
+                            <div className={'check-button float-right'} onClick={
+                                () => {window.open("https://www.jwscully.uk/resume.pdf", "_blank")}
+                            }>
+                                View my Resume
+                            </div>
+
+
+                        </div>
+                        <img id={"IntroImage"} src={Avatar} alt={""}/>
                     </div>
-                    <img src={Avatar} alt={""}/>
+
+                    {/*<Card img={images('./tux.png')} text={"Linux Enthusiast"}/>*/}
+                    {/*<Card img={images('./android_logo.png')} text={"Android Developer [Java/Kotlin]"}/>*/}
+                    {/*<Card img={images('./uni.png')} text={"BSc Comp Sci graduate"}/>*/}
                 </div>
 
-                {/*<Card img={images('./tux.png')} text={"Linux Enthusiast"}/>*/}
-                {/*<Card img={images('./android_logo.png')} text={"Android Developer [Java/Kotlin]"}/>*/}
-                {/*<Card img={images('./uni.png')} text={"BSc Comp Sci graduate"}/>*/}
-
-                <span id={"ProjectsPreamble"}>
-                    <div className={"section"}>Projects</div>
-                </span>
-
-                <div id={"CheckbuttonContainer"}>
-                    <b>Filter by tag: <br/> <br/></b>
-                    {
-                        // for each tag, add button
-                        this.state.allTags.map((tag, index) => {
-                            let filtered = this.state.filter.get(tag)
-                            return (
-                                <Checkbutton key={index} tag={tag} checked={filtered} callback={(enabled) => {
-                                    this.filterTag(tag, enabled)
-                                }} />
-                            );
-                        })
-                    }
-                </div>
-
-                <div id={"ProjectContainer"}>
-                    {
-                        this.state.projects.map((project) => {
-                            let valid = false
-
-                            // we only need 1 tag to match for the filter
-                            for(const index in project.tags) {
-                                // if we've hit a valid tag, we don't need to search anymore
-                                if(valid)
-                                    break
-
-                                const tag = project.tags[index]
-                                valid = this.state.filter.get(tag)
-                            }
-
-                            // return our view if valid, else hide
-                            return (valid && <ProjectView key={project.id} id={project.id} />)
-                        })
-                    }
-                </div>
-
-                <span id={"ProjectsPreamble"}>
-                    <div className={"section"}>
-                        Education
-                    </div>
-                </span>
-
-                <EducationSection/>
 
                 <div className={"section"}>
-                    Bits and Bobs
+                    <SectionHeader text={"Projects"}/>
+
+                    <div id={"CheckbuttonContainer"}>
+                        <b>Filter by tag: <br/><br/></b>
+                        {
+                            // for each tag, add button
+                            this.state.allTags.map((tag, index) => {
+                                let filtered = this.state.filter.get(tag)
+                                return (
+                                    <Checkbutton key={index} tag={tag} checked={filtered} callback={(enabled) => {
+                                        this.filterTag(tag, enabled)
+                                    }} />
+                                );
+                            })
+                        }
+                    </div>
+
+                    <div id={"ProjectContainer"}>
+                        {
+                            this.state.projects.map((project) => {
+                                let valid = false
+
+                                // we only need 1 tag to match for the filter
+                                for(const index in project.tags) {
+                                    // if we've hit a valid tag, we don't need to search anymore
+                                    if(valid)
+                                        break
+
+                                    const tag = project.tags[index]
+                                    valid = this.state.filter.get(tag)
+                                }
+
+                                // return our view if valid, else hide
+                                return (valid && <ProjectView key={project.id} id={project.id} />)
+                            })
+                        }
+                    </div>
                 </div>
 
+                <div className={"section"}>
+                    <SectionHeader text={"Education"}/>
+                    <EducationSection/>
+                </div>
+
+                <div className={"section"}>
+                    <SectionHeader text={"Bits and Bobs"}/>
+                </div>
             </div>
 
         );

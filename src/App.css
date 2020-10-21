@@ -13,6 +13,12 @@ body {
   background-color: var(--color-bg);
 }
 
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100vw;
+}
+
 a:link {
   color: #fff;
   text-underline-offset: 5px
@@ -54,36 +60,38 @@ a:active {
   height: 20vh
 }
 
-.section {
+.section-header {
   font-size: 32pt;
   font-weight: bolder;
   width: 100vw;
+
   text-align: center;
 
-  margin-top: 24px;
+  line-height: 50px;
   margin-bottom: 24px;
 }
 
+.section {
+  /*background-color: #ab000e;*/
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
 
 #IntroContainer {
-  background-color: var(--color-primary);
   display: flex;
   flex-direction: row;
 
   border-radius: 10px;
-  padding: 20px;
 
-  width: 50vw;
+  width: 60vw;
   margin: 0 auto 20px;
 }
 
-#IntroContainer img {
-  object-fit: cover;
-  height: 100%;
-  width: 250px;
-}
-
 #IntroText {
+  background-color: var(--color-primary-dark);
+  padding: 20px;
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,14 +102,15 @@ a:active {
   /*background-color: var(--color-primary);*/
 }
 
-#IntroContainer img {
+#IntroImage {
   object-fit: cover;
   height: 100%;
   width: 250px;
+  align-self: center;
 }
 
 #IntroText p {
-  text-align: center;
+  text-align: left;
 }
 
 #ProjectsPreamble {
@@ -109,26 +118,6 @@ a:active {
   width: 100%;
   display: block;
   margin-bottom: 20px;
-}
-
-.socialBtn {
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  user-select: none;
-  border-radius: 100px;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: inline-block;
-  background-color: var(--color-primary);
-  cursor: pointer;
-  line-height: 24px
-}
-
-.socialBtn img {
-  width: 30px;
-  height: 30px;
-  float: left;
 }
 
 
@@ -155,6 +144,11 @@ a:active {
   cursor: pointer;
   margin-left: 5px;
   margin-right: 5px;
+
+  /*box-shadow: 2px 6px #494949;*/
+
+
+  width: auto;
 
   white-space: nowrap;
   display: inline-block;
