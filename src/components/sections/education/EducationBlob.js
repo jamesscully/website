@@ -68,7 +68,7 @@ export default class EducationBlob extends Component {
                     <Spring
                         native
                         force
-                        config={{ tension: 2500, friction: 200, precision: 1, clamp: true }}
+                        config={{ tension: 2500, friction: 200, precision: 1 }}
                         from={{
                             height: expanded ? 0 : 'auto',
                             opacity: expanded ? 0 : 1,
@@ -81,12 +81,13 @@ export default class EducationBlob extends Component {
                     >
                         {
                             props => (
-                                <animated.div className={"item"} style={props}>
+                                <animated.div className={"item"}  style={props}>
                                     {
                                         text.map((item, i) => {
-                                            return <p key={i} > {item} </p>
+                                            return <animated.p key={i} > {item} </animated.p>
                                         })
                                     }
+                                    <br style={props}/>
                                 </animated.div>
                             )
                         }
@@ -102,9 +103,6 @@ export default class EducationBlob extends Component {
                         inverted={this.state.expanded}
                     />
 
-                    {/*<div id="button_expand" className={'check-button float-right flex-end'} onClick={this.onToggle}>*/}
-                    {/*    {buttonText}*/}
-                    {/*</div>*/}
                 </div>
             </div>
         );

@@ -66,7 +66,7 @@ export default class Button extends React.Component {
         }
 
         // which text we will use
-        const outText = inverted ? altText : text
+        const outText = (inverted && altText != null) ? altText : text
 
         return(
             <div>
