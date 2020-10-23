@@ -1,19 +1,6 @@
-export const ProjectsData = [
-    // {
-    //     "id": "null",
-    //     "title": "null",
-    //     "image": "",
-    //     "imageText": "",
-    //     "startDate": "",
-    //     "endDate": "",
-    //     "description": "",
-    //     "tags": [""],
-    //     "stack": [""],
-    //     "github": ""
-    // },
+export const ProjectsData = {
 
-    {
-        "id": "bottleup",
+    "bottleup" : {
         "title": "Bottling Up Assistant",
         "imageURL": "",
         "imageText": "0x1F37E",
@@ -25,8 +12,7 @@ export const ProjectsData = [
         "github": "https://github.com/jamesscully/spoons-bottle-up"
     },
 
-    {
-        "id": "openglbeach",
+    "openglbeach": {
         "title": "OpenGL Beach Scene",
         "imageURL": "https://i.imgur.com/Cj3XUvS.png",
         "imageText": "",
@@ -38,8 +24,7 @@ export const ProjectsData = [
         "github": "https://github.com/jamesscully/OpenGL-Beach-Scene"
     },
 
-    {
-        "id": "openglcollege",
+    "openglcollege" : {
         "title": "OpenGL Vertex Demo",
         "imageURL": "https://s3.eu-west-2.amazonaws.com/jwscully.uk/res/img/glvertexdemo.png",
         "imageText": "",
@@ -52,8 +37,7 @@ export const ProjectsData = [
         "github": "https://github.com/jamesscully/OpenGL-Vertex-Demo"
     },
 
-    {
-        "id": "hendrix",
+    "hendrix": {
         "title": "Hendrix Music App",
         "imageURL": "https://i.imgur.com/gxiXfcg.png",
         "imageText": "",
@@ -64,8 +48,8 @@ export const ProjectsData = [
         "stack": ["Android", "Kotlin"],
         "github": "https://github.com/jamesscully/Hendrix"
     },
-    {
-        "id": "dexteritate",
+
+    "dexteritate": {
         "title": "Dexteritate",
         "imageURL": "https://i.imgur.com/Vn6hTjc.png",
         "imageText": "",
@@ -76,5 +60,4 @@ export const ProjectsData = [
         "stack": ["C#", "Blender", "Unity"],
         "github": "https://github.com/jamesscully/Dexteritate"
     }
-
-]
+}

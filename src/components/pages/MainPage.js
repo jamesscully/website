@@ -18,6 +18,9 @@ export default class MainPage extends React.Component {
     constructor(props) {
         super(props);
 
+        ProjectRepository.populate()
+
+
         let filterMap = new HashMap()
 
         this.state = {
@@ -25,6 +28,8 @@ export default class MainPage extends React.Component {
             allTags: ProjectRepository.tagMap.keys(),
             filter: filterMap
         }
+
+
 
         // enable all by default (until params)
         this.state.allTags.map((tag) => {
@@ -52,7 +57,7 @@ export default class MainPage extends React.Component {
                     <h1>James Scully</h1>
 
                     <Link to={'/project/dexteritate'}>
-                        <button>Click me</button>
+                        <button>Project: Dexteritate</button>
                     </Link>
 
                     <span>
@@ -73,12 +78,11 @@ export default class MainPage extends React.Component {
                                 I typically work with Android, however I enjoy any language or tech that is the right tool for the job. This website written in React.js for example!
                             </p>
 
-                            <Button
-                                text={"View my Resume"}
-                                onClick={() =>
-                                { window.open("https://www.jwscully.uk/resume.pdf", "_blank") }
-                                }
-                            />
+                            <Link to={'/resume.pdf'}>
+                                <Button
+                                    text={"View my Resume"}
+                                />
+                            </Link>
                         </div>
                         <img id={"IntroImage"} src={Avatar} alt={""}/>
                     </div>
@@ -108,6 +112,8 @@ export default class MainPage extends React.Component {
 
                                 // we only need 1 tag to match for the filter
                                 for(const index in project.tags) {
+
+
                                     // if we've hit a valid tag, we don't need to search anymore
                                     if(valid)
                                         break

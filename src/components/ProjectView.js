@@ -4,6 +4,7 @@ import ProjectRepository from "../ProjectRepository";
 import SmallGitHub from "../res/img/github_logo_32px.png"
 import {config, Spring} from "react-spring/renderprops-universal";
 import Button from "./Button";
+import {Link} from "react-router-dom";
 
 export default class ProjectView extends React.Component {
 
@@ -13,6 +14,8 @@ export default class ProjectView extends React.Component {
         this.state = {
             id: props.id
         }
+
+        console.log(this.state.id)
 
         this.project = ProjectRepository.getProjectById(this.state.id)
     }
@@ -75,10 +78,13 @@ export default class ProjectView extends React.Component {
                                 </div>
                             </div>
 
-                            <Button
-                                text={"Read more"}
-                                className={"flex-end float-right"}
-                            />
+                            <Link to={`/project/${this.project.id}`}>
+                                <Button
+                                    key={this.project.title}
+                                    text={"Read more"}
+                                    className={"flex-end float-right"}
+                                />
+                            </Link>
 
                         </div>
                     )

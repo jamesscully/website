@@ -1,0 +1,26 @@
+#projectPage {
+
+}
+
+#projectBody {
+    width: 80vw;
+    text-align: center;
+
+    margin: 0 auto;
+
+    background-color: var(--color-primary-dark);
+}
+
+#banner {
+    width: 100vw;
+    height: 40vh;
+
+    overflow: hidden;
+    object-fit: none;
+}
+
+#goBack {
+    position: absolute;
+    top: 16px;
+    left: 8px;
+}

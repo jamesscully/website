@@ -33,10 +33,14 @@ export default class ProjectRepository {
         })
 
         // add all projects to map + array
-        for(const x in ProjectsData) {
-            const project = new Project(null, ProjectsData[x])
+        for(const id in ProjectsData) {
+            const project = new Project(null, ProjectsData[id])
 
-            this.projectsMap.set(project.id, project)
+            // set project id from found key
+            project.id = id
+
+            // update the map with our data
+            this.projectsMap.set(id, project)
             projects.push(project)
         }
 
@@ -72,10 +76,6 @@ export default class ProjectRepository {
     }
 
     static filterTag(tag, enabled) {
-
-
-
-
         this.filterTags.set(tag, enabled)
 
         if(tag === "Android (Java/Kotlin)") {
