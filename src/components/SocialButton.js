@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import GitHubImg from "../res/img/github_logo_120px.png";
 
 export default class SocialButton extends Component {
 

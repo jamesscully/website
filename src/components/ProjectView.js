@@ -2,7 +2,7 @@ import * as React from "react";
 import './ProjectView.css'
 import ProjectRepository from "../ProjectRepository";
 import SmallGitHub from "../res/img/github_logo_32px.png"
-import {Spring, config} from "react-spring/renderprops-universal";
+import {config, Spring} from "react-spring/renderprops-universal";
 import Button from "./Button";
 
 export default class ProjectView extends React.Component {

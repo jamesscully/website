@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import {EducationData} from '../../../data/education'
 import './Education.css'
-import {Spring, config} from "react-spring/renderprops";
-import {animated} from "react-spring/renderprops";
+import {animated, Spring} from "react-spring/renderprops";
 import Button from "../../Button";
 
 const images = require.context('../../../res/img/edu', true);
@@ -33,14 +32,17 @@ export default class EducationBlob extends Component {
         let course = object['course']
         let description = object['description']
 
-        console.log("Redrawing blob")
+        const { expanded } = this.state
+
 
         // update text for expansion of blob
         let buttonText = "Expand";
-        if(this.state.expanded) {
+
+        if(expanded) {
             buttonText = "Collapse"
             console.log(`${buttonText}`)
         }
+
 
         const text = description.split('\n\n')
 
@@ -67,8 +69,16 @@ export default class EducationBlob extends Component {
                         native
                         force
                         config={{ tension: 2500, friction: 200, precision: 1, clamp: true }}
-                        from={{ height: this.state.expanded ? 0 : 'auto'}}
-                        to={{ height: this.state.expanded ? 'auto' : 0}}>
+                        from={{
+                            height: expanded ? 0 : 'auto',
+                            opacity: expanded ? 0 : 1,
+                        }}
+
+                        to={{
+                            height: expanded ? 'auto' : 0,
+                            opacity: expanded ? 1 : 0,
+                        }}
+                    >
                         {
                             props => (
                                 <animated.div className={"item"} style={props}>

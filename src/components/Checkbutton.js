@@ -1,6 +1,6 @@
 import * as React from "react";
 import ProjectRepository from "../ProjectRepository";
-import {Spring, config} from "react-spring/renderprops";
+import {config, Spring} from "react-spring/renderprops";
 import {animated} from "react-spring";
 
 export default class Checkbutton extends React.Component {

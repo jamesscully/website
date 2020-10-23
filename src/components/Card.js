@@ -1,7 +1,7 @@
 import React from 'react'
 import {animated} from "react-spring";
 import './Card.css'
-import {Spring, config} from "react-spring/renderprops-universal";
+import {config, Spring} from "react-spring/renderprops-universal";
 
 export default class Card extends React.Component {
 

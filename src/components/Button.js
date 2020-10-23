@@ -1,6 +1,5 @@
 import React from "react";
-import {Spring, config} from "react-spring/renderprops";
-import {animated} from "react-spring/renderprops";
+import {animated, config, Spring} from "react-spring/renderprops";
 
 import ForwardIcon from '../res/img/forward.png'
 import ExpandIcon from '../res/img/expand.png'
