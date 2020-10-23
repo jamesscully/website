@@ -3,6 +3,7 @@ import './ProjectView.css'
 import ProjectRepository from "../ProjectRepository";
 import SmallGitHub from "../res/img/github_logo_32px.png"
 import {Spring, config} from "react-spring/renderprops-universal";
+import Button from "./Button";
 
 export default class ProjectView extends React.Component {
 
@@ -74,7 +75,11 @@ export default class ProjectView extends React.Component {
                                 </div>
                             </div>
 
-                            <div className={"check-button float-right flex-end"}> Read more </div>
+                            <Button
+                                text={"Read more"}
+                                className={"flex-end float-right"}
+                            />
+
                         </div>
                     )
                 }

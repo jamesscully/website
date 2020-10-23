@@ -33,18 +33,14 @@
     padding: 0;
 }
 
-.EducationBlob img {
-    align-self: flex-start;
-    object-fit: contain;
+#BlobImage img {
+
 
     width: 75px;
     border-radius: 50px;
-}
 
-#BlobImage {
-    display: flex;
     float: left;
-    padding-right: 16px;
+    margin-right: 16px;
 }
 
 .BlobContent {
@@ -91,9 +87,8 @@
     font-size: 16pt;
 }
 
-#button_expand {
+.button_expand {
     align-self: center;
-    width: 15%;
 
 }
 

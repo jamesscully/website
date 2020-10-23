@@ -3,6 +3,7 @@ import {EducationData} from '../../../data/education'
 import './Education.css'
 import {Spring, config} from "react-spring/renderprops";
 import {animated} from "react-spring/renderprops";
+import Button from "../../Button";
 
 const images = require.context('../../../res/img/edu', true);
 
@@ -18,7 +19,10 @@ export default class EducationBlob extends Component {
         }
     }
 
-    onToggle = () => this.setState(state => ({expanded: !state.expanded}))
+    onToggle = () => {
+        this.setState(state => ({expanded: !state.expanded}))
+        console.log(`Expanded: ${this.state.expanded}`)
+    }
 
     render() {
         let object = EducationData[this.state.identifier]
@@ -29,10 +33,13 @@ export default class EducationBlob extends Component {
         let course = object['course']
         let description = object['description']
 
+        console.log("Redrawing blob")
+
         // update text for expansion of blob
-        let buttonText = "Expand"
+        let buttonText = "Expand";
         if(this.state.expanded) {
             buttonText = "Collapse"
+            console.log(`${buttonText}`)
         }
 
         const text = description.split('\n\n')
@@ -60,7 +67,7 @@ export default class EducationBlob extends Component {
                         native
                         force
                         config={{ tension: 2500, friction: 200, precision: 1, clamp: true }}
-                        from={{ height: this.state.expanded ? 0 : 'auto' }}
+                        from={{ height: this.state.expanded ? 0 : 'auto'}}
                         to={{ height: this.state.expanded ? 'auto' : 0}}>
                         {
                             props => (
@@ -76,9 +83,18 @@ export default class EducationBlob extends Component {
                     </Spring>
 
 
-                    <div id="button_expand" className={'check-button float-right flex-end'} onClick={this.onToggle}>
-                        {buttonText}
-                    </div>
+                    <Button
+                        text={"Expand"}
+                        altText={"Collapse"}
+                        onClick={this.onToggle}
+                        className={'flex-end float-right button_expand'}
+                        iconName={'drop'}
+                        inverted={this.state.expanded}
+                    />
+
+                    {/*<div id="button_expand" className={'check-button float-right flex-end'} onClick={this.onToggle}>*/}
+                    {/*    {buttonText}*/}
+                    {/*</div>*/}
                 </div>
             </div>
         );

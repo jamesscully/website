@@ -17,24 +17,13 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100vw;
+  overflow-x: hidden;
 }
 
-a:link {
-  color: #fff;
-  text-underline-offset: 5px
-}
-
-a:visited {
-  color: #fff
-}
-
-a:hover {
-  color: var(--color-secondary-light)
-}
-
-a:active {
-  color: var(--color-primary-accent)
-}
+a:link { color: #fff; text-underline-offset: 5px }
+a:visited { color: #fff }
+a:hover { color: var(--color-secondary-light) }
+a:active { color: var(--color-primary-accent) }
 
 
 .App-header h1 {
@@ -121,6 +110,9 @@ a:active {
 }
 
 
+.flex-center {
+  align-self: center;
+}
 
 .flex-end {
   align-self: flex-end;

@@ -90,10 +90,6 @@ export default class Checkbutton extends React.Component {
                 props => (
                     <animated.div key={this.getText()} style={props} className={"check-button"} onClick={this.onToggle}>
                         {image} {this.state.text}
-
-                        {
-                            console.log(props)
-                        }
                     </animated.div>
                 )
             }

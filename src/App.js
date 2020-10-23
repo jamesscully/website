@@ -10,6 +10,7 @@ import {EducationSection} from "./components/sections/education/EducationSection
 
 import SectionHeader from "./components/SectionHeader";
 import SocialButton from "./components/SocialButton";
+import Button from "./components/Button";
 
 const images = require.context('./res/img/', true);
 
@@ -40,6 +41,7 @@ export default class App extends Component {
 
         newMap.set(tag, enabled)
 
+        // update actual filter object, not directly modify
         this.setState({
             filter: newMap
         })
@@ -66,26 +68,21 @@ export default class App extends Component {
                             <p>
                                 Hello! I'm James, a programmer that enjoys making life easier.
                                 <br/> <br/>
-                                I graduated from the University of Nottingham with an upper-class second honours in September 2020,
+                                I graduated from the University of Nottingham with an upper-class second honours in June 2020,
                                 and since then, have been looking for opportunities!
                                 <br/> <br/>
                                 I typically work with Android, however I enjoy any language or tech that is the right tool for the job. This website written in React.js for example!
                             </p>
 
-                            <div className={'check-button float-right'} onClick={
-                                () => {window.open("https://www.jwscully.uk/resume.pdf", "_blank")}
-                            }>
-                                View my Resume
-                            </div>
-
-
+                            <Button
+                                text={"View my Resume"}
+                                onClick={() =>
+                                    { window.open("https://www.jwscully.uk/resume.pdf", "_blank") }
+                                }
+                            />
                         </div>
                         <img id={"IntroImage"} src={Avatar} alt={""}/>
                     </div>
-
-                    {/*<Card img={images('./tux.png')} text={"Linux Enthusiast"}/>*/}
-                    {/*<Card img={images('./android_logo.png')} text={"Android Developer [Java/Kotlin]"}/>*/}
-                    {/*<Card img={images('./uni.png')} text={"BSc Comp Sci graduate"}/>*/}
                 </div>
 
 
@@ -138,7 +135,6 @@ export default class App extends Component {
                     <SectionHeader text={"Bits and Bobs"}/>
                 </div>
             </div>
-
         );
     }
 }

@@ -1,0 +1,39 @@
+.button {
+    background-color: #575757;
+    border-radius: 50px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    user-select: none;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    /*box-shadow: 2px 6px #494949;*/
+
+    width: auto;
+
+    align-content: center;
+
+    white-space: nowrap;
+    display: inline-flex;
+    min-height: 1em;
+    font-weight: bold;
+    font-size: 15pt;
+
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.invert { filter: invert(100%); }
+
+.buttonImg {
+    display: flex;
+    line-height: 40px;
+
+    align-self: center;
+
+    height: 20px;
+    overflow: hidden;
+
+}
