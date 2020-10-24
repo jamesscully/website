@@ -19,9 +19,9 @@ const images = require.context('./res/img/', true);
 export default class App extends Component {
     constructor(props) {
         super(props);
+
+        ProjectRepository.populate()
     }
-
-
 
     render() {
         return (

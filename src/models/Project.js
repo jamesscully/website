@@ -17,6 +17,7 @@ export default class Project extends React.Component {
         this.tags = json_object.tags
         this.stack = json_object.stack
         this.github = json_object.github
+        this.pageContent = json_object.pageContent
 
 
         this.state = {

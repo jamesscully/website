@@ -98,7 +98,7 @@ export default class EducationBlob extends Component {
                         text={"Expand"}
                         altText={"Collapse"}
                         onClick={this.onToggle}
-                        className={'flex-end float-right button_expand'}
+                        className={'button_expand'}
                         iconName={'drop'}
                         inverted={this.state.expanded}
                     />

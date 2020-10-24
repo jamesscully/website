@@ -20,7 +20,6 @@ export default class MainPage extends React.Component {
 
         ProjectRepository.populate()
 
-
         let filterMap = new HashMap()
 
         this.state = {
@@ -28,8 +27,6 @@ export default class MainPage extends React.Component {
             allTags: ProjectRepository.tagMap.keys(),
             filter: filterMap
         }
-
-
 
         // enable all by default (until params)
         this.state.allTags.map((tag) => {
@@ -55,10 +52,6 @@ export default class MainPage extends React.Component {
                 <header className="App-header">
                     Greetings! I'm
                     <h1>James Scully</h1>
-
-                    <Link to={'/project/dexteritate'}>
-                        <button>Project: Dexteritate</button>
-                    </Link>
 
                     <span>
                         <SocialButton img={GitHubImg} href={"https://www.github.com/jamesscully"}/>
