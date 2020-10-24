@@ -5,7 +5,6 @@ import {ProjectsData} from "../../data/projects";
 import GitHubImg from '../../res/img/github_logo_120px.png'
 import YoutubeImg from '../../res/img/youtube-icon.png'
 
-
 import './ProjectPage.css'
 import Button from "../Button";
 import ProjectRepository from "../../ProjectRepository";
@@ -72,6 +71,13 @@ export default class ProjectPage extends React.Component {
                 <div id="projectBody">
                     <div id="projectTitle">
                         {project.title}
+                        <div id="projectSubtitle">
+                            {
+                                project.stack.map((tag) => {
+                                    return <span>{tag}, </span>
+                                })
+                            }
+                        </div>
                     </div>
 
                     <div id="projectDetails">
@@ -97,12 +103,8 @@ export default class ProjectPage extends React.Component {
 
                     <div id="projectText">
                         {content.text}
-
-
                     </div>
-
                 </div>
-
             </div>
         );
     }

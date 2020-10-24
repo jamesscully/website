@@ -43,6 +43,4 @@ export default class Project extends React.Component {
 
         return `${this.startDate} - ${end}`
     }
-
-
 }

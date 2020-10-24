@@ -73,6 +73,11 @@ a:active { color: var(--color-primary-accent) }
     font-weight: bolder;
 }
 
+#projectSubtitle {
+    font-size: 22pt;
+    color: #7f7f7f;
+}
+
 #projectText {
     background-color: var(--color-primary-dark);
     padding: 1.5em;

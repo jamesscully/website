@@ -71,11 +71,15 @@ export default class MainPage extends React.Component {
                                 I typically work with Android, however I enjoy any language or tech that is the right tool for the job. This website written in React.js for example!
                             </p>
 
-                            <Link to={'/resume.pdf'}>
+                            <a
+                                href={'https://jwscully.uk/resume.pdf'}
+                                target={"_blank"}
+                                rel={"noopener noreferrer"}
+                            >
                                 <Button
                                     text={"View my Resume"}
                                 />
-                            </Link>
+                            </a>
                         </div>
                         <img id={"IntroImage"} src={Avatar} alt={""}/>
                     </div>
@@ -90,9 +94,14 @@ export default class MainPage extends React.Component {
                             this.state.allTags.map((tag, index) => {
                                 let filtered = this.state.filter.get(tag)
                                 return (
-                                    <Checkbutton key={index} tag={tag} checked={filtered} callback={(enabled) => {
-                                        this.filterTag(tag, enabled)
-                                    }} />
+                                    <Checkbutton
+                                        key={index}
+                                        tag={tag}
+                                        checked={filtered}
+                                        callback={(enabled) => {
+                                            this.filterTag(tag, enabled)
+                                        }}
+                                    />
                                 );
                             })
                         }
