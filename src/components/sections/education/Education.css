@@ -53,13 +53,13 @@
 
 }
 
-.item {
+.desc-item {
     width: 100%;
     overflow: hidden;
     color: white;
 }
 
-.item p {
+.desc-item p {
     margin: 0;
     padding: 10px;
 }

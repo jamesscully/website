@@ -81,7 +81,7 @@ export default class EducationBlob extends Component {
                     >
                         {
                             props => (
-                                <animated.div className={"item"}  style={props}>
+                                <animated.div className={"desc-item"}  style={props}>
                                     {
                                         text.map((item, i) => {
                                             return <animated.p key={i} > {item} </animated.p>
