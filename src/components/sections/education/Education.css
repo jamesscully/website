@@ -1,0 +1,98 @@
+
+#Section {
+    width: 80vw;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+    EducationBlobs
+*/
+
+.EducationBlob {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+
+.EducationBlob h1 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.EducationBlob h2 {
+    border-bottom: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #ab000e;
+
+    margin: 0;
+    padding: 0;
+}
+
+#BlobImage img {
+
+
+    width: 75px;
+    border-radius: 20px;
+
+    float: left;
+    margin-right: 16px;
+}
+
+.BlobContent {
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+
+}
+
+.desc-item {
+    width: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+.desc-item p {
+    margin: 0;
+    padding: 10px;
+}
+
+/*
+    Content IDs
+*/
+
+#institution {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+#date {
+    font-size: 16pt;
+    font-weight: normal;
+    float: right;
+}
+
+#course {
+    font-size: 18pt;
+}
+
+#grade {
+    font-size: 16pt;
+}
+
+
+.button_expand {
+    margin-top: 16px;
+}
+
+
+
+
+

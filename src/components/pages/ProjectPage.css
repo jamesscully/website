@@ -1,0 +1,92 @@
+#projectPage {
+    height: 150vh;
+}
+
+a:link { color: #fff; }
+a:visited { color: #fff }
+a:hover { color: var(--color-secondary-light) }
+a:active { color: var(--color-primary-accent) }
+
+
+#projectDetails {
+    display: flex;
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.item {
+    display: flex;
+}
+
+.detail-button {
+    background-color: #494848;
+
+    font-weight: bolder;
+    font-size: 12pt;
+    text-decoration: none;
+
+    padding: 1em;
+    margin-right: 12px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+}
+
+.inline-link-img {
+    height: 1.5em;
+    margin-left: 12px;
+    object-fit: fill;
+    display: flex;
+}
+
+#projectBody {
+    width: 80vw;
+    text-align: center;
+
+    margin: 0 auto;
+
+}
+
+#banner {
+    width: 100vw;
+    height: 40vh;
+
+    overflow: hidden;
+
+    margin-bottom: 24px;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#projectTitle {
+    text-align: left;
+    font-size: 68pt;
+    font-weight: bolder;
+}
+
+#projectSubtitle {
+    font-size: 22pt;
+    color: #7f7f7f;
+}
+
+#projectText {
+    background-color: var(--color-primary-dark);
+    padding: 1.5em;
+
+    text-align: left;
+}
+
+#goBack {
+    position: absolute;
+    top: 16px;
+    left: 8px;
+}

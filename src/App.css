@@ -1,0 +1,179 @@
+:root {
+  --color-bg: #181a1b;
+  --color-primary: rgb(42, 42, 42);
+  --color-primary-dark: #272727;
+  --color-primary-accent: #e53935;
+  --color-secondary: #e53935;
+  --color-secondary-light: #ff6d60;
+  --color-secondary-dark: #ab000e;
+  color: white;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a:link { color: #fff; text-underline-offset: 5px }
+a:visited { color: #fff }
+a:hover { color: var(--color-secondary-light) }
+a:active { color: var(--color-primary-accent) }
+
+
+.App-header h1 {
+  margin: 0 auto;
+  margin-bottom: 24px;
+  font-size: 32pt;
+  text-align: center;
+}
+
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  margin-bottom: 20px;
+  background-color: var(--color-primary-accent);
+  text-align: center;
+  user-select: none;
+
+  height: 20vh
+}
+
+.section-header {
+  font-size: 32pt;
+  font-weight: bolder;
+  width: 100vw;
+
+  text-align: center;
+
+  line-height: 50px;
+  margin-bottom: 24px;
+}
+
+.section {
+  /*background-color: #ab000e;*/
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+#IntroContainer {
+  display: flex;
+  flex-direction: row;
+
+  border-radius: 10px;
+
+  width: 60vw;
+  margin: 0 auto 20px;
+}
+
+#IntroText {
+  background-color: var(--color-primary-dark);
+  padding: 20px;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+
+  margin-right: 20px;
+
+  /*background-color: var(--color-primary);*/
+}
+
+#IntroImage {
+  object-fit: cover;
+  height: 100%;
+  width: 250px;
+  align-self: center;
+}
+
+#IntroText p {
+  text-align: left;
+}
+
+#ProjectsPreamble {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+.flex-center {
+  align-self: center;
+}
+
+.flex-end {
+  align-self: flex-end;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.float-right {
+  float: right;
+}
+
+.check-button {
+  background-color: #575757;
+  border-radius: 50px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  user-select: none;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  /*box-shadow: 2px 6px #494949;*/
+
+
+  width: auto;
+
+  white-space: nowrap;
+  display: inline-block;
+  min-height: 1em;
+  font-weight: bold;
+  font-size: 15pt;
+
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+#CheckbuttonContainer {
+  background-color: var(--color-primary-dark);
+  text-align: center;
+
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#ProjectContainer {
+  padding-top: 28px;
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  margin: 0 auto;
+
+  width: 80vw;
+
+  min-height: 50vh;
+}
+
+
