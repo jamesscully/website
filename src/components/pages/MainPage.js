@@ -1,7 +1,7 @@
 import React from "react";
 import SocialButton from "../SocialButton";
-import GitHubImg from "../../res/img/github_logo_120px.png";
-import LinkedInImg from "../../res/img/linkedin_logo.png";
+import GitHubImg from "../../res/img/logos/github_logo_120px.png";
+import LinkedInImg from "../../res/img/logos/linkedin_logo.png";
 import SectionHeader from "../SectionHeader";
 import Button from "../Button";
 import Avatar from "../../res/img/avatar_placeholder_400px.png";
@@ -9,7 +9,6 @@ import Checkbutton from "../Checkbutton";
 import ProjectView from "../ProjectView";
 import {EducationSection} from "../sections/education/EducationSection";
 import ProjectRepository from "../../ProjectRepository";
-import {Link} from "react-router-dom";
 
 var HashMap = require('hashmap')
 
@@ -63,12 +62,15 @@ export default class MainPage extends React.Component {
                     <div id={"IntroContainer"}>
                         <div id={"IntroText"}>
                             <p>
-                                Hello! I'm James, a programmer that enjoys making life easier.
+                                Hello! I'm James, a Computer Science graduate from the University of Nottingham.
                                 <br/> <br/>
-                                I graduated from the University of Nottingham with an upper-class second honours in June 2020,
-                                and since then, have been looking for opportunities!
+                                I enjoy creating software that makes life easier, namely with the use
+                                of Android. I also enjoy tinkering with Linux (extensively) and new tech that can
+                                become useful in other projects down the line!
                                 <br/> <br/>
-                                I typically work with Android, however I enjoy any language or tech that is the right tool for the job. This website written in React.js for example!
+                                You can check out some of my projects in the <a href={"#projects"}>portfolio</a> section
+                                below.
+                                <br/> <br/>
                             </p>
 
                             <a
@@ -81,10 +83,10 @@ export default class MainPage extends React.Component {
                                 />
                             </a>
                         </div>
-                        <img id={"IntroImage"} src={Avatar} alt={""}/>
+                        {/*<img id={"IntroImage"} src={Avatar} alt={""}/>*/}
                     </div>
                 </div>
-                <div className={"section"}>
+                <div id={"projects"} className={"section"}>
                     <SectionHeader text={"Projects"}/>
 
                     <div id={"CheckbuttonContainer"}>

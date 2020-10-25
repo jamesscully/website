@@ -1,3 +1,5 @@
+import React from "react";
+
 export const ProjectsData = {
 
     "bottleup" : {
@@ -11,7 +13,42 @@ export const ProjectsData = {
         "stack": ["Java", "Kotlin", "Python"],
         "github": "https://github.com/jamesscully/spoons-bottle-up",
         "pageContent": {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan, erat nec eleifend imperdiet, enim est semper risus, molestie pellentesque est ante sed nisi. Sed molestie mattis magna, vitae fermentum ante sagittis nec. Fusce vestibulum augue lectus. Nunc in diam at ligula sodales cursus. Nam vitae nisi pharetra, sodales velit ut, sollicitudin arcu. Fusce malesuada dignissim dui, at venenatis lorem sagittis sit amet. Sed dui dui, feugiat posuere justo eu, eleifend vulputate velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque luctus, nulla at tempor mattis, mi lacus volutpat nibh, ac fringilla urna diam non ante. Praesent at fringilla ipsum, sed bibendum magna. Sed venenatis quam vitae gravida hendrerit. Donec vitae sem pulvinar, accumsan libero vulputate, blandit urna. Morbi id risus id tellus eleifend condimentum eu sit amet enim. Etiam ultrices odio sit amet arcu mattis commodo. Vestibulum vestibulum posuere molestie. ",
+            "text":
+            <div>
+                <p>
+                    This was an Android application that was initially developed in 2018 during employment at Wetherspoons.
+                    It started at first as a way to dip into Android development, but served to use and evolve
+                    my skills in the area.
+                </p>
+                <p>
+                    Its purpose is to speed up restocking of fridges at the end of the night by using a mobile phone
+                    rather than scribbling with a pen on paper. With the current version, users can get a list of products
+                    and quantity to get by entering how many they need, or by how many are left in the fridge; the latter
+                    uses a pre-defined max amount value to calculate the difference.
+                </p>
+                <p>
+                    Albeit a trivial application, seeing it iterate from a primitive and <i>(laggy)</i> long list of
+                    buttons with product names to an application that feels good to use at work with the help of colleagues
+                    and their feedback. My favourite time with this application would be reverse-engineering the official
+                    Wetherspoon app to get an API endpoint for retrieving JSON product data, and parsing with Python
+                    to create a database that could be used as a base for the application. Of course, writing each
+                    product down into a database would be easier, but quite mundane!
+                </p>
+                <p>
+                    Some updates I plan to add to this would be:
+                    <ul>
+                        <li>Wear OS / Smartwatch integration</li>
+                        <li>Android Beam support</li>
+                        <li>Support for more pubs</li>
+                    </ul>
+
+                    Smartwatches would be a big plus, as this would remove the need to pick up / look at the phone each
+                    time, and being able to transfer a list to a colleague with a tap of phones would be not just
+                    extremely cool, but massively helpful and on par with physical lists. <br/>
+                    However, I have neither a second phone
+                    or smart watch :(.
+                </p>
+            </div>,
             "video": "https://www.youtube.com/embed/kF9vgrtHUu0/",
             "pictures": ['']
         }
@@ -28,7 +65,9 @@ export const ProjectsData = {
         "stack": ["OpenGL", "C++"],
         "github": "https://github.com/jamesscully/OpenGL-Beach-Scene",
         "pageContent": {
-            "text": "",
+            "text": <div>
+                test
+            </div>,
             "video": "",
             "pictures": ['']
         }

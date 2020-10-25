@@ -1,9 +1,7 @@
 import * as React from "react";
 import {Link} from "react-router-dom";
-
-import {ProjectsData} from "../../data/projects";
-import GitHubImg from '../../res/img/github_logo_120px.png'
-import YoutubeImg from '../../res/img/youtube-icon.png'
+import GitHubImg from '../../res/img/logos/github_logo_120px.png'
+import YoutubeImg from '../../res/img/logos/youtube_logo.png'
 
 import './ProjectPage.css'
 import Button from "../Button";
@@ -18,7 +16,7 @@ const DetailButton = ({link, image, text}) =>
         rel={"noopener noreferrer"}
     >
         <span>{text}</span>
-        <img className={"inline-link-img"} src={image}/>
+        <img className={"inline-link-img"} src={image} alt={""}/>
     </a>
 
 export default class ProjectPage extends React.Component {
@@ -58,7 +56,7 @@ export default class ProjectPage extends React.Component {
         return (
             <div id="projectPage">
                 <div id="banner">
-                    <img src={require('../../res/img/banner_openglbeach.png')}/>
+                    <img src={require('../../res/img/banners/openglbeach.png')}/>
                 </div>
 
                 <div id="goBack">
@@ -102,7 +100,10 @@ export default class ProjectPage extends React.Component {
                     </div>
 
                     <div id="projectText">
-                        {content.text}
+                        <h2>Description</h2>
+                        {
+                            content.text
+                        }
                     </div>
                 </div>
             </div>
