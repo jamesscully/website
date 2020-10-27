@@ -44,13 +44,20 @@ export const ProjectsData = {
 
                     Smartwatches would be a big plus, as this would remove the need to pick up / look at the phone each
                     time, and being able to transfer a list to a colleague with a tap of phones would be not just
-                    extremely cool, but massively helpful and on par with physical lists. <br/>
+                    extremely cool, but massively helpful and on par with physical lists.
+                    <br/>
+                    <br/>
                     However, I have neither a second phone
-                    or smart watch :(.
+                    or smart watch :(
                 </p>
             </div>,
             "video": "https://www.youtube.com/embed/kF9vgrtHUu0/",
-            "pictures": ['']
+            "pictures": [
+                require('../res/img/projects/bottleup/pic1.jpg'),
+                require('../res/img/projects/bottleup/pic2.jpg'),
+                require('../res/img/projects/bottleup/pic3.jpg'),
+                require('../res/img/projects/bottleup/pic4.jpg')
+            ]
         }
     },
 
@@ -65,30 +72,49 @@ export const ProjectsData = {
         "stack": ["OpenGL", "C++"],
         "github": "https://github.com/jamesscully/OpenGL-Beach-Scene",
         "pageContent": {
-            "text": <div>
-                test
+            "text":
+            <div>
+                <p>
+                    This was a project built for the third year module of Computer Graphics at university. The deliverables
+                    for the assignment was an OpenGL scene with shapes that were complex (many vertices, shaded or
+                    optionally textures) and animation.
+                    To make this part easier the project can read model data from Wavefront .obj formats, extracting
+                    vertex data with UV map coordinates and the material the object uses.
+
+                    Similarly, to help with animation and positioning the game takes a page out of the typical game dev / modelling
+                    book, by allowing models to store a pointer to a parent object; meaning that positioning can be done
+                    absolutely or relatively.
+                </p>
+                <p>
+                    Outside of flying around throwing coconuts on a lonesome island, the project did not serve much practical
+                    purpose. It was however extremely fun and engaging trying to get everything to work together and build
+                    a very clandestine-sort-of graphics engine, and porting build tools from VS Solution / XCode to CMake.
+                </p>
+                <p>
+                    The GitHub repo lists instructions for downloading and running the program both in Windows and Linux.
+                </p>
             </div>,
             "video": "",
             "pictures": ['']
         }
     },
 
-    "openglcollege" : {
-        "title": "OpenGL Vertex Demo",
-        "imageURL": "https://s3.eu-west-2.amazonaws.com/jwscully.uk/res/img/glvertexdemo.png",
-        "imageText": "",
-        "startDate": 2016,
-        "endDate": 2017,
-        "description": "Created in college to illustrate how vertices and shapes are drawn at the API level, rather than using Blender.",
-        "tags": ["C++"],
-        "stack": ["OpenGL", "C++"],
-        "github": "https://github.com/jamesscully/OpenGL-Vertex-Demo",
-        "pageContent": {
-            "text": "",
-            "video": "",
-            "pictures": ['']
-        }
-    },
+    // "openglcollege" : {
+    //     "title": "OpenGL Vertex Demo",
+    //     "imageURL": "https://s3.eu-west-2.amazonaws.com/jwscully.uk/res/img/glvertexdemo.png",
+    //     "imageText": "",
+    //     "startDate": 2016,
+    //     "endDate": 2017,
+    //     "description": "Created in college to illustrate how vertices and shapes are drawn at the API level, rather than using Blender.",
+    //     "tags": ["C++"],
+    //     "stack": ["OpenGL", "C++"],
+    //     "github": "https://github.com/jamesscully/OpenGL-Vertex-Demo",
+    //     "pageContent": {
+    //         "text": "",
+    //         "video": "",
+    //         "pictures": ['']
+    //     }
+    // },
 
     "hendrix": {
         "title": "Hendrix Music App",

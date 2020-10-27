@@ -25,6 +25,10 @@ export default class Button extends React.Component {
             iconName: props.iconName,
             inverted: props.inverted
         }
+
+        if(props.iconName == null) {
+            this.setState({iconName: 'forward'})
+        }
     }
 
     getIcon() {
@@ -41,9 +45,6 @@ export default class Button extends React.Component {
     }
 
     onClick = () => {
-        this.setState({
-            inverted: !this.state.inverted
-        })
 
         // only call if we have an onClick
         if(this.state.onClick) {
@@ -61,8 +62,10 @@ export default class Button extends React.Component {
         const {text, altText, className, hovered, inverted} = this.state
         const classes = 'button ' + className
 
-        let imageStyle = {
-            transform: inverted ? 'rotate(180deg)' : 'rotate(0deg)'
+        let imageStyle = null
+
+        if(this.state.iconName === 'forward') {
+            imageStyle = { transform: inverted ? 'rotate(180deg)' : 'rotate(0deg)' }
         }
 
         // which text we will use
@@ -80,7 +83,7 @@ export default class Button extends React.Component {
                     from={{
                         width:      hovered ? '0px' : '20px',
                         marginLeft: hovered ? '0em' : '0.5em',
-                        transform:  hovered ? 'rotate(180deg)': 'rotate(0deg)',
+                        transform:  hovered ? 'rotate(180deg)' : 'rotate(0deg)',
                         opacity:    hovered ? 0 : 1
                     }}
 

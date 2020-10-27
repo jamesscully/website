@@ -6,6 +6,7 @@ import YoutubeImg from '../../res/img/logos/youtube_logo.png'
 import './ProjectPage.css'
 import Button from "../Button";
 import ProjectRepository from "../../ProjectRepository";
+import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 
 // functional component for small buttons below title
 const DetailButton = ({link, image, text}) =>
@@ -53,10 +54,20 @@ export default class ProjectPage extends React.Component {
 
         const video = this.getVideoEmbed(content.video)
 
+        let banner = null
+        let icon   = null
+        try {
+            banner = require(`../../res/img/projects/${name}/banner.png`)
+            icon   = require(`../../res/img/projects/${name}/icon.png`)
+        } catch (e) { console.log(e) }
+
+
         return (
             <div id="projectPage">
                 <div id="banner">
-                    <img src={require('../../res/img/banners/openglbeach.png')}/>
+                    <img
+                        src={banner}
+                    />
                 </div>
 
                 <div id="goBack">
@@ -67,6 +78,7 @@ export default class ProjectPage extends React.Component {
 
 
                 <div id="projectBody">
+
                     <div id="projectTitle">
                         {project.title}
                         <div id="projectSubtitle">
