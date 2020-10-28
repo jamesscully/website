@@ -103,8 +103,8 @@ h2 {
 
 .gallery-image {
     height: 200px;
-
     margin-right: 24px;
+    cursor: pointer;
 }
 
 #gallery {

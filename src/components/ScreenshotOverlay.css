@@ -1,0 +1,40 @@
+#screenshot-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+#screenshot-overlay-container {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+#screenshot-overlay-image {
+    display: flex;
+    object-fit: contain;
+    height: 80vh;
+
+    z-index: 2;
+
+}
+
+#screenshot-overlay-close {
+    opacity: 1;
+    position: absolute;
+    right: 2vw;
+    top: 1vw;
+}

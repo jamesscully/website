@@ -8,6 +8,7 @@ import Button from "../Button";
 import ProjectRepository from "../../ProjectRepository";
 import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 import {Spring, config, animated} from "react-spring/renderprops";
+import ScreenshotOverlay from "../ScreenshotOverlay";
 
 // functional component for small buttons below title
 const DetailButton = ({link, image, text}) =>
@@ -21,8 +22,13 @@ const DetailButton = ({link, image, text}) =>
         <img className={"inline-link-img"} src={image} alt={""}/>
     </a>
 
-const GalleryImage = ({image}) => (
-        <img className={"gallery-image"} src={image} alt={""}/>
+const GalleryImage = ({image, onCl}) => (
+        <img
+            className={"gallery-image"}
+            src={image}
+            alt={""}
+            onClick={onCl}
+        />
 )
 
 
@@ -51,9 +57,13 @@ export default class ProjectPage extends React.Component {
     }
 
 
-    toggleScreenshots = () => {
-        this.setState(state => ({screenshotsExpanded: !state.screenshotsExpanded}))
-        console.log(this.state.screenshotsExpanded)
+    showImageHighlight = (image) => {
+        this.setState(state =>
+            ({
+                screenshotsExpanded: !state.screenshotsExpanded,
+                focusImage: image
+            })
+        )
     }
 
     render() {
@@ -72,7 +82,9 @@ export default class ProjectPage extends React.Component {
             icon   = require(`../../res/img/projects/${name}/icon.png`)
         } catch (e) {  }
 
-        const { screenshotsExpanded } = this.state
+        const {screenshotsExpanded} = this.state
+
+        console.log(`Page, ss enabled : ${screenshotsExpanded}`)
 
         return (
             <div id="projectPage">
@@ -81,6 +93,18 @@ export default class ProjectPage extends React.Component {
                         src={banner}
                     />
                 </div>
+
+                {
+                    (screenshotsExpanded) &&
+                    <ScreenshotOverlay
+                        enabled={screenshotsExpanded}
+                        image={this.state.focusImage}
+                        onClose={() => {
+                            this.setState({screenshotsExpanded: false})
+                        }}
+                    />
+
+                }
 
                 <div id="goBack">
                     <Link to={'/'}>
@@ -130,7 +154,13 @@ export default class ProjectPage extends React.Component {
                             {
                                 <div id={"image-container"}>
                                     {
-                                        content.pictures.map((image) => <GalleryImage image={image}> </GalleryImage>)
+                                        content.pictures.map((image, index) =>
+                                            <div onClick={() => this.showImageHighlight(content.pictures[index])}>
+                                                <GalleryImage
+                                                    image={image}
+                                                />
+                                            </div>
+                                        )
                                     }
                                 </div>
                             }
