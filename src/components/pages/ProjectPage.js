@@ -7,6 +7,7 @@ import './ProjectPage.css'
 import Button from "../Button";
 import ProjectRepository from "../../ProjectRepository";
 import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
+import {Spring, config, animated} from "react-spring/renderprops";
 
 // functional component for small buttons below title
 const DetailButton = ({link, image, text}) =>
@@ -20,18 +21,22 @@ const DetailButton = ({link, image, text}) =>
         <img className={"inline-link-img"} src={image} alt={""}/>
     </a>
 
+const GalleryImage = ({image}) => (
+        <img className={"gallery-image"} src={image} alt={""}/>
+)
+
+
 export default class ProjectPage extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            name: this.props.match.params.name
+            name: this.props.match.params.name,
+            screenshotsExpanded: false
         }
     }
 
     getVideoEmbed(url) {
-        console.log("URL = " + url)
-
         if(url !== "") {
             return(
                 <iframe
@@ -43,6 +48,12 @@ export default class ProjectPage extends React.Component {
             )
         }
         return null
+    }
+
+
+    toggleScreenshots = () => {
+        this.setState(state => ({screenshotsExpanded: !state.screenshotsExpanded}))
+        console.log(this.state.screenshotsExpanded)
     }
 
     render() {
@@ -59,8 +70,9 @@ export default class ProjectPage extends React.Component {
         try {
             banner = require(`../../res/img/projects/${name}/banner.png`)
             icon   = require(`../../res/img/projects/${name}/icon.png`)
-        } catch (e) { console.log(e) }
+        } catch (e) {  }
 
+        const { screenshotsExpanded } = this.state
 
         return (
             <div id="projectPage">
@@ -81,7 +93,7 @@ export default class ProjectPage extends React.Component {
 
                     <div id="projectTitle">
                         {project.title}
-                        <div id="projectSubtitle">
+                        <div className="subtitle">
                             {
                                 project.stack.map((tag) => {
                                     return <span>{tag}, </span>
@@ -111,8 +123,24 @@ export default class ProjectPage extends React.Component {
 
                     </div>
 
+                    {
+                        (content.pictures.length > 0) &&
+                        <div>
+                            <h2>Screenshots</h2>
+                            {
+                                <div id={"image-container"}>
+                                    {
+                                        content.pictures.map((image) => <GalleryImage image={image}> </GalleryImage>)
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+
+
+                    <h2>Description</h2>
+
                     <div id="projectText">
-                        <h2>Description</h2>
                         {
                             content.text
                         }

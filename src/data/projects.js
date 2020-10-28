@@ -95,7 +95,7 @@ export const ProjectsData = {
                 </p>
             </div>,
             "video": "",
-            "pictures": ['']
+            "pictures": []
         }
     },
 
@@ -129,7 +129,7 @@ export const ProjectsData = {
         "pageContent": {
             "text": "",
             "video": "",
-            "pictures": ['']
+            "pictures": []
         }
     },
 
@@ -146,7 +146,7 @@ export const ProjectsData = {
         "pageContent": {
             "text": "",
             "video": "",
-            "pictures": ['']
+            "pictures": []
         }
     }
 }

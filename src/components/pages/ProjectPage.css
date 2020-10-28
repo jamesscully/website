@@ -73,7 +73,7 @@ a:active { color: var(--color-primary-accent) }
     font-weight: bolder;
 }
 
-#projectSubtitle {
+.subtitle {
     font-size: 22pt;
     color: #7f7f7f;
 }
@@ -89,4 +89,32 @@ a:active { color: var(--color-primary-accent) }
     position: absolute;
     top: 16px;
     left: 8px;
+}
+
+#image-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+h2 {
+    text-align: left;
+}
+
+.gallery-image {
+    height: 200px;
+
+    margin-right: 24px;
+}
+
+#gallery {
+    background-color: #ab000e;
+}
+
+.expand-images {
+    float: left;
+}
+
+.float-left {
+    float: left;
 }
