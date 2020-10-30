@@ -83,8 +83,15 @@ export default class Checkbutton extends React.Component {
         return (
             <Spring
                 config={config.default}
-                from={{backgroundColor: checked ? "red" : "green"}}
-                to={{backgroundColor: checked ? "green" : "red"}}
+                from={{
+                    backgroundColor: checked ? "#007400" : "#ff0000",
+                    boxShadow: checked ? "2px 4px #008000" : "2px 4px #ff0000"
+                }}
+                to={{
+                    backgroundColor: checked ? "#007400" : "#ff0000",
+                    boxShadow: checked ? "2px 4px #008000" : "2px 4px #ff0000"
+
+                }}
             >
             {
                 props => (

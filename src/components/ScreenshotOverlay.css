@@ -20,16 +20,31 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
+    height: 85vh;
+
 }
 
 
 #screenshot-overlay-image {
     display: flex;
     object-fit: contain;
-    height: 80vh;
+    height: 90%;
 
     z-index: 2;
+}
 
+#screenshot-overlay-caption {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bolder;
+    text-align: center;
+
+
+    height: 3em;
+    border-radius: 16px;
 }
 
 #screenshot-overlay-close {

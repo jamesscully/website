@@ -8,8 +8,10 @@ export default class ScreenshotOverlay extends React.Component {
         this.state = {
             enabled: props.enabled,
             image: props.image,
-            onClose: props.onClose
+            onClose: props.onClose,
+            caption: props.caption
         }
+        console.log(this.state.caption)
     }
 
     disable = () => {
@@ -21,7 +23,7 @@ export default class ScreenshotOverlay extends React.Component {
 
         console.log(`Rendering, state: ${this.state.enabled}`)
 
-        const {image} = this.state
+        const {image, caption} = this.state
 
         return( this.state.enabled &&
             <div id={"screenshot-overlay"} onClick={this.disable}>
@@ -32,16 +34,21 @@ export default class ScreenshotOverlay extends React.Component {
                         src={image}
                         onClick={null}
                     />
-                    <p id={"screenshot-overlay-caption"}>
-                        Test Caption
-                    </p>
+                    {
+                        (caption) &&
+                        <p id={"screenshot-overlay-caption"}>
+                            {caption}
+                        </p>
+                    }
+
                 </div>
-                <button
+                <div
                     id={"screenshot-overlay-close"}
+                    className={"button"}
                     onClick={this.disable}
                 >
                     Close
-                </button>
+                </div>
             </div>
         )
     }

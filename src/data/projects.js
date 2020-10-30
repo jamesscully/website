@@ -35,7 +35,7 @@ export const ProjectsData = {
                     product down into a database would be easier, but quite mundane!
                 </p>
                 <p>
-                    Some updates I plan to add to this would be:
+                    Some updates I plan to add to this are:
                     <ul>
                         <li>Wear OS / Smartwatch integration</li>
                         <li>Android Beam support</li>
@@ -47,7 +47,7 @@ export const ProjectsData = {
                     extremely cool, but massively helpful and on par with physical lists.
                     <br/>
                     <br/>
-                    However, I have neither a second phone
+                    However, I currently have neither a second phone
                     or smart watch :(
                 </p>
             </div>,
@@ -57,6 +57,12 @@ export const ProjectsData = {
                 require('../res/img/projects/bottleup/pic2.jpg'),
                 require('../res/img/projects/bottleup/pic3.jpg'),
                 require('../res/img/projects/bottleup/pic4.jpg')
+            ],
+            "captions": [
+                "Bottles can be counted by one, by row or by inverting (seen in purple)",
+                "Easy to read list - fridge contents are often stored in separate areas",
+                "Fridges can have their contents re-arranged, or edited",
+                "Editing of bottle"
             ]
         }
     },
@@ -95,7 +101,8 @@ export const ProjectsData = {
                 </p>
             </div>,
             "video": "",
-            "pictures": []
+            "pictures": [],
+            "captions": []
         }
     },
 
@@ -129,7 +136,8 @@ export const ProjectsData = {
         "pageContent": {
             "text": "",
             "video": "",
-            "pictures": []
+            "pictures": [],
+            "captions": []
         }
     },
 
@@ -146,7 +154,8 @@ export const ProjectsData = {
         "pageContent": {
             "text": "",
             "video": "",
-            "pictures": []
+            "pictures": [],
+            "captions": []
         }
     }
 }

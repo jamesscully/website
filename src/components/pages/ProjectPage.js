@@ -57,11 +57,12 @@ export default class ProjectPage extends React.Component {
     }
 
 
-    showImageHighlight = (image) => {
+    showImageHighlight = (image, caption) => {
         this.setState(state =>
             ({
                 screenshotsExpanded: !state.screenshotsExpanded,
-                focusImage: image
+                focusImage: image,
+                focusCaption: caption
             })
         )
     }
@@ -84,8 +85,6 @@ export default class ProjectPage extends React.Component {
 
         const {screenshotsExpanded} = this.state
 
-        console.log(`Page, ss enabled : ${screenshotsExpanded}`)
-
         return (
             <div id="projectPage">
                 <div id="banner">
@@ -102,6 +101,7 @@ export default class ProjectPage extends React.Component {
                         onClose={() => {
                             this.setState({screenshotsExpanded: false})
                         }}
+                        caption={this.state.focusCaption}
                     />
 
                 }
@@ -155,7 +155,14 @@ export default class ProjectPage extends React.Component {
                                 <div id={"image-container"}>
                                     {
                                         content.pictures.map((image, index) =>
-                                            <div onClick={() => this.showImageHighlight(content.pictures[index])}>
+                                            <div
+                                                onClick={() =>
+                                                    this.showImageHighlight(
+                                                        content.pictures[index],
+                                                        content.captions[index]
+                                                    )
+                                                }
+                                            >
                                                 <GalleryImage
                                                     image={image}
                                                 />
