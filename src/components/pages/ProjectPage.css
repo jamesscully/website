@@ -115,6 +115,15 @@ h2 {
     float: left;
 }
 
+.google-play {
+    display: flex;
+}
+
+.google-play img {
+    display: flex;
+    height: 100px;
+}
+
 .float-left {
     float: left;
 }

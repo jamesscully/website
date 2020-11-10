@@ -2,6 +2,7 @@ import * as React from "react";
 import {Link} from "react-router-dom";
 import GitHubImg from '../../res/img/logos/github_logo_120px.png'
 import YoutubeImg from '../../res/img/logos/youtube_logo.png'
+import GooglePlayImg from '../../res/img/logos/google_play_logo.png'
 
 import './ProjectPage.css'
 import Button from "../Button";
@@ -133,16 +134,27 @@ export default class ProjectPage extends React.Component {
                         {(project.github !== "") ?
                                 <DetailButton
                                     text={"View Source (GitHub)"}
-                                    link={project.github} image={GitHubImg}
+                                    link={project.github}
+                                    image={GitHubImg}
                                 /> : null
                         }
 
                         {(content.video !== "") ?
                                 <DetailButton
                                     text={"Demo (YouTube)"}
-                                    link={content.video} image={YoutubeImg}
+                                    link={content.video}
+                                    image={YoutubeImg}
                                 />
                                 : null
+                        }
+
+                        {
+                            (content.app_store && content.app_store !== "") ?
+                                <DetailButton
+                                    text={"Download from Google Play"}
+                                    link={content.app_store}
+                                    image={GooglePlayImg}
+                                /> : null
                         }
 
                     </div>
