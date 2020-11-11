@@ -88,7 +88,6 @@ export default class Checkbutton extends React.Component {
                 }}
                 to={{
                     backgroundColor: checked ? "#007400" : "#ff0000",
-
                 }}
             >
             {
