@@ -102,8 +102,20 @@ export const ProjectsData = {
                 </p>
             </div>,
             "video": "",
-            "pictures": [],
-            "captions": []
+            "pictures": [
+                require("../res/img/projects/openglbeach/docks_1.png"),
+                require("../res/img/projects/openglbeach/tree_lit.png"),
+                require("../res/img/projects/openglbeach/tree_unlit.png"),
+                require("../res/img/projects/openglbeach/night.png"),
+                require("../res/img/projects/openglbeach/day.png")
+            ],
+            "captions": [
+                "Closeup of the monkey on the docks",
+                "Lit up tree",
+                "Unlit tree",
+                "Night time",
+                "Dusk",
+            ]
         }
     },
 
