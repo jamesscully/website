@@ -93,7 +93,7 @@ a:active { color: var(--color-primary-accent) }
 
 #image-container {
     display: flex;
-    overflow: hidden;
+    overflow-y: hidden;
     width: 100%;
 }
 

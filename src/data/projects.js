@@ -174,8 +174,14 @@ export const ProjectsData = {
                     written with C#, <a href={"https://github.com/jamesscully/Dexteritate/blob/master/Assets/Models"}>models</a> developed with Blender.
                 </p>
             </div>,
-            "video": "",
-            "pictures": [],
+            "video": "https://youtu.be/mcVy1EQEdW8",
+            "pictures": [
+                require("../res/img/projects/dexteritate/level2.png"),
+                require("../res/img/projects/dexteritate/level2_1.png"),
+                require("../res/img/projects/dexteritate/ricochet.png"),
+                require("../res/img/projects/dexteritate/tut1.png"),
+                require("../res/img/projects/dexteritate/tut2.png")
+            ],
             "captions": []
         }
     }
