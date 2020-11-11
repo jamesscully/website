@@ -89,7 +89,7 @@ export const ProjectsData = {
                     vertex data with UV map coordinates and the material the object uses.
 
                     Similarly, to help with animation and positioning the game takes a page out of the typical game dev / modelling
-                    book, by allowing models to store a pointer to a parent object; meaning that positioning can be done
+                    book, by allowing <a href={"https://github.com/jamesscully/Dexteritate/blob/master/Assets/Models"}>models</a> to store a pointer to a parent object; meaning that positioning can be done
                     absolutely or relatively.
                 </p>
                 <p>
@@ -153,7 +153,27 @@ export const ProjectsData = {
         "stack": ["C#", "Blender", "Unity"],
         "github": "https://github.com/jamesscully/Dexteritate",
         "pageContent": {
-            "text": "",
+            "text":
+            <div>
+                <p>
+                    Dexteritate is a video game developed as part of a Games module at university. It was developed with
+                    Unity (C#) and features puzzles that increase in difficulty as playtime increases (albeit, not
+                    too difficult). The main objective is to complete the game with the least amount of mistakes and
+                    in the fastest time.
+                </p>
+                <p>
+                    It was primarily assessed on ideas learned in class, for example progressive difficulty, layering
+                    mechanics on top of each other (e.g. shoot 3 targets before a timer ends) and
+                    creating an <a href={"https://en.wikipedia.org/wiki/MDA_framework"}>aesthetic</a>. Overall, it was
+                    quite a fun project - it gave me a chance to work with game engines again, which are less useful
+                    in real life, but the potential for creativity and constant iteration of ideas is unrivalled.
+                </p>
+
+                <p>
+                    All <a href={"https://github.com/jamesscully/Dexteritate/blob/master/Assets/Scripts"}>code (*.cs)</a> was
+                    written with C#, <a href={"https://github.com/jamesscully/Dexteritate/blob/master/Assets/Models"}>models</a> developed with Blender.
+                </p>
+            </div>,
             "video": "",
             "pictures": [],
             "captions": []
