@@ -182,7 +182,13 @@ export const ProjectsData = {
                 require("../res/img/projects/dexteritate/tut1.png"),
                 require("../res/img/projects/dexteritate/tut2.png")
             ],
-            "captions": []
+            "captions": [
+                "3rd level, using multiple mechanics needed for completion",
+                "The player should recognize a target, so this can be used in physics puzzles aswell.",
+                "Ricochet boards - projectiles will bounce off each instance of these. Activation is only done after all in a group are hit.",
+                "Tutorial introducing some mechanics to the player",
+                "Tutorial introducing some mechanics to the player",
+            ]
         }
     }
 }
