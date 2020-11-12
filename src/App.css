@@ -177,4 +177,8 @@ a:active { color: var(--color-primary-accent) }
   min-height: 50vh;
 }
 
+#buildDetails {
+  text-align: center;
+  font-weight: bold;
+}
 
