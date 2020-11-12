@@ -15,8 +15,8 @@
     "react-spring": "^8.0.27"
   },
   "scripts": {
-    "start": "REACT_APP_GIT_SHA=`git rev-parse --short HEAD` react-scripts start",
-    "build": "REACT_APP_GIT_SHA=`git rev-parse --short HEAD` react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "deploy": "aws s3 sync build/ s3://jwscully.uk",
     "eject": "react-scripts eject"

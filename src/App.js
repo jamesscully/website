@@ -18,14 +18,6 @@ export default class App extends Component {
             <div className="App">
                 {/*<NavBar/>*/}
                 <PageRouter/>
-
-                <div id={"buildDetails"}>
-                    <p>
-                        Built from Commit: <a href={"https://github.com/jamesscully/website/tree/" + process.env.REACT_APP_GIT_SHA} target={"_blank"} >
-                        {process.env.REACT_APP_GIT_SHA}
-                    </a>
-                    </p>
-                </div>
             </div>
         );
     }
