@@ -8,6 +8,7 @@ a:hover { color: var(--color-secondary-light) }
 a:active { color: var(--color-primary-accent) }
 
 
+
 #projectDetails {
     display: flex;
 

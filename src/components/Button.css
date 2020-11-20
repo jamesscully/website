@@ -26,6 +26,7 @@
 
     padding-left: 1em;
     padding-right: 1em;
+
 }
 
 .invert { filter: invert(100%); }
@@ -33,10 +34,10 @@
 .buttonImg {
     display: flex;
     line-height: 40px;
+}
 
-    align-self: center;
-
+.buttonImg img {
+    object-fit: contain;
     height: 20px;
-    overflow: hidden;
-
+    align-self: center;
 }

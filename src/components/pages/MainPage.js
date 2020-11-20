@@ -86,9 +86,14 @@ export default class MainPage extends React.Component {
                         {/*<img id={"IntroImage"} src={Avatar} alt={""}/>*/}
                     </div>
                 </div>
+
+                <div className={"section"}>
+                    <SectionHeader text={"Education"}/>
+                    <EducationSection/>
+                </div>
+
                 <div id={"projects"} className={"section"}>
                     <SectionHeader text={"Projects"}/>
-
                     <div id={"CheckbuttonContainer"}>
                         <b>Filter by tag: <br/><br/></b>
                         {
@@ -116,13 +121,12 @@ export default class MainPage extends React.Component {
 
                                 // we only need 1 tag to match for the filter
                                 for(const index in project.tags) {
-
+                                    const tag = project.tags[index]
 
                                     // if we've hit a valid tag, we don't need to search anymore
                                     if(valid)
                                         break
 
-                                    const tag = project.tags[index]
                                     valid = this.state.filter.get(tag)
                                 }
 
@@ -132,10 +136,9 @@ export default class MainPage extends React.Component {
                         }
                     </div>
                 </div>
-                <div className={"section"}>
-                    <SectionHeader text={"Education"}/>
-                    <EducationSection/>
-                </div>
+
+
+
                 {/*<div className={"section"}>*/}
                 {/*    <SectionHeader text={"Bits and Bobs"}/>*/}
                 {/*</div>*/}
