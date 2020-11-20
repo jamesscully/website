@@ -49,6 +49,10 @@ export default class Button extends React.Component {
         // only call if we have an onClick
         if(this.state.onClick) {
             this.state.onClick()
+
+            this.setState({
+                inverted: !this.state.inverted
+            })
         }
     }
 

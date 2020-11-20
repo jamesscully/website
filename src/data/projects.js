@@ -136,23 +136,23 @@ export const ProjectsData = {
     //     }
     // },
 
-    "hendrix": {
-        "title": "Hendrix Music App",
-        "imageURL": "https://i.imgur.com/gxiXfcg.png",
-        "imageText": "",
-        "startDate": 2019,
-        "endDate": 2020,
-        "description": "Simple music player for bookmarking points within songs, and navigation between them.",
-        "tags": ["Android (Java/Kotlin)"],
-        "stack": ["Android", "Kotlin"],
-        "github": "https://github.com/jamesscully/Hendrix",
-        "pageContent": {
-            "text": "",
-            "video": "",
-            "pictures": [],
-            "captions": []
-        }
-    },
+    // "hendrix": {
+    //     "title": "Hendrix Music App",
+    //     "imageURL": "https://i.imgur.com/gxiXfcg.png",
+    //     "imageText": "",
+    //     "startDate": 2019,
+    //     "endDate": 2020,
+    //     "description": "Simple music player for bookmarking points within songs, and navigation between them.",
+    //     "tags": ["Android (Java/Kotlin)"],
+    //     "stack": ["Android", "Kotlin"],
+    //     "github": "https://github.com/jamesscully/Hendrix",
+    //     "pageContent": {
+    //         "text": "",
+    //         "video": "",
+    //         "pictures": [],
+    //         "captions": []
+    //     }
+    // },
 
     "dexteritate": {
         "title": "Dexteritate",
