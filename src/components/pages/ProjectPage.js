@@ -73,8 +73,14 @@ export default class ProjectPage extends React.Component {
         const { name } = this.state
 
         const project = ProjectRepository.getProjectById(name)
-        const content = project.pageContent
 
+        // redirect to homepage if id does not match
+        if(!project) {
+            window.location = "https://www.jwscully.uk"
+            return null
+        }
+
+        const content = project.pageContent
         const video = this.getVideoEmbed(content.video)
 
         let banner = null

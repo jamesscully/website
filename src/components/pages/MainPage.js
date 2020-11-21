@@ -76,14 +76,12 @@ export default class MainPage extends React.Component {
                             <a
                                 href={'https://jwscully.uk/resume.pdf'}
                                 target={"_blank"}
-                                rel={"noopener noreferrer"}
-                            >
+                                rel={"noopener noreferrer"}>
                                 <Button
                                     text={"View my Resume"}
                                 />
                             </a>
                         </div>
-                        {/*<img id={"IntroImage"} src={Avatar} alt={""}/>*/}
                     </div>
                 </div>
 
@@ -136,13 +134,6 @@ export default class MainPage extends React.Component {
                         }
                     </div>
                 </div>
-
-
-
-                {/*<div className={"section"}>*/}
-                {/*    <SectionHeader text={"Bits and Bobs"}/>*/}
-                {/*</div>*/}
-
             </div>
         )
     }
