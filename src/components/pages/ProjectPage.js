@@ -7,8 +7,6 @@ import GooglePlayImg from '../../res/img/logos/google_play_logo.png'
 import './ProjectPage.css'
 import Button from "../Button";
 import ProjectRepository from "../../ProjectRepository";
-import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
-import {Spring, config, animated} from "react-spring/renderprops";
 import ScreenshotOverlay from "../ScreenshotOverlay";
 
 // functional component for small buttons below title

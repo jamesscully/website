@@ -4,7 +4,6 @@ import GitHubImg from "../../res/img/logos/github_logo_120px.png";
 import LinkedInImg from "../../res/img/logos/linkedin_logo.png";
 import SectionHeader from "../SectionHeader";
 import Button from "../Button";
-import Avatar from "../../res/img/avatar_placeholder_400px.png";
 import Checkbutton from "../Checkbutton";
 import ProjectView from "../ProjectView";
 import {EducationSection} from "../sections/education/EducationSection";
