@@ -17,7 +17,7 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100vw;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 
@@ -60,6 +60,9 @@ a:active { color: var(--color-primary-accent) }
 
   line-height: 50px;
   margin-bottom: 24px;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .section {

@@ -12,17 +12,26 @@ export default class SectionHeader extends Component {
     }
 
     divider = () => {
+        const lineY = "50%"
+        const width = "10%"
+
+        const strokeWidth = 5
+
+        const margin = "24px"
+
         const style = {
-            fontSize: "32pt",
-            fontWeight: "300"
+            marginLeft: margin,
+            marginRight: margin
         }
 
-        const lineY = "70%"
-        const lineX = "125px"
-
         const svg =
-            <svg style={style} height={"50"} width={lineX}>
-                <line x1="0" y1={lineY} x2={lineX} y2={lineY} style={{stroke: 'rgb(255, 255, 255)', strokeWidth: 4}} />
+            <svg
+                width={width}
+                height={strokeWidth}
+                className={"item"}
+                style={style}
+            >
+                <line x1="0" y1={lineY} x2={"100%"} y2={lineY} style={{stroke: 'rgb(255, 255, 255)', strokeWidth: strokeWidth}} />
             </svg>
 
         return(
@@ -38,8 +47,8 @@ export default class SectionHeader extends Component {
         }
 
         return(
-            <div className={"section-header"} style={style}>
-                {this.divider()} &nbsp; {text} &nbsp; {this.divider()}
+            <div className={"section-header item"} style={style}>
+                {this.divider()} {text} {this.divider()}
             </div>
         )
     }
