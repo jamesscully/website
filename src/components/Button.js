@@ -68,9 +68,7 @@ export default class Button extends React.Component {
 
         let imageStyle = null
 
-        if(this.state.iconName === 'forward') {
-            imageStyle = { transform: inverted ? 'rotate(180deg)' : 'rotate(0deg)' }
-        }
+        imageStyle = { transform: inverted ? 'rotate(180deg)' : 'rotate(0deg)' }
 
         // which text we will use
         const outText = (inverted && altText != null) ? altText : text

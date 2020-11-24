@@ -113,7 +113,7 @@ export default class ProjectPage extends React.Component {
 
                 <div id="goBack">
                     <Link to={'/'}>
-                        <Button text={"Back"}/>
+                        <Button text={"Back"} inverted/>
                     </Link>
                 </div>
 

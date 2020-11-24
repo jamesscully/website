@@ -9,15 +9,14 @@
   color: white;
 }
 
-body {
-  background-color: var(--color-bg);
-}
-
 html, body {
   margin: 0;
   height: 100%;
   width: 100vw;
-  overflow-x: scroll;
+  overflow-x: hidden;
+
+  background-color: var(--color-bg);
+
 }
 
 
@@ -79,6 +78,18 @@ a:active { color: var(--color-primary-accent) }
 
   width: 40vw;
   margin: 0 auto 20px;
+}
+
+@media only screen and (max-width: 1360px) {
+  #IntroContainer  {
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 10px;
+
+    width: 80vw;
+    margin: 0 auto;
+  }
 }
 
 #IntroText {
