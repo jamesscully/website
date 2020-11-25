@@ -175,7 +175,6 @@ a:active { color: var(--color-primary-accent) }
 
   width: 80vw;
 
-  min-height: 50vh;
 }
 
 #buildDetails {
