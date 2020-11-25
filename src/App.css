@@ -19,8 +19,6 @@ html, body {
 
 }
 
-
-
 a:link { color: #fff; text-underline-offset: 5px }
 a:visited { color: #fff }
 a:hover { color: var(--color-secondary-light) }
@@ -33,7 +31,6 @@ a:active { color: var(--color-primary-accent) }
   font-size: 32pt;
   text-align: center;
 }
-
 
 .App-header {
   display: flex;
@@ -78,18 +75,6 @@ a:active { color: var(--color-primary-accent) }
 
   width: 40vw;
   margin: 0 auto 20px;
-}
-
-@media only screen and (max-width: 1360px) {
-  #IntroContainer  {
-    display: flex;
-    flex-direction: row;
-
-    border-radius: 10px;
-
-    width: 80vw;
-    margin: 0 auto;
-  }
 }
 
 #IntroText {
@@ -198,3 +183,14 @@ a:active { color: var(--color-primary-accent) }
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1360px) {
+  #IntroContainer  {
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 10px;
+
+    width: 80vw;
+    margin: 0 auto;
+  }
+}

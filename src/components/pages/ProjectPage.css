@@ -128,3 +128,17 @@ h2 {
 .float-left {
     float: left;
 }
+
+@media only screen and (max-width: 1360px) {
+    #projectTitle {
+        font-size: 48pt;
+    }
+
+    .subtitle {
+        font-size: 18pt;
+    }
+
+    #banner {
+        height: 20vh;
+    }
+}
