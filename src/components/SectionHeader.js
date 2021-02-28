@@ -7,21 +7,28 @@ export default class SectionHeader extends Component {
         super(props);
 
         this.state = {
-            text: props.text
+            text: props.text,
+            hideDivider: props.hideDivider
         }
     }
 
     divider = () => {
         const lineY = "50%"
-        const width = "10%"
+        const width = "95vw"
 
-        const strokeWidth = 5
+        const strokeWidth = 2
 
         const margin = "24px"
+        const marginVert = "10vh"
 
         const style = {
             marginLeft: margin,
-            marginRight: margin
+            marginRight: margin,
+            marginTop: marginVert,
+            marginBottom: marginVert,
+            display: "inline-block",
+            verticalAlign: "middle",
+            textAlign: "center"
         }
 
         const svg =
@@ -31,7 +38,7 @@ export default class SectionHeader extends Component {
                 className={"item"}
                 style={style}
             >
-                <line x1="0" y1={lineY} x2={"100%"} y2={lineY} style={{stroke: 'rgb(255, 255, 255)', strokeWidth: strokeWidth}} />
+                <line x1="0" y1={lineY} x2={"100%"} y2={lineY} style={{stroke: "#323232", strokeWidth: strokeWidth}} />
             </svg>
 
         return(
@@ -40,15 +47,29 @@ export default class SectionHeader extends Component {
     }
 
     render() {
-        const {text} = this.state
+        const {text, hideDivider} = this.state
 
         const style = {
-            verticalAlign: "middle"
+            textAlign: "center"
         }
 
+        const textStyle = {
+            textAlign: "center",
+        }
+
+        var divider = this.divider();
+
+        if(hideDivider)
+            divider = "";
+
         return(
-            <div className={"section-header item"} style={style}>
-                {this.divider()} {text} {this.divider()}
+            <div style={style}>
+                {
+                    divider
+                }
+                <div className={"section-header item"} style={textStyle}>
+                    { text }
+                </div>
             </div>
         )
     }

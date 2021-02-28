@@ -56,8 +56,8 @@ export default class MainPage extends React.Component {
                         <SocialButton img={LinkedInImg} href={"https://www.linkedin.com/in/james-scully-852b8797/"}/>
                     </span>
                 </header>
-                <div className={"section"}>
-                    <SectionHeader text={"A bit about me"}/>
+                <div className={"section"} style={{marginTop: "10vh"}}>
+                    <SectionHeader text={"A bit about me"} hideDivider />
                     <div id={"IntroContainer"}>
                         <div id={"IntroText"}>
                             <p>
@@ -89,7 +89,7 @@ export default class MainPage extends React.Component {
                     <EducationSection/>
                 </div>
 
-                <div id={"projects"} className={"section"}>
+                <div id="projects" className={"section text-center"}>
                     <SectionHeader text={"Projects"}/>
                     <div id={"CheckbuttonContainer"}>
                         <b>Filter by tag: <br/><br/></b>

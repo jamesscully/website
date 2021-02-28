@@ -30,21 +30,9 @@ export const BitsAndBobsData = {
         "imageText": "",
         "startDate": 2018,
         "endDate": 2019,
-        "description": "OpenGL work featuring lighting systems, dynamic lighting, object loading",
+        "description": "",
         "tags": ["C++"],
         "stack": ["C++"],
         "github": ""
     },
-
-    "first": {
-        "title": "DayZ Mildot Calculator (first project)",
-        "imageURL": "",
-        "imageText": "",
-        "startDate": 2013,
-        "endDate": 2013,
-        "description": "",
-        "tags": [],
-        "stack": [],
-        "github": ""
-    }
 }
