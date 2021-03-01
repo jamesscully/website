@@ -13,7 +13,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build-deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -28,12 +28,7 @@ jobs:
           npm install
           npm run-script build
 
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy Auto-Update files to S3
+      - name: Deploy website
         uses:  anshulrgoyal/upload-s3-action@master
         with:
           aws_key_id: ${{ secrets.S3_ACCESS_KEY }}
@@ -41,6 +36,4 @@ jobs:
           aws_bucket: 'jwscully.uk'
           source_dir: 'build/'
           destination_dir: ""
-
-
 
