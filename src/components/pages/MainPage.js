@@ -85,7 +85,7 @@ export default class MainPage extends React.Component {
                 </div>
 
                 <div className={"section"}>
-                    <SectionHeader text={"Education"}/>
+                    <SectionHeader text={"Education test for deployment"}/>
                     <EducationSection/>
                 </div>
 
