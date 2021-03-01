@@ -49,6 +49,7 @@ export default class ProjectPage extends React.Component {
                     src={url}
                     frameBorder="0"
                     allowFullScreen
+                    title={"embedded_yt_video"}
                 />
             )
         }
@@ -79,13 +80,11 @@ export default class ProjectPage extends React.Component {
         }
 
         const content = project.pageContent
-        const video = this.getVideoEmbed(content.video)
 
         let banner = null
-        let icon   = null
+
         try {
             banner = require(`../../res/img/projects/${name}/banner.png`)
-            icon   = require(`../../res/img/projects/${name}/icon.png`)
         } catch (e) {  }
 
         const {screenshotsExpanded} = this.state
@@ -95,6 +94,7 @@ export default class ProjectPage extends React.Component {
                 <div id="banner">
                     <img
                         src={banner}
+                        alt={"Project banner"}
                     />
                 </div>
 

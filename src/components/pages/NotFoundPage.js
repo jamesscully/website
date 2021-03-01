@@ -1,10 +1,6 @@
 import React from "react";
 
 export default class NotFoundPage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <body style={{textAlign: "center"}}>

@@ -33,6 +33,7 @@ export default class ScreenshotOverlay extends React.Component {
                         id={"screenshot-overlay-image"}
                         src={image}
                         onClick={null}
+                        alt={""}
                     />
                     {
                         (caption) &&
