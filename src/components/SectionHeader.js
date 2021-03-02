@@ -1,5 +1,9 @@
 import React, {Component} from "react";
-import '../App.css'
+import './SectionHeader.css'
+
+import EducationBanner from '../res/img/education-banner.png'
+import ProjectsBanner from '../res/img/projects-banner.png'
+// import IntroBanner from '../res/img/intro-banner.png'
 
 export default class SectionHeader extends Component {
 
@@ -8,7 +12,8 @@ export default class SectionHeader extends Component {
 
         this.state = {
             text: props.text,
-            hideDivider: props.hideDivider
+            hideDivider: props.hideDivider,
+            subject: props.subject
         }
     }
 
@@ -16,7 +21,7 @@ export default class SectionHeader extends Component {
         const lineY = "50%"
         const width = "95vw"
 
-        const strokeWidth = 2
+        const strokeWidth = 5
 
         const margin = "24px"
         const marginVert = "10vh"
@@ -24,11 +29,10 @@ export default class SectionHeader extends Component {
         const style = {
             marginLeft: margin,
             marginRight: margin,
-            marginTop: marginVert,
-            marginBottom: marginVert,
-            display: "inline-block",
+            height: strokeWidth,
             verticalAlign: "middle",
-            textAlign: "center"
+            textAlign: "center",
+            // boxShadow: "0 0 white, 0 0 white, 0 0 50px 2px #2A2A2A",
         }
 
         const svg =
@@ -38,8 +42,17 @@ export default class SectionHeader extends Component {
                 className={"item"}
                 style={style}
             >
-                <line x1="0" y1={lineY} x2={"100%"} y2={lineY} style={{stroke: "#323232", strokeWidth: strokeWidth}} />
+                <line x1="0"
+                      y1={lineY}
+                      x2={"100%"}
+                      y2={lineY}
+                      style={{
+                          stroke: "#323232",
+                          strokeWidth: strokeWidth,
+                      }}
+                />
             </svg>
+
 
         return(
             svg
@@ -47,10 +60,29 @@ export default class SectionHeader extends Component {
     }
 
     render() {
-        const {text, hideDivider} = this.state
+        const {text, hideDivider, subject} = this.state
 
-        const style = {
-            textAlign: "center"
+        let bannerMap = {
+            "education": EducationBanner,
+            "projects": ProjectsBanner
+        }
+
+        var banner = bannerMap[subject]
+
+        if(subject != null) {
+            console.log("subject: " + subject)
+            console.log(bannerMap[subject])
+        }
+
+        var containerStyle = {
+            backgroundImage: `url('${banner}')`,
+
+            backgroundColor: '151515',
+            //  no-repeat fixed center;
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover"
         }
 
         const textStyle = {
@@ -63,11 +95,14 @@ export default class SectionHeader extends Component {
             divider = "";
 
         return(
-            <div style={style}>
+            <div id={"section-header-container"} style={containerStyle}>
                 {
                     divider
                 }
-                <div className={"section-header item"} style={textStyle}>
+
+                <div id={"previewImage"} />
+
+                <div id="section-header-text" className={"section-header item"} style={textStyle}>
                     { text }
                 </div>
             </div>

@@ -56,8 +56,8 @@ export default class MainPage extends React.Component {
                         <SocialButton img={LinkedInImg} href={"https://www.linkedin.com/in/james-scully-852b8797/"}/>
                     </span>
                 </header>
-                <div className={"section"} style={{marginTop: "10vh"}}>
-                    <SectionHeader text={"A bit about me"} hideDivider />
+                <div className={"section"}>
+                    <SectionHeader text={"A bit about me"} hideDivider/>
                     <div id={"IntroContainer"}>
                         <div id={"IntroText"}>
                             <p>
@@ -85,13 +85,13 @@ export default class MainPage extends React.Component {
                 </div>
 
                 <div className={"section"}>
-                    <SectionHeader text={"Education"}/>
+                    <SectionHeader text={"Education"} subject={"education"}/>
                     <EducationSection/>
                 </div>
 
                 <div id="projects" className={"section text-center"}>
-                    <SectionHeader text={"Projects"}/>
-                    <div id={"CheckbuttonContainer"}>
+                    <SectionHeader text={"Projects"} subject={"projects"}/>
+                    <div id={"CheckbuttonContainer"} className={"shadow"}>
                         <b>Filter by tag: <br/><br/></b>
                         {
                             // for each tag, add button

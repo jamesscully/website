@@ -46,7 +46,7 @@ export default class ProjectView extends React.Component {
 
                 { props =>
                     (
-                        <div id={"project"} style={props} className={"container"}>
+                        <div id={"project"} style={props} className={"container shadow"}>
                             <div id={"title"} >
                         <span>
                             {project.title} ({project.getTimeSpan()})

@@ -9,6 +9,10 @@
   color: white;
 }
 
+.shadow {
+  box-shadow: 0 0 8px #232323;
+}
+
 html, body {
   margin: 0;
   height: 100%;
@@ -39,7 +43,6 @@ a:active { color: var(--color-primary-accent) }
   padding-top: 60px;
   padding-bottom: 60px;
 
-  margin-bottom: 20px;
   background-color: var(--color-primary-accent);
   text-align: center;
   user-select: none;
@@ -47,24 +50,13 @@ a:active { color: var(--color-primary-accent) }
   height: 20vh
 }
 
-.section-header {
-  font-size: 32pt;
-  font-weight: bolder;
-  width: 100vw;
-
-  text-align: center;
-
-  line-height: 50px;
-  margin-bottom: 24px;
-
-  align-items: center;
-  justify-content: center;
-}
-
 .section {
   /*background-color: #ab000e;*/
-  margin-top: 24px;
   margin-bottom: 48px;
+}
+
+.section:after {
+  margin-top: 24px;
 }
 
 .text-center {
