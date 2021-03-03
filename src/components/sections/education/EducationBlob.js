@@ -49,10 +49,10 @@ export default class EducationBlob extends Component {
         return(
             <div className={"EducationBlob"}>
                 <div id={"BlobImage"}>
-                    <img src={image} alt={"Logo"}/>
+                    <img src={image} alt={"Logo"} className={"shadow"}/>
                 </div>
 
-                <div className={"BlobContent"}>
+                <div className={"BlobContent shadow"}>
                     <span id={"institution"}>
                         {name}
                         <span id={"date"}>

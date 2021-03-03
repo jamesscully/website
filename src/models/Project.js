@@ -32,7 +32,7 @@ export default class Project extends React.Component {
 
     getTimeSpan() {
         if(this.startDate === this.endDate) {
-            return this.startDate.toString()
+            return ""
         }
 
         let end = this.endDate

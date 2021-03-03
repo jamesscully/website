@@ -136,23 +136,28 @@ export const ProjectsData = {
     //     }
     // },
 
-    // "hendrix": {
-    //     "title": "Hendrix Music App",
-    //     "imageURL": "https://i.imgur.com/gxiXfcg.png",
-    //     "imageText": "",
-    //     "startDate": 2019,
-    //     "endDate": 2020,
-    //     "description": "Simple music player for bookmarking points within songs, and navigation between them.",
-    //     "tags": ["Android (Java/Kotlin)"],
-    //     "stack": ["Android", "Kotlin"],
-    //     "github": "https://github.com/jamesscully/Hendrix",
-    //     "pageContent": {
-    //         "text": "",
-    //         "video": "",
-    //         "pictures": [],
-    //         "captions": []
-    //     }
-    // },
+    "tarkovassistant": {
+        "title": "Tarkov Assistant",
+        "imageURL": "",
+        "imageText": "TA",
+        "startDate": 2021,
+        "endDate": 2021,
+        "description": "A small application to assist with viewing maps whilst in-game on Escape From Tarkov.",
+        "tags": ["C#"],
+        "stack": ["C#", ".NET Framework", "WPF"],
+        "github": "https://github.com/jamesscully/tarkov",
+        "pageContent": {
+            "text":
+                <div>
+
+                </div>,
+            "video": "",
+            "pictures": [
+                "https://raw.githubusercontent.com/jamesscully/tarkov/main/media/example.gif"
+            ],
+            "captions": []
+        }
+    },
 
     "dexteritate": {
         "title": "Dexteritate",

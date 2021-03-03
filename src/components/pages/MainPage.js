@@ -11,7 +11,6 @@ import ProjectRepository from "../../ProjectRepository";
 
 var HashMap = require('hashmap')
 
-
 export default class MainPage extends React.Component {
     constructor(props) {
         super(props);
@@ -58,7 +57,7 @@ export default class MainPage extends React.Component {
                 </header>
                 <div className={"section"}>
                     <SectionHeader text={"A bit about me"} hideDivider/>
-                    <div id={"IntroContainer"}>
+                    <div id={"IntroContainer"} className={"shadow"}>
                         <div id={"IntroText"}>
                             <p>
                                 Hello! I'm James, a Computer Science graduate from the University of Nottingham.

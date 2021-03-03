@@ -69,20 +69,21 @@ export default class SectionHeader extends Component {
 
         var banner = bannerMap[subject]
 
+        banner = `url('${banner}')`;
+
         if(subject != null) {
             console.log("subject: " + subject)
             console.log(bannerMap[subject])
         }
 
         var containerStyle = {
-            backgroundImage: `url('${banner}')`,
+            backgroundImage: banner,
 
-            backgroundColor: '151515',
             //  no-repeat fixed center;
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"
+            backgroundSize: "cover",
         }
 
         const textStyle = {
@@ -102,7 +103,7 @@ export default class SectionHeader extends Component {
 
                 <div id={"previewImage"} />
 
-                <div id="section-header-text" className={"section-header item"} style={textStyle}>
+                <div id="section-header-text" className={"section-header item text-shadow"} style={textStyle}>
                     { text }
                 </div>
             </div>

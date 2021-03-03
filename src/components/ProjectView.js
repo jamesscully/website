@@ -12,10 +12,9 @@ export default class ProjectView extends React.Component {
         super(props);
 
         this.state = {
-            id: props.id
+            id: props.id,
+            hidden: props.hidden
         }
-
-        console.log(this.state.id)
 
         this.project = ProjectRepository.getProjectById(this.state.id)
     }
@@ -32,7 +31,22 @@ export default class ProjectView extends React.Component {
     }
 
     render() {
-        let image = <img src={this.project.imageURL} alt={String.fromCodePoint(this.project.imageText)}/>
+
+        let imageAlt = ""
+
+        try {
+            imageAlt = String.fromCodePoint(this.project.imageText)
+        } catch (e) {
+            console.error(e)
+            imageAlt = this.project.imageText
+        }
+
+        let image = <img
+            src={this.project.imageURL}
+            alt={
+                imageAlt
+            }
+        />
 
         // alias to remove this. keyword
         const project = this.project
@@ -46,15 +60,16 @@ export default class ProjectView extends React.Component {
 
                 { props =>
                     (
-                        <div id={"project"} style={props} className={"container shadow"}>
+                        <div id={"project"} style={props} className={`container shadow`}>
                             <div id={"title"} >
                         <span>
-                            {project.title} ({project.getTimeSpan()})
+                            {project.title}
                         </span>
 
                                 <a  id="linkToGitHub"
                                     href={project.github}
                                     target="_blank"
+                                    draggable={"false"}
                                     rel={"noopener noreferrer"}>
                                     <span>Source</span>
                                     <img src={SmallGitHub} alt={"Source"}/>
@@ -68,7 +83,7 @@ export default class ProjectView extends React.Component {
                             </div>
 
                             <div id={"description_container"}>
-                                <div id="image" className={"item"}>
+                                <div id="image" className={"item shadow"}>
                                     {image}
                                 </div>
                                 <div id={"description"} className={"item"}>
