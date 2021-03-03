@@ -98,7 +98,7 @@ export default class SectionHeader extends Component {
         return(
             <div id={"section-header-container"} style={containerStyle}>
                 {
-                    divider
+                    // divider
                 }
 
                 <div id={"previewImage"} />

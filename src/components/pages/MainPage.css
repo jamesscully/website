@@ -1,0 +1,136 @@
+.intro-header h1 {
+    margin: 0 auto;
+    margin-bottom: 24px;
+    font-size: 32pt;
+    text-align: center;
+}
+
+.intro-header {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--color-primary-accent);
+    text-align: center;
+    user-select: none;
+
+    height: 20vh
+}
+
+.section {
+    /*background-color: #ab000e;*/
+    margin-bottom: 48px;
+}
+
+.section:after {
+    margin-top: 24px;
+}
+
+#IntroContainer {
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 10px;
+
+    width: 40vw;
+    margin: 0 auto 20px;
+}
+
+#IntroText {
+    background-color: var(--color-primary-dark);
+    padding: 20px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+
+    /*background-color: var(--color-primary);*/
+}
+
+
+#IntroImage {
+    object-fit: cover;
+    height: 100%;
+    width: 250px;
+    align-self: center;
+}
+
+#IntroText p {
+    text-align: left;
+}
+
+#ProjectsPreamble {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.check-button {
+    background-color: #575757;
+    border-radius: 50px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    user-select: none;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+
+
+
+    width: auto;
+
+    white-space: nowrap;
+    display: inline-block;
+    min-height: 1em;
+    font-weight: bold;
+    font-size: 15pt;
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+
+}
+
+
+#CheckbuttonContainer {
+    background-color: var(--color-primary-dark);
+    text-align: center;
+
+    padding: 16px;
+
+    display: inline-block;
+
+    width: fit-content;
+
+    border-radius: 16px;
+}
+
+#ProjectContainer {
+    padding-top: 28px;
+    display: -webkit-flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+@media only screen and (max-width: 1360px) {
+    #IntroContainer  {
+        display: flex;
+        flex-direction: row;
+
+        border-radius: 10px;
+
+        width: 80vw;
+        margin: 0 auto;
+    }
+}
+

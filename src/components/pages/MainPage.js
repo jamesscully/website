@@ -9,6 +9,8 @@ import ProjectView from "../ProjectView";
 import {EducationSection} from "../sections/education/EducationSection";
 import ProjectRepository from "../../ProjectRepository";
 
+import './MainPage.css'
+
 var HashMap = require('hashmap')
 
 export default class MainPage extends React.Component {
@@ -46,7 +48,7 @@ export default class MainPage extends React.Component {
     render() {
         return(
             <div>
-                <header className="App-header">
+                <header className="intro-header">
                     Greetings! I'm
                     <h1>James Scully</h1>
 
@@ -90,7 +92,7 @@ export default class MainPage extends React.Component {
 
                 <div id="projects" className={"section text-center"}>
                     <SectionHeader text={"Projects"} subject={"projects"}/>
-                    <div id={"CheckbuttonContainer"} className={"shadow"}>
+                    <div id="CheckbuttonContainer" className={"shadow"}>
                         <b>Filter by tag: <br/><br/></b>
                         {
                             // for each tag, add button
@@ -127,7 +129,7 @@ export default class MainPage extends React.Component {
                                 }
 
                                 // return our view if valid, else hide
-                                return (valid && <ProjectView key={project.id} id={project.id} />)
+                                return valid && <ProjectView key={project.id} id={project.id}/>
                             })
                         }
                     </div>
