@@ -1,4 +1,4 @@
-#projectPage {
+#project-page {
     height: 150vh;
 }
 
@@ -7,9 +7,24 @@ a:visited { color: #fff }
 a:hover { color: var(--color-secondary-light) }
 a:active { color: var(--color-primary-accent) }
 
+h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 68pt;
+    font-weight: bolder;
+}
 
+h2 {
+    text-align: left;
+}
 
-#projectDetails {
+h3 {
+    margin: 0;
+    font-size: 22pt;
+    color: #7f7f7f;
+}
+
+#project-details {
     display: flex;
 
     margin-top: 24px;
@@ -45,7 +60,7 @@ a:active { color: var(--color-primary-accent) }
     display: flex;
 }
 
-#projectBody {
+#project-body {
     width: 80vw;
     text-align: center;
 
@@ -70,39 +85,25 @@ a:active { color: var(--color-primary-accent) }
     background: no-repeat fixed center;
 }
 
-#projectTitle {
-    text-align: left;
-    font-size: 68pt;
-    font-weight: bolder;
-}
-
-.subtitle {
-    font-size: 22pt;
-    color: #7f7f7f;
-}
-
-#projectText {
+#project-description {
     background-color: var(--color-primary-dark);
     padding: 1.5em;
 
     text-align: left;
 }
 
-#goBack {
+#project-button-goback {
     position: absolute;
     top: 16px;
     left: 8px;
 }
 
-#image-container {
+#project-image-container {
     display: flex;
     overflow-y: hidden;
     width: 100%;
 }
 
-h2 {
-    text-align: left;
-}
 
 .gallery-image {
     height: 200px;

@@ -28,7 +28,7 @@
     margin-top: 24px;
 }
 
-#IntroContainer {
+#intro-container {
     display: flex;
     flex-direction: row;
 
@@ -38,7 +38,7 @@
     margin: 0 auto 20px;
 }
 
-#IntroText {
+#intro-text {
     background-color: var(--color-primary-dark);
     padding: 20px;
 
@@ -52,26 +52,11 @@
 }
 
 
-#IntroImage {
-    object-fit: cover;
-    height: 100%;
-    width: 250px;
-    align-self: center;
-}
-
-#IntroText p {
+#intro-text p {
     text-align: left;
 }
 
-#ProjectsPreamble {
-    text-align: center;
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
-
-
-.check-button {
+.checkbutton {
     background-color: #575757;
     border-radius: 50px;
     text-align: center;
@@ -94,12 +79,10 @@
 
     padding-left: 1em;
     padding-right: 1em;
-
-
 }
 
 
-#CheckbuttonContainer {
+#checkbutton-container {
     background-color: var(--color-primary-dark);
     text-align: center;
 
@@ -112,7 +95,7 @@
     border-radius: 16px;
 }
 
-#ProjectContainer {
+#project-container {
     padding-top: 28px;
     display: -webkit-flex;
 
@@ -123,7 +106,7 @@
 }
 
 @media only screen and (max-width: 1360px) {
-    #IntroContainer  {
+    #intro-container  {
         display: flex;
         flex-direction: row;
 

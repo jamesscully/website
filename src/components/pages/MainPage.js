@@ -57,10 +57,10 @@ export default class MainPage extends React.Component {
                         <SocialButton img={LinkedInImg} href={"https://www.linkedin.com/in/james-scully-852b8797/"}/>
                     </span>
                 </header>
-                <div className={"section"}>
+                <div className="section">
                     <SectionHeader text={"A bit about me"} hideDivider/>
-                    <div id={"IntroContainer"} className={"shadow"}>
-                        <div id={"IntroText"}>
+                    <div id={"intro-container"} className={"shadow"}>
+                        <div id={"intro-text"}>
                             <p>
                                 Hello! I'm James, a Computer Science graduate from the University of Nottingham.
                                 <br/> <br/>
@@ -90,9 +90,13 @@ export default class MainPage extends React.Component {
                     <EducationSection/>
                 </div>
 
-                <div id="projects" className={"section text-center"}>
-                    <SectionHeader text={"Projects"} subject={"projects"}/>
-                    <div id="CheckbuttonContainer" className={"shadow"}>
+                <div className={"section text-center"}>
+                    <SectionHeader
+                        text={"Projects"}
+                        subject={"projects"}
+                    />
+
+                    <div id={"checkbutton-container"} className={"shadow"}>
                         <b>Filter by tag: <br/><br/></b>
                         {
                             // for each tag, add button
@@ -112,7 +116,7 @@ export default class MainPage extends React.Component {
                         }
                     </div>
 
-                    <div id={"ProjectContainer"}>
+                    <div id={"project-container"}>
                         {
                             this.state.projects.map((project) => {
                                 let valid = false

@@ -1,12 +1,17 @@
 import React, {Component} from 'react'
 import EducationBlob from "./EducationBlob";
-import './Education.css'
+import './EducationBlob.css'
 
 
 export class EducationSection extends Component {
     render() {
         return (
-            <div id={"Section"}>
+            <div style={{
+                width: "80vw",
+                margin: "0 auto",
+                display: "flex",
+                flexDirection: "column"
+            }}>
 
             <EducationBlob id={"university"}/>
             <EducationBlob id={"college"}/>

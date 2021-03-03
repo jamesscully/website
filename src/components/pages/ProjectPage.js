@@ -90,7 +90,7 @@ export default class ProjectPage extends React.Component {
         const {screenshotsExpanded} = this.state
 
         return (
-            <div id="projectPage">
+            <div id="project-page">
                 <div id="banner">
                     <img
                         src={banner}
@@ -99,6 +99,7 @@ export default class ProjectPage extends React.Component {
                 </div>
 
                 {
+                    // Rendered when a screenshot has been expanded
                     (screenshotsExpanded) &&
                     <ScreenshotOverlay
                         enabled={screenshotsExpanded}
@@ -111,27 +112,26 @@ export default class ProjectPage extends React.Component {
 
                 }
 
-                <div id="goBack">
+                <div id="project-button-goback">
                     <Link to={'/'}>
                         <Button text={"Back"} inverted/>
                     </Link>
                 </div>
 
+                <div id="project-body">
 
-                <div id="projectBody">
-
-                    <div id="projectTitle">
+                    <h1>
                         {project.title}
-                        <div className="subtitle">
+                        <h3 className="subtitle">
                             {
                                 project.stack.map((tag) => {
-                                    return <span>{tag}, </span>
+                                    return <span>{tag}; </span>
                                 })
                             }
-                        </div>
-                    </div>
+                        </h3>
+                    </h1>
 
-                    <div id="projectDetails">
+                    <div id="project-details">
 
                         {/* Only render buttons if their sources exist */}
 
@@ -168,7 +168,7 @@ export default class ProjectPage extends React.Component {
                         <div>
                             <h2>Screenshots</h2>
                             {
-                                <div id={"image-container"}>
+                                <div id={"project-image-container"}>
                                     {
                                         content.pictures.map((image, index) =>
                                             <div
@@ -193,7 +193,7 @@ export default class ProjectPage extends React.Component {
 
                     <h2>Description</h2>
 
-                    <div id="projectText">
+                    <div id="project-description">
                         {
                             content.text
                         }

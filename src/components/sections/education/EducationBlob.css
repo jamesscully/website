@@ -1,30 +1,20 @@
 
-#Section {
-    width: 80vw;
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
 /*
-    EducationBlobs
+    education-blobs
 */
 
-.EducationBlob {
+.education-blob {
     margin-bottom: 24px;
     position: relative;
 }
 
-
-.EducationBlob h1 {
+.education-blob h1 {
     text-align: left;
     margin: 0;
     padding: 0;
 }
 
-.EducationBlob h2 {
+.education-blob h2 {
     border-bottom: 4px;
     border-bottom-style: solid;
     border-bottom-color: #ab000e;
@@ -33,7 +23,7 @@
     padding: 0;
 }
 
-#BlobImage img {
+#blob-image img {
     width: 75px;
     border-radius: 20px;
 
@@ -41,7 +31,7 @@
     margin-right: 16px;
 }
 
-.BlobContent {
+.blob-content {
     display: flex;
     flex-direction: column;
 
@@ -71,35 +61,35 @@
     Content IDs
 */
 
-#institution {
+#blob-text-institute {
     font-size: 24pt;
     font-weight: bold;
 }
 
-#date {
+#blob-text-graduation {
     font-size: 16pt;
     font-weight: normal;
     float: right;
 }
 
 @media only screen and (max-width: 1360px) {
-    #date {
+    #blob-text-graduation {
         float: left;
     }
 
-    #BlobImage img {
+    #blob-image img {
         width: 50px;
     }
 }
 
-#course {
+#blob-text-course {
     margin-top: 12px;
 
     font-size: 18pt;
     font-weight: bold;
 }
 
-#grade {
+#blob-text-grade {
     font-size: 16pt;
 }
 

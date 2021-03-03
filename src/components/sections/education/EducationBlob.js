@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {EducationData} from '../../../data/education'
-import './Education.css'
+import './EducationBlob.css'
 import {animated, Spring} from "react-spring/renderprops";
 import Button from "../../Button";
 
@@ -47,22 +47,22 @@ export default class EducationBlob extends Component {
         const text = description.split('\n\n')
 
         return(
-            <div className={"EducationBlob"}>
-                <div id={"BlobImage"}>
+            <div className={"education-blob"}>
+                <div id={"blob-image"}>
                     <img src={image} alt={"Logo"} className={"shadow"}/>
                 </div>
 
-                <div className={"BlobContent shadow"}>
-                    <span id={"institution"}>
+                <div className={"blob-content shadow"}>
+                    <span id={"blob-text-institute"}>
                         {name}
-                        <span id={"date"}>
+                        <span id={"blob-text-graduation"}>
                             Graduated {date}
                         </span>
                     </span>
 
-                    <span id={"course"}>
+                    <span id={"blob-text-course"}>
                         {course}, <br/>
-                        <span id={"grade"}> {grade} </span>
+                        <span id={"blob-text-grade"}> {grade} </span>
                     </span>
 
                     <Spring
