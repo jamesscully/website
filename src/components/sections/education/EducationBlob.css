@@ -68,15 +68,11 @@
 
 #blob-text-graduation {
     font-size: 16pt;
-    font-weight: normal;
+    font-weight: bold;
     float: right;
 }
 
 @media only screen and (max-width: 1360px) {
-    #blob-text-graduation {
-        float: left;
-    }
-
     #blob-image img {
         width: 50px;
     }
@@ -86,11 +82,11 @@
     margin-top: 12px;
 
     font-size: 18pt;
-    font-weight: bold;
 }
 
 #blob-text-grade {
     font-size: 16pt;
+    font-weight: bold;
 }
 
 
