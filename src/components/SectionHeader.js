@@ -13,7 +13,9 @@ export default class SectionHeader extends Component {
         this.state = {
             text: props.text,
             hideDivider: props.hideDivider,
+            hideMarginBottom: props.hideMarginBottom,
             subject: props.subject
+
         }
     }
 
@@ -29,7 +31,7 @@ export default class SectionHeader extends Component {
         const style = {
             marginLeft: margin,
             marginRight: margin,
-            height: strokeWidth,
+            height: "50px",
             verticalAlign: "middle",
             textAlign: "center",
             // boxShadow: "0 0 white, 0 0 white, 0 0 50px 2px #2A2A2A",
@@ -60,7 +62,7 @@ export default class SectionHeader extends Component {
     }
 
     render() {
-        const {text, hideDivider, subject} = this.state
+        const {text, hideDivider, hideMarginBottom, subject} = this.state
 
         let bannerMap = {
             "education": EducationBanner,
@@ -87,7 +89,12 @@ export default class SectionHeader extends Component {
         }
 
         const textStyle = {
-            textAlign: "center",
+            textAlign: "left",
+        }
+
+        if(hideMarginBottom) {
+            textStyle["marginBottom"] = "0px"
+            textStyle["paddingBottom"] = "0px"
         }
 
         var divider = this.divider();

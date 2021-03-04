@@ -7,40 +7,56 @@ export default class SocialButton extends Component {
 
         this.state = {
             image: props.img,
-            link: props.href
+            link: props.href,
+            text: props.text,
+            alt: props.alt
         }
     }
 
     render() {
         const divStyle = {
-            width: "30px",
-            height: "30px",
-            padding: "10px",
+            width: "50px",
+            height: "50px",
+            padding: "20px",
             userSelect: "none",
             borderRadius: "100px",
-            marginLeft: "10px",
-            marginRight: "10px",
-            display: "inline-block",
+            margin: "10px",
+            display: "inline-flex",
             backgroundColor: "var(--color-primary)",
             cursor: "pointer",
-            lineHeight: "24px",
-            objectFit: "contain"
+            lineHeight: "50px",
+            objectFit: "contain",
+            zIndex: "1",
+            textDecoration: "none",
+            textAlign: "center",
+            verticalAlign: "center"
         }
 
         const imgStyle = {
-            width: "30px",
-            height: "30px",
+            width: "50px",
+            height: "50px",
+            zIndex: "1",
+
             float: "left"
         }
 
-        const {link, image} = this.state
+        const {link, image, text, alt} = this.state
+
+        var isTextButton = text != null || text !== ""
+        var isImageButton = image != null
 
         return(
-            <div style={divStyle}>
-                <a href={link} target="_blank" rel={"noopener noreferrer"}>
-                    <img style={imgStyle} src={image} alt={"Social"}/>
+            <div className={"social-button"} style={divStyle}>
+                <a href={link} target="_blank" rel={"noopener noreferrer"} >
+                    {
+                        (isImageButton) && <img style={imgStyle} src={image} alt={alt}/>
+                    }
+                    {
+                        (isTextButton) && <text> {text} </text>
+                    }
                 </a>
             </div>
         )
     }
 }
+

@@ -62,7 +62,7 @@ export default class EducationBlob extends Component {
 
                     <span id={"blob-text-course"}>
                         {course}, <br/>
-                        Achievedlo: <span id={"blob-text-grade"}> {grade} </span>
+                        Achieved: <span id={"blob-text-grade"}> {grade} </span>
                     </span>
 
                     <Spring

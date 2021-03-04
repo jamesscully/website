@@ -1,27 +1,53 @@
-.intro-header h1 {
-    margin: 0 auto;
-    margin-bottom: 24px;
-    font-size: 32pt;
-    text-align: center;
+
+:root {
+    --padding-large: 100px;
+    --header-height: 60vh;
 }
 
-.intro-header {
+header {
     display: flex;
     flex-direction: column;
 
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--padding-large);
+    padding-bottom: var(--padding-large);
+    padding-left: 15%;
 
-    background-color: var(--color-primary-accent);
-    text-align: center;
+    background-color: #1a1a1a;
     user-select: none;
+    font-size: 18pt;
+}
 
-    height: 20vh
+
+header h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-size: 48pt;
+    text-align: left;
+}
+
+header p {
+    width: 40vw;
+}
+
+.social-container {
+
+}
+.social-button {
+    transition: box-shadow 100ms linear;
+    box-shadow: 0 0 0px #4b4b4b;
+}
+
+.social-button:hover {
+    box-shadow: 0 0 12px #4b4b4b;
 }
 
 .section {
     /*background-color: #ab000e;*/
     margin-bottom: 48px;
+
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .section:after {
@@ -60,49 +86,47 @@
     background-color: #575757;
     border-radius: 50px;
     text-align: center;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     user-select: none;
     cursor: pointer;
     margin-left: 5px;
     margin-right: 5px;
 
-
-
     width: auto;
 
     white-space: nowrap;
     display: inline-block;
+
     min-height: 1em;
     font-weight: bold;
     font-size: 15pt;
 
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
 
 #checkbutton-container {
     background-color: var(--color-primary-dark);
-    text-align: center;
 
     padding: 16px;
-
-    display: inline-block;
 
     width: fit-content;
 
     border-radius: 16px;
+
+    text-align: center;
+
 }
 
 #project-container {
     padding-top: 28px;
-    display: -webkit-flex;
+    display: flex;
 
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    width: 80vw;
+
+
 }
 
 @media only screen and (max-width: 1360px) {

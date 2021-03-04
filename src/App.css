@@ -46,7 +46,7 @@ a:active { color: var(--color-primary-accent) }
 }
 
 .text-shadow {
-  text-shadow: 0 0 16px var(--color-primary-dark), 0 0 16px var(--color-primary-dark), 0 0 32px var(--color-primary-dark);
+  text-shadow: 0 0 16px var(--color-primary-dark);
 }
 
 

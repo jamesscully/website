@@ -2,6 +2,7 @@ import React from "react";
 import SocialButton from "../SocialButton";
 import GitHubImg from "../../res/img/logos/github_logo_120px.png";
 import LinkedInImg from "../../res/img/logos/linkedin_logo.png";
+import CVImg from "../../res/img/logos/cv_logo.png";
 import SectionHeader from "../SectionHeader";
 import Button from "../Button";
 import Checkbutton from "../Checkbutton";
@@ -48,56 +49,43 @@ export default class MainPage extends React.Component {
     render() {
         return(
             <div>
-                <header className="intro-header">
+                <header>
+
                     Greetings! I'm
                     <h1>James Scully</h1>
 
-                    <span>
+                    <p>
+                        I enjoy creating software that makes life easier, namely with the use
+                        of Android. I also enjoy tinkering with Linux (extensively) and new tech that can
+                        become useful in other projects down the line!
+                    </p>
+
+                    <p>
+                        You can find my GitHub and LinkedIn below, or view my <a href={"#projects"}>portfolio</a> here
+                    </p>
+
+                    <span className={"social-container"}>
                         <SocialButton img={GitHubImg} href={"https://www.github.com/jamesscully"}/>
                         <SocialButton img={LinkedInImg} href={"https://www.linkedin.com/in/james-scully-852b8797/"}/>
+                        <SocialButton img={CVImg} alt={"CV"} href={"https://jwscully.uk/resume.pdf"}/>
                     </span>
                 </header>
-                <div className="section">
-                    <SectionHeader text={"A bit about me"} hideDivider/>
-                    <div id={"intro-container"} className={"shadow"}>
-                        <div id={"intro-text"}>
-                            <p>
-                                Hello! I'm James, a Computer Science graduate from the University of Nottingham.
-                                <br/> <br/>
-                                I enjoy creating software that makes life easier, namely with the use
-                                of Android. I also enjoy tinkering with Linux (extensively) and new tech that can
-                                become useful in other projects down the line!
-                                <br/> <br/>
-                                You can check out some of my projects in the <a href={"#projects"}>portfolio</a> section
-                                below.
-                                <br/> <br/>
-                            </p>
 
-                            <a
-                                href={'https://jwscully.uk/resume.pdf'}
-                                target={"_blank"}
-                                rel={"noopener noreferrer"}>
-                                <Button
-                                    text={"View my Resume"}
-                                />
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
                 <div className={"section"}>
-                    <SectionHeader text={"Education"} subject={"education"}/>
+                    <SectionHeader text={"Education"}/>
                     <EducationSection/>
                 </div>
 
-                <div className={"section text-center"}>
+                <div className={"section"}>
                     <SectionHeader
                         text={"Projects"}
-                        subject={"projects"}
+                        hideMarginBottom
                     />
+                    <h2>Filter by tag:</h2>
 
-                    <div id={"checkbutton-container"} className={"shadow"}>
-                        <b>Filter by tag: <br/><br/></b>
+                    {/*<div id={"checkbutton-container"} className={"shadow"}>*/}
+
                         {
                             // for each tag, add button
                             this.state.allTags.map((tag, index) => {
@@ -114,7 +102,7 @@ export default class MainPage extends React.Component {
                                 );
                             })
                         }
-                    </div>
+                    {/*</div>*/}
 
                     <div id={"project-container"}>
                         {

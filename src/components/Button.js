@@ -64,7 +64,7 @@ export default class Button extends React.Component {
 
     render() {
         const {text, altText, className, hovered, inverted} = this.state
-        const classes = 'button ' + className
+        const classes = 'button ' + className + ' shadow'
 
         let imageStyle = null
 

@@ -39,7 +39,12 @@
 #project {
     max-width: 500px;
     min-width: 500px;
-    margin: 16px;
+
+    display: flex;
+
+    margin-right: 24px;
+    margin-bottom: 24px;
+
     padding: 32px;
     background-color: var(--color-primary);
 
