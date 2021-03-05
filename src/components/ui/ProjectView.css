@@ -52,11 +52,6 @@
 
     vertical-align: middle;
 
-    -webkit-flex: 1 0 auto;
-    -webkit-transition: -webkit-flex 250ms linear;
-
-    flex-grow: 1;
-    transition: flex-grow 300ms linear;
 }
 
 #title {

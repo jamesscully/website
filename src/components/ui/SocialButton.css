@@ -21,7 +21,7 @@
     background-color: var(--color-primary);
 
     transition: box-shadow 100ms linear;
-    box-shadow: 0 0 0 #4b4b4b;
+    box-shadow: 0 0 0 var(--color-primary-dark);
     text-align: center;
 
     position: relative;
@@ -32,12 +32,6 @@
     float: left;
 }
 
-.social-button span {
-    display: block;
-
-    bottom: -50px;
-
-}
 .social-button:hover {
     box-shadow: 0 0 12px #4b4b4b;
 }

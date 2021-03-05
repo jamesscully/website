@@ -57,13 +57,12 @@ export default class MainPage extends React.Component {
 
                     <div id={"intro-text"}>
                         <p>
-                            I enjoy creating software that makes life easier, namely with the use
-                            of Android. I also enjoy tinkering with Linux (extensively) and new tech that can
-                            become useful in other projects down the line!
+                            I enjoy creating software that makes life easier, through mobile and desktop applications.
                         </p>
-
                         <p>
-                            You can find my GitHub and LinkedIn below, or view my <a href={"#projects"}>portfolio</a> here
+                            Check out my <a href={"https://www.github.com/jamesscully"}>GitHub</a>, <a href={"https://www.linkedin.com/in/james-scully-852b8797/"}>LinkedIn</a> or <a href={"https://jwscully.uk/resume.pdf"}>resume</a> below;
+                            alternatively, check out <a href={"#projects"}>projects</a> section for more insight on my side projects!
+
                         </p>
                     </div>
 
@@ -87,25 +86,22 @@ export default class MainPage extends React.Component {
                     />
                     <h2>Filter by tag:</h2>
 
-                    {/*<div id={"checkbutton-container"} className={"shadow"}>*/}
-
-                        {
-                            // for each tag, add button
-                            this.state.allTags.map((tag, index) => {
-                                let filtered = this.state.filter.get(tag)
-                                return (
-                                    <Checkbutton
-                                        key={index}
-                                        tag={tag}
-                                        checked={filtered}
-                                        callback={(enabled) => {
-                                            this.filterTag(tag, enabled)
-                                        }}
-                                    />
-                                );
-                            })
-                        }
-                    {/*</div>*/}
+                    {
+                        // for each tag, add button
+                        this.state.allTags.map((tag, index) => {
+                            let filtered = this.state.filter.get(tag)
+                            return (
+                                <Checkbutton
+                                    key={index}
+                                    tag={tag}
+                                    checked={filtered}
+                                    callback={(enabled) => {
+                                        this.filterTag(tag, enabled)
+                                    }}
+                                />
+                            );
+                        })
+                    }
 
                     <div id={"project-container"}>
                         {
