@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import './SocialButton.css'
+import '../../css/SocialButton.css'
 
 export default class SocialButton extends Component {
 

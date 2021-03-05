@@ -4,7 +4,7 @@ import GitHubImg from '../../res/img/logos/github_logo_120px.png'
 import YoutubeImg from '../../res/img/logos/youtube_logo.png'
 import GooglePlayImg from '../../res/img/logos/google_play_logo.png'
 
-import './ProjectPage.css'
+import '../../css/ProjectPage.css'
 import Button from "../ui/Button";
 import ProjectRepository from "../../ProjectRepository";
 import ScreenshotOverlay from "../ScreenshotOverlay";

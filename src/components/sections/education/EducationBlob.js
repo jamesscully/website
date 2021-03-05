@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {EducationData} from '../../../data/education'
-import './EducationBlob.css'
+import '../../../css/EducationBlob.css'
 import {animated, Spring} from "react-spring/renderprops";
 import Button from "../../ui/Button";
 

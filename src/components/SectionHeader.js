@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './SectionHeader.css'
+import '../css/SectionHeader.css'
 
 import EducationBanner from '../res/img/education-banner.png'
 import ProjectsBanner from '../res/img/projects-banner.png'

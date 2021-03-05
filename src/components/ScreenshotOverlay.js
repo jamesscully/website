@@ -1,5 +1,5 @@
 import React from 'react'
-import './ScreenshotOverlay.css'
+import '../css/ScreenshotOverlay.css'
 
 export default class ScreenshotOverlay extends React.Component {
     constructor(props) {

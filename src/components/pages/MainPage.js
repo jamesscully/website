@@ -9,7 +9,7 @@ import ProjectView from "../ui/ProjectView";
 import {EducationSection} from "../sections/education/EducationSection";
 import ProjectRepository from "../../ProjectRepository";
 
-import './MainPage.css'
+import '../../css/MainPage.css'
 
 var HashMap = require('hashmap')
 

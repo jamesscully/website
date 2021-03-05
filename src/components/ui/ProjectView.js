@@ -1,5 +1,5 @@
 import * as React from "react";
-import './ProjectView.css'
+import '../../css/ProjectView.css'
 import ProjectRepository from "../../ProjectRepository";
 import SmallGitHub from "../../res/img/logos/github_logo_32px.png"
 import {config, Spring} from "react-spring/renderprops-universal";

@@ -4,7 +4,7 @@ import {animated, config, Spring} from "react-spring/renderprops";
 import ForwardIcon from '../../res/img/forward.png'
 import ExpandIcon from '../../res/img/expand.png'
 
-import './Button.css'
+import '../../css/Button.css'
 
 
 // onClick  - Takes a lambda for onClick functionality

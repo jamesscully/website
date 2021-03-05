@@ -1,9 +1,0 @@
-#board {
-    position: relative;
-    margin: 0 auto;
-}
-
-.cell {
-    position: absolute;
-    background-color: #ab000e;
-}

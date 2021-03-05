@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import EducationBlob from "./EducationBlob";
-import './EducationBlob.css'
+import '../../../css/EducationBlob.css'
 
 
 export class EducationSection extends Component {
