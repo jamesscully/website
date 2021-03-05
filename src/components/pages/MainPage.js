@@ -1,14 +1,16 @@
 import React from "react";
-import SocialButton from "../SocialButton";
+import SocialButton from "../ui/SocialButton";
 import GitHubImg from "../../res/img/logos/github_logo_120px.png";
 import LinkedInImg from "../../res/img/logos/linkedin_logo.png";
 import CVImg from "../../res/img/logos/cv_logo.png";
 import SectionHeader from "../SectionHeader";
-import Button from "../Button";
-import Checkbutton from "../Checkbutton";
-import ProjectView from "../ProjectView";
+import Button from "../ui/Button";
+import Checkbutton from "../ui/Checkbutton";
+import ProjectView from "../ui/ProjectView";
 import {EducationSection} from "../sections/education/EducationSection";
 import ProjectRepository from "../../ProjectRepository";
+
+import GridBackground from "../visual/GridBackground";
 
 import './MainPage.css'
 
@@ -54,15 +56,19 @@ export default class MainPage extends React.Component {
                     Greetings! I'm
                     <h1>James Scully</h1>
 
-                    <p>
-                        I enjoy creating software that makes life easier, namely with the use
-                        of Android. I also enjoy tinkering with Linux (extensively) and new tech that can
-                        become useful in other projects down the line!
-                    </p>
+                    {/*<GridBackground rows={15} cols={15}/>*/}
 
-                    <p>
-                        You can find my GitHub and LinkedIn below, or view my <a href={"#projects"}>portfolio</a> here
-                    </p>
+                    <div id={"intro-text"}>
+                        <p>
+                            I enjoy creating software that makes life easier, namely with the use
+                            of Android. I also enjoy tinkering with Linux (extensively) and new tech that can
+                            become useful in other projects down the line!
+                        </p>
+
+                        <p>
+                            You can find my GitHub and LinkedIn below, or view my <a href={"#projects"}>portfolio</a> here
+                        </p>
+                    </div>
 
                     <span className={"social-container"}>
                         <SocialButton img={GitHubImg} href={"https://www.github.com/jamesscully"}/>
@@ -126,6 +132,7 @@ export default class MainPage extends React.Component {
                         }
                     </div>
                 </div>
+
             </div>
         )
     }

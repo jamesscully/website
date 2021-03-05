@@ -5,7 +5,7 @@ import YoutubeImg from '../../res/img/logos/youtube_logo.png'
 import GooglePlayImg from '../../res/img/logos/google_play_logo.png'
 
 import './ProjectPage.css'
-import Button from "../Button";
+import Button from "../ui/Button";
 import ProjectRepository from "../../ProjectRepository";
 import ScreenshotOverlay from "../ScreenshotOverlay";
 

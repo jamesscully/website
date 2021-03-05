@@ -1,7 +1,18 @@
 
 :root {
-    --padding-large: 100px;
+    --padding-large: 80px;
     --header-height: 60vh;
+}
+
+@keyframes backgroundAnim {
+    from {
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+    to {
+        background-position-x: 60000%;
+        background-position-y: 120000%;
+    }
 }
 
 header {
@@ -12,9 +23,24 @@ header {
     padding-bottom: var(--padding-large);
     padding-left: 15%;
 
-    background-color: #1a1a1a;
     user-select: none;
     font-size: 18pt;
+
+    background: url("../../res/img/grid.png");
+    background-repeat: repeat;
+
+
+    animation-duration: 60000s;
+    animation-name: backgroundAnim;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    background-size: 100px;
+}
+
+header * {
+    z-index: 1;
+
 }
 
 
@@ -26,8 +52,23 @@ header h1 {
     text-align: left;
 }
 
-header p {
+#intro-text {
+    background-color: var(--color-primary-dark);
+    padding: 20px;
     width: 40vw;
+    border-radius: 16px;
+
+    font-size: 16pt;
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+
+
+#intro-text p {
+    text-align: left;
+    margin-bottom: 24px;
 }
 
 .social-container {
@@ -64,23 +105,8 @@ header p {
     margin: 0 auto 20px;
 }
 
-#intro-text {
-    background-color: var(--color-primary-dark);
-    padding: 20px;
 
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-
-    /*background-color: var(--color-primary);*/
-}
-
-
-#intro-text p {
-    text-align: left;
-}
 
 .checkbutton {
     background-color: #575757;

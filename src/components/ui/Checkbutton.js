@@ -1,5 +1,5 @@
 import * as React from "react";
-import ProjectRepository from "../ProjectRepository";
+import ProjectRepository from "../../ProjectRepository";
 import {config, Spring} from "react-spring/renderprops";
 import {animated} from "react-spring";
 
