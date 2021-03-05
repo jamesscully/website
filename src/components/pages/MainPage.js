@@ -4,13 +4,10 @@ import GitHubImg from "../../res/img/logos/github_logo_120px.png";
 import LinkedInImg from "../../res/img/logos/linkedin_logo.png";
 import CVImg from "../../res/img/logos/cv_logo.png";
 import SectionHeader from "../SectionHeader";
-import Button from "../ui/Button";
 import Checkbutton from "../ui/Checkbutton";
 import ProjectView from "../ui/ProjectView";
 import {EducationSection} from "../sections/education/EducationSection";
 import ProjectRepository from "../../ProjectRepository";
-
-import GridBackground from "../visual/GridBackground";
 
 import './MainPage.css'
 

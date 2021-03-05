@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 
+import './SocialButton.css'
+
 export default class SocialButton extends Component {
 
     constructor(props) {
@@ -15,21 +17,7 @@ export default class SocialButton extends Component {
 
     render() {
         const divStyle = {
-            width: "50px",
-            height: "50px",
-            padding: "20px",
-            userSelect: "none",
-            borderRadius: "100px",
-            margin: "10px",
-            display: "inline-flex",
-            backgroundColor: "var(--color-primary)",
-            cursor: "pointer",
-            lineHeight: "50px",
-            objectFit: "contain",
-            zIndex: "1",
-            textDecoration: "none",
-            textAlign: "center",
-            verticalAlign: "center"
+
         }
 
         const imgStyle = {
@@ -49,7 +37,7 @@ export default class SocialButton extends Component {
             <div className={"social-button"} style={divStyle}>
                 <a href={link} target="_blank" rel={"noopener noreferrer"} >
                     {
-                        (isImageButton) && <img style={imgStyle} src={image} alt={alt}/>
+                        (isImageButton) && <img className={"social-button-size"} src={image} alt={alt}/>
                     }
                     {
                         (isTextButton) && <text> {text} </text>

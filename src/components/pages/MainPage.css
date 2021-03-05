@@ -74,14 +74,7 @@ header h1 {
 .social-container {
 
 }
-.social-button {
-    transition: box-shadow 100ms linear;
-    box-shadow: 0 0 0px #4b4b4b;
-}
 
-.social-button:hover {
-    box-shadow: 0 0 12px #4b4b4b;
-}
 
 .section {
     /*background-color: #ab000e;*/
