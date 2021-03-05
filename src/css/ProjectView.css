@@ -15,14 +15,6 @@
     align-items: stretch;
 }
 
-.flex-columns {
-    flex-direction: column;
-}
-
-.flex-rows {
-    flex-direction: row;
-}
-
 .hidden {
     flex-grow: 0.0001;
 }
@@ -106,14 +98,6 @@
 
     line-height: 120%;
     text-align: left;
-}
-
-.vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 #linkToGitHub {
