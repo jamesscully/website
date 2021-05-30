@@ -51,7 +51,7 @@ export const ProjectsData = {
                     or smart watch :(
                 </p>
             </div>,
-            "video": "https://www.youtube.com/embed/kF9vgrtHUu0/",
+            "video": "",
             "app_store": "https://play.google.com/store/apps/details?id=com.scullyapps.spoonsbottleup",
             "pictures": [
                 require('../res/img/projects/bottleup/pic1.jpg'),
