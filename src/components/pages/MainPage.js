@@ -9,6 +9,10 @@ import ProjectView from "../ui/ProjectView";
 import {EducationSection} from "../sections/education/EducationSection";
 import ProjectRepository from "../../ProjectRepository";
 
+import EducationBanner from "../../res/img/education-banner.png"
+
+
+
 import '../../css/MainPage.css'
 
 var HashMap = require('hashmap')
@@ -53,8 +57,6 @@ export default class MainPage extends React.Component {
                     Greetings! I'm
                     <h1>James Scully</h1>
 
-                    {/*<GridBackground rows={15} cols={15}/>*/}
-
                     <div id={"intro-text"}>
                         <p>
                             I enjoy creating software that makes life easier, through mobile and desktop applications.
@@ -75,7 +77,11 @@ export default class MainPage extends React.Component {
 
 
                 <div className={"section"}>
-                    <SectionHeader text={"Education"}/>
+                    
+                    <SectionHeader 
+                        text={"Education"}
+                        subject="education"
+                    />
                     <EducationSection/>
                 </div>
 
@@ -83,6 +89,7 @@ export default class MainPage extends React.Component {
                     <SectionHeader
                         text={"Projects"}
                         hideMarginBottom
+                        subject="projects"
                     />
                     <h2>Filter by tag:</h2>
 
@@ -115,7 +122,7 @@ export default class MainPage extends React.Component {
                                     // if we've hit a valid tag, we don't need to search anymore
                                     if(valid)
                                         break
-
+ 
                                     valid = this.state.filter.get(tag)
                                 }
 

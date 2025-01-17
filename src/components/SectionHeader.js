@@ -61,6 +61,8 @@ export default class SectionHeader extends Component {
         );
     }
 
+
+
     render() {
         const {text, hideDivider, hideMarginBottom, subject} = this.state
 
@@ -71,46 +73,32 @@ export default class SectionHeader extends Component {
 
         var banner = bannerMap[subject]
 
-        banner = `url('${banner}')`;
-
         if(subject != null) {
             console.log("subject: " + subject)
             console.log(bannerMap[subject])
         }
 
-        var containerStyle = {
-            backgroundImage: banner,
+        
 
-            //  no-repeat fixed center;
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center',
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-        }
-
-        const textStyle = {
-            textAlign: "left",
-        }
-
-        if(hideMarginBottom) {
-            textStyle["marginBottom"] = "0px"
-            textStyle["paddingBottom"] = "0px"
-        }
+        console.log("Banner is a " + banner)
 
         var divider = this.divider();
 
         if(hideDivider)
             divider = "";
 
+        console.debug("bg image is: " + banner)
+
         return(
-            <div id={"section-header-container"} style={containerStyle}>
+            <div id={"section-header-container"}>
+            {/* style={{backgroundImage: "url(" + EducationBanner + ")"}} */}
+            
                 {
                     // divider
                 }
-
                 <div id={"previewImage"} />
 
-                <div id="section-header-text" className={"section-header item text-shadow"} style={textStyle}>
+                <div id="section-header-text" className={"section-header item text-shadow"}>
                     { text }
                 </div>
             </div>

@@ -4,8 +4,10 @@ import '../../../css/EducationBlob.css'
 import {animated, Spring} from "react-spring/renderprops";
 import Button from "../../ui/Button";
 
-const images = require.context('../../../res/img/edu', true);
+import EducationBanner from '../../../res/img/education-banner.png'
+import ProjectsBanner from '../../../res/img/projects-banner.png'
 
+const images = require.context('../../../res/img/edu', true);
 
 export default class EducationBlob extends Component {
     constructor(props) {
@@ -59,6 +61,8 @@ export default class EducationBlob extends Component {
                             Graduated {date}
                         </span>
                     </span>
+
+
 
                     <span id={"blob-text-course"}>
                         {course}, <br/>

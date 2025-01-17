@@ -5,6 +5,7 @@ export const EducationData = {
         "name": "University of Nottingham",
         "course": "BSc Computer Science",
         "grade": "2:1 with Honours",
+        "bg_image": "../res/img/education_banner.png",
         "description":
             `Studying at the University of Nottingham, I worked with a variety of technologies from low-level 
              C and ARM assembly to software development methods, computer security and OpenGL.

@@ -40,6 +40,37 @@
     border-radius: 8px;
     background-color: var(--color-primary-dark);
 
+    /* background-image: url("../res/img/education-banner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    -webkit-mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+    mask-image: radial-gradient(ellipse, black 10%, rgba(0, 0, 0, 0.) 50%); */
+}
+
+#blob-bg-image {
+    position: absolute;
+    display: inline-block;
+    align-self: flex-end;
+    right: -16px;
+    top: -5px;
+    width: 20vw;
+    z-index: 5;
+
+    border-radius: 0px 15px 15px 20px;
+
+    mask-size: 500%;
+    mask-image: linear-gradient(black, transparent);
+    
+    
+}
+
+.education-blob img {
+    width: 75px;
+    border-radius: 20px;
+
+    float: left;
+    margin-right: 16px;
 }
 
 .desc-item {
@@ -71,6 +102,7 @@
     font-size: 16pt;
     font-weight: bold;
     float: right;
+    z-index: 0;
 }
 
 @media only screen and (max-width: 1360px) {

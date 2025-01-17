@@ -26,20 +26,21 @@ header {
     user-select: none;
     font-size: 18pt;
 
-    background: url("../res/img/grid.png");
+    background-image: url("../res/img/grid.png");
     background-repeat: repeat;
-
+    background-color: rgb(32, 32, 32);
+    background-blend-mode: overlay;
 
     animation-duration: 60000s;
     animation-name: backgroundAnim;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
-    background-size: 100px;
+    background-size: 75px;
 }
 
 header * {
-    z-index: 1;
+    z-index: 2;
 
 }
 
@@ -77,19 +78,11 @@ header h1 {
 
 
 .section {
-    /*background-color: #ab000e;*/
     margin-bottom: 48px;
 
-    margin-left: 10vw;
-    margin-right: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
-
-.section:after {
-    margin-top: 24px;
-}
-
-
-
 
 .checkbutton {
     background-color: #575757;
@@ -120,7 +113,5 @@ header h1 {
     display: flex;
 
     flex-wrap: wrap;
-
-
 }
 
